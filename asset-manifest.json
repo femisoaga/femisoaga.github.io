@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.50ee855e.css",
+    "main.js": "/static/js/main.292dafe4.js",
+    "static/js/787.b7d7b59f.chunk.js": "/static/js/787.b7d7b59f.chunk.js",
+    "static/media/bg.png": "/static/media/bg.9dd0e15c1666ae345b13.png",
+    "static/media/solutions architect badge.png": "/static/media/solutions architect badge.5de5ac5041c48c198d8b.png",
+    "static/media/OluwafemiResume.pdf": "/static/media/OluwafemiResume.81f1aaf88161591b8b7a.pdf",
+    "static/media/dp.jpg": "/static/media/dp.15842515cff033a6f839.jpg",
+    "static/media/cloudpractioner badge.png": "/static/media/cloudpractioner badge.1d4d9fa250269a5b5067.png",
+    "index.html": "/index.html",
+    "static/media/Alx-logo-black.svg": "/static/media/Alx-logo-black.2c61c45f23a21f17cd15e4aa4da6c3f6.svg",
+    "main.50ee855e.css.map": "/static/css/main.50ee855e.css.map",
+    "main.292dafe4.js.map": "/static/js/main.292dafe4.js.map",
+    "787.b7d7b59f.chunk.js.map": "/static/js/787.b7d7b59f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.50ee855e.css",
+    "static/js/main.292dafe4.js"
+  ]
+}
