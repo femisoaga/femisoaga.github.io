@@ -21,6 +21,23 @@ const ResumeComponent = () => {
     );
   }
 
+  // Functions to handle project clicks
+  function handleSarepayClick() {
+    window.open("https://sarepay.com", "_blank");
+  }
+
+  function handleKekereClick() {
+    window.open("https://kekere.com", "_blank");
+  }
+
+  function handleUniswitchClick() {
+    window.open("https://www.uniswitchng.com", "_blank");
+  }
+
+  function handleBillerhqClick() {
+    window.open("https://billerhq.com", "_blank");
+  }
+
   return (
     <section className="mb-8 bg-white rounded-lg shadow-md sm:p-16 p-6">
       <header className="mb-4">
@@ -30,76 +47,172 @@ const ResumeComponent = () => {
         </div>
       </header>
 
-      <section className="overflow-y-scroll h-[38rem] md:h-full md:overflow-auto">
+      <section className="overflow-y-scroll h-[38rem]  md:overflow-auto">
         <div className="flex flex-wrap justify-center">
-        <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2">
-              <div className="rounded-lg overflow-hidden relative">
-                <img className="h-72" src={alxLogo} alt="Card 1" />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
-                      <p>Full Stack MEVN - Vercel - Heroku.</p>
-                      <div className="flex justify-center items-center my-2">
-                        <button
-                          onClick={handleCloudBadgeVerification}
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
-                        >
-                          Verify Badge
-                        </button>
-                        <a
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
-                          href="https://www.coursera.org/articles/solutions-architect"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Info
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="p-2 h-[5rem]">
-                <h2 className="font-bold text-lg leading-8">Project Title</h2>
-              </div>
-            </div>
-          </div>
+          {/* Sarepay */}
           <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2">
+            <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleSarepayClick}>
               <div className="rounded-lg overflow-hidden relative">
-                <img className="h-72" src={dp} alt="Card 1" />
+                <img className="h-72 w-full object-cover" src="https://placehold.co/600x400" alt="Sarepay" />
                 <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
-                      <p>Full Stack MEVN - Vercel - Heroku.</p>
+                      <p>React.js - Node.js - Typescript</p>
                       <div className="flex justify-center items-center my-2">
                         <button
-                          onClick={handleCloudBadgeVerification}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleSarepayClick();
+                          }}
                           className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
                         >
-                          Verify Badge
+                          Visit Site
                         </button>
-                        <a
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
-                          href="https://www.coursera.org/articles/solutions-architect"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleSarepayClick();
+                          }}
+                          className="bg-green-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
                         >
-                          Info
-                        </a>
+                          Learn More
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="p-2 h-[5rem]">
-                <h2 className="font-bold text-lg leading-8">Project Title</h2>
+                <h2 className="font-bold text-lg leading-8">Sarepay - Payment Platform</h2>
               </div>
             </div>
           </div>
+
+          {/* Kekere */}
+          <div className="w-full md:w-1/2">
+            <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleKekereClick}>
+              <div className="rounded-lg overflow-hidden relative">
+                <img className="h-72 w-full object-cover" src="https://placehold.co/600x400"  alt="Kekere" />
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-white text-center">
+                      <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
+                      <p>Next.js - Node.js </p>
+                      <p>Easily Invest in Rental Homes</p>
+                      <div className="flex justify-center items-center my-2">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleKekereClick();
+                          }}
+                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
+                        >
+                          Visit Site
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleKekereClick();
+                          }}
+                          className="bg-green-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
+                        >
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-2 h-[5rem]">
+                <h2 className="font-bold text-lg leading-8">Kekere -  Easily Invest in Rental Homes</h2>
+              </div>
+            </div>
+          </div>
+
+          {/* Uniswitch */}
+          <div className="w-full md:w-1/2">
+            <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleUniswitchClick}>
+              <div className="rounded-lg overflow-hidden relative">
+                <img className="h-72 w-full object-cover" src="https://placehold.co/600x400" alt="Uniswitch" />
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-white text-center">
+                      <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
+                       <p>React.js </p>
+                      <p>Payment Gateway - API Integration - Microservices</p>
+                      <div className="flex justify-center items-center my-2">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleUniswitchClick();
+                          }}
+                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
+                        >
+                          Visit Site
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleUniswitchClick();
+                          }}
+                          className="bg-green-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
+                        >
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-2 h-[5rem]">
+                <h2 className="font-bold text-lg leading-8">Uniswitch Website</h2>
+              </div>
+            </div>
+          </div>
+
+          {/* BillerHQ */}
+          <div className="w-full md:w-1/2">
+            <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleBillerhqClick}>
+              <div className="rounded-lg overflow-hidden relative">
+                <img className="h-72 w-full object-cover" src="https://placehold.co/600x400"  alt="BillerHQ" />
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-white text-center">
+                      <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
+                      <p>React.js </p>
+                      <p>Bill Management System - Payment Processing</p>
+                      <div className="flex justify-center items-center my-2">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleBillerhqClick();
+                          }}
+                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
+                        >
+                          Visit Site
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleBillerhqClick();
+                          }}
+                          className="bg-green-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
+                        >
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-2 h-[5rem]">
+                <h2 className="font-bold text-lg leading-8">BillerHQ - Bill Management</h2>
+              </div>
+            </div>
+          </div>
+
+          {/* AWS Cloud Practitioner Certificate */}
           <div className="w-full md:w-1/2">
             <div className="p-2 bg-gray-100 rounded-lg m-2">
               <div className="rounded-lg overflow-hidden relative">
@@ -146,6 +259,8 @@ const ResumeComponent = () => {
               </div>
             </div>
           </div>
+
+          {/* AWS Solutions Architect Certificate */}
           <div className="w-full md:w-1/2">
             <div className="p-2 bg-gray-100 rounded-lg m-2">
               <div className="rounded-lg overflow-hidden relative">
@@ -166,7 +281,7 @@ const ResumeComponent = () => {
                       </p>
                       <div className="flex justify-center items-center my-2">
                         <button
-                          onClick={handleCloudBadgeVerification}
+                          onClick={handleSolutionsBadgeVerification}
                           className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
                         >
                           Verify Badge
@@ -191,6 +306,8 @@ const ResumeComponent = () => {
               </div>
             </div>
           </div>
+
+          {/* ALX AWS Cloud Computing */}
           <div className="w-full md:w-1/2">
             <div className="p-2 bg-gray-100 rounded-lg m-2">
               <div className="rounded-lg overflow-hidden relative">
@@ -232,6 +349,8 @@ const ResumeComponent = () => {
               </div>
             </div>
           </div>
+
+          {/* ALX Foundation */}
           <div className="w-full md:w-1/2">
             <div className="p-2 bg-gray-100 rounded-lg m-2">
               <div className="rounded-lg overflow-hidden relative">
@@ -266,74 +385,6 @@ const ResumeComponent = () => {
               </div>
             </div>
           </div>
-          {/* <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2">
-              <div className="rounded-lg overflow-hidden relative">
-                <img className="h-72" src={alxLogo} alt="Card 1" />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
-                      <p>Full Stack MEVN - Vercel - Heroku.</p>
-                      <div className="flex justify-center items-center my-2">
-                        <button
-                          onClick={handleCloudBadgeVerification}
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
-                        >
-                          Verify Badge
-                        </button>
-                        <a
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
-                          href="https://www.coursera.org/articles/solutions-architect"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Info
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="p-2 h-[5rem]">
-                <h2 className="font-bold text-lg leading-8">Project Title</h2>
-              </div>
-            </div>
-          </div>
-          <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2">
-              <div className="rounded-lg overflow-hidden relative">
-                <img className="h-72" src={dp} alt="Card 1" />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
-                      <p>Full Stack MEVN - Vercel - Heroku.</p>
-                      <div className="flex justify-center items-center my-2">
-                        <button
-                          onClick={handleCloudBadgeVerification}
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
-                        >
-                          Verify Badge
-                        </button>
-                        <a
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
-                          href="https://www.coursera.org/articles/solutions-architect"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Info
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="p-2 h-[5rem]">
-                <h2 className="font-bold text-lg leading-8">Project Title</h2>
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
     </section>
