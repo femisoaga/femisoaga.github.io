@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { MdOutlineLinearScale } from "react-icons/md";
 import alxLogo from "./assets/Alx-logo-black.svg";
-import dp from "./assets/dp.jpg";
+import sarepay from "./assets/sarepay.png";
+import kekere from "./assets/kekere.png";
+import billerhq from "./assets/billerhq.png";
+import uniswitch from "./assets/uniswitch.png";
 import cloudPractionerCertificateBadge from "./assets/cloudpractioner badge.png";
 import solutionsArchitectCertificateBadge from "./assets/solutions architect badge.png";
 
@@ -53,7 +56,7 @@ const ResumeComponent = () => {
           <div className="w-full md:w-1/2">
             <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleSarepayClick}>
               <div className="rounded-lg overflow-hidden relative">
-                <img className="h-72 w-full object-cover" src="https://placehold.co/600x400" alt="Sarepay" />
+                <img className="h-72 w-full object-cover" src={sarepay} alt="Sarepay" />
                 <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center">
@@ -89,52 +92,11 @@ const ResumeComponent = () => {
             </div>
           </div>
 
-          {/* Kekere */}
-          <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleKekereClick}>
-              <div className="rounded-lg overflow-hidden relative">
-                <img className="h-72 w-full object-cover" src="https://placehold.co/600x400"  alt="Kekere" />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
-                      <p>Next.js - Node.js </p>
-                      <p>Easily Invest in Rental Homes</p>
-                      <div className="flex justify-center items-center my-2">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleKekereClick();
-                          }}
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
-                        >
-                          Visit Site
-                        </button>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleKekereClick();
-                          }}
-                          className="bg-green-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
-                        >
-                          Learn More
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="p-2 h-[5rem]">
-                <h2 className="font-bold text-lg leading-8">Kekere -  Easily Invest in Rental Homes</h2>
-              </div>
-            </div>
-          </div>
-
-          {/* Uniswitch */}
+           {/* Uniswitch */}
           <div className="w-full md:w-1/2">
             <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleUniswitchClick}>
               <div className="rounded-lg overflow-hidden relative">
-                <img className="h-72 w-full object-cover" src="https://placehold.co/600x400" alt="Uniswitch" />
+                <img className="h-72 w-full object-cover" src={uniswitch} alt="Uniswitch" />
                 <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center">
@@ -171,11 +133,53 @@ const ResumeComponent = () => {
             </div>
           </div>
 
+          {/* Kekere */}
+          <div className="w-full md:w-1/2">
+            <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleKekereClick}>
+              <div className="rounded-lg overflow-hidden relative">
+                <img className="h-72 w-full object-cover" src={kekere}  alt="Kekere" />
+                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-white text-center">
+                      <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
+                      <p>Next.js - Node.js </p>
+                      <p>Easily Invest in Rental Homes</p>
+                      <div className="flex justify-center items-center my-2">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleKekereClick();
+                          }}
+                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
+                        >
+                          Visit Site
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleKekereClick();
+                          }}
+                          className="bg-green-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
+                        >
+                          Learn More
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-2 h-[5rem]">
+                <h2 className="font-bold text-lg leading-8">Kekere -  Easily Invest in Rental Homes</h2>
+              </div>
+            </div>
+          </div>
+
+
           {/* BillerHQ */}
           <div className="w-full md:w-1/2">
             <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleBillerhqClick}>
               <div className="rounded-lg overflow-hidden relative">
-                <img className="h-72 w-full object-cover" src="https://placehold.co/600x400"  alt="BillerHQ" />
+                <img className="h-72 w-full object-cover" src={billerhq} alt="BillerHQ" />
                 <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center">
