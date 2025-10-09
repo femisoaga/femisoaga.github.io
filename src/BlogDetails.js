@@ -1,9 +1,15 @@
 import React from "react";
 import { MdOutlineLinearScale } from "react-icons/md";
+import backgroundSVG from "./assets/bg.png";
 
 const BlogDetails = () => {
   return (
-    <section className="mb-8 bg-white rounded-lg shadow-md sm:p-16 p-6">
+    <section className="mb-8 card sm:p-16 p-6 relative overflow-hidden">
+    <div
+      className="absolute inset-0 bg-no-repeat bg-right-top bg-contain opacity-25 dark:opacity-20 pointer-events-none"
+      style={{ backgroundImage: `url(${backgroundSVG})` }}
+    />
+    <div className="relative z-10">
     <header className="mb-4">
       <h2 className="text-3xl font-bold">Blog</h2>
       <div className="mb-4">
@@ -11,6 +17,7 @@ const BlogDetails = () => {
       </div>
     </header>
     <h2 className="text-xl mb-4">Work In Progress.....</h2>
+    </div>
     </section>
 
   

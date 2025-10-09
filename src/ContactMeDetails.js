@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { MdOutlineLinearScale } from "react-icons/md";
+import backgroundSVG from "./assets/bg.png";
 
 const ContactMeDetails = () => { 
   
@@ -34,7 +35,12 @@ const ContactMeDetails = () => {
   };
 
   return (
-    <section className="mb-8 bg-white rounded-lg shadow-md sm:p-16 p-6">
+    <section className="mb-8 card sm:p-16 p-6 relative overflow-hidden">
+    <div
+      className="absolute inset-0 bg-no-repeat bg-right-top bg-contain opacity-25 dark:opacity-20 pointer-events-none"
+      style={{ backgroundImage: `url(${backgroundSVG})` }}
+    />
+    <div className="relative z-10">
     <header className="mb-4">
       <h2 className="text-3xl font-bold">Contact Me</h2>
       <div className="mb-4">
@@ -42,7 +48,7 @@ const ContactMeDetails = () => {
       </div>
     </header>
     <div className="max-w-md mx-auto">
-      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" netlify>
+      <form onSubmit={handleSubmit} className="glass rounded px-8 pt-6 pb-8 mb-4" netlify>
       <input type="hidden" name="form-name" value="contact" />
 
         <div className="mb-4">
@@ -50,7 +56,7 @@ const ContactMeDetails = () => {
             Name
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow-sm appearance-none border border-slate-200/70 dark:border-white/10 bg-white/70 dark:bg-white/5 rounded w-full py-2 px-3 text-gray-700 dark:text-slate-200 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-400"
             id="name"
             type="text"
             placeholder="Name"
@@ -64,7 +70,7 @@ const ContactMeDetails = () => {
             Email
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow-sm appearance-none border border-slate-200/70 dark:border-white/10 bg-white/70 dark:bg-white/5 rounded w-full py-2 px-3 text-gray-700 dark:text-slate-200 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-400"
             id="email"
             type="email"
             placeholder="Email"
@@ -78,7 +84,7 @@ const ContactMeDetails = () => {
             Message
           </label>
           <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow-sm appearance-none border border-slate-200/70 dark:border-white/10 bg-white/70 dark:bg-white/5 rounded w-full py-2 px-3 text-gray-700 dark:text-slate-200 leading-tight focus:outline-none focus:ring-2 focus:ring-primary-400"
             id="message"
             placeholder="Message"
             name="message"
@@ -88,7 +94,7 @@ const ContactMeDetails = () => {
         </div>
         <div className="flex items-center justify-between">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="btn-primary"
             type="submit"
           >
             Send
@@ -96,11 +102,12 @@ const ContactMeDetails = () => {
         </div>
       </form>
       {formSubmitted && (
-        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+        <div className="bg-green-100 dark:bg-green-900/30 border border-green-400/60 text-green-700 dark:text-green-300 px-4 py-3 rounded relative" role="alert">
           <strong className="font-bold">Success!</strong>
           <span className="block sm:inline"> Your message has been sent.</span>
         </div>
       )}
+    </div>
     </div>  </section>
   );
 };

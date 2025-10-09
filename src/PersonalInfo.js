@@ -12,30 +12,30 @@ import OluwafemiResume from "../src/assets/OluwafemiResume.pdf";
 
 const PersonalInfo = () => {
   return (
-    <section className="mt-4 mb-3 bg-white rounded-lg shadow-md p-6">
+    <section className="mt-4 mb-3 card">
       <div className="container md:flex md:items-center md:justify-between">
         <div className="flex justify-center items-center my-2">
-          <div className="bg-gray-300 rounded-full h-32 w-32 flex justify-center items-center ">
-            <img className="h-32 rounded-full" src={dp} alt="Mypicture" />
+          <div className="rounded-full h-32 w-32 flex justify-center items-center bg-gradient-to-br from-primary-200 to-primary-400 p-1">
+            <img className="h-32 w-32 rounded-full object-cover bg-white" src={dp} alt="Oluwafemi Soaga" />
           </div>
         </div>
         <header className="text-center md:flex md:flex-col justify-center md:items-center md:text-left mb-3">
-          <h1 className="text-3xl md:text-2xl font-bold md:mb-2">
+          <h1 className="md:mb-2">
             Oluwafemi Samuel Soaga
           </h1>
           <p className="text-gray-500 md:mb-2">Software Engineer | DevOps </p>
           <div className="flex justify-center md:justify-start md:w-full items-center my-2">
             <ul className="flex">
-              <li className="mr-3 cursor-pointer hover:text-blue-500">
+              <li className="mr-3 cursor-pointer hover:text-primary-600 transition-colors">
                 <CiLinkedin />
               </li>
-              <li className="mr-3 cursor-pointer hover:text-blue-500">
+              <li className="mr-3 cursor-pointer hover:text-primary-600 transition-colors">
                 <FiTwitter />
               </li>
-              <li className="mr-3 cursor-pointer hover:text-blue-500">
+              <li className="mr-3 cursor-pointer hover:text-primary-600 transition-colors">
                 <FiGithub />
               </li>
-              <li className="cursor-pointer hover:text-blue-500">
+              <li className="cursor-pointer hover:text-primary-600 transition-colors">
                 <FaInstagram />
               </li>
             </ul>
@@ -66,11 +66,11 @@ const PersonalInfo = () => {
         <div>
           <article className="mb-3">
             <h3 className="text-sm font-semibold text-gray-400">CV</h3>
-            <p className="text-gray-900 flex items-center hover:text-blue-400">
+            <p className="text-gray-900 flex items-center hover:text-primary-600">
               <a
                 href={OluwafemiResume}
                 download="Oluwafemi-Resume"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 Download
               </a>

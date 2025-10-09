@@ -1,4 +1,5 @@
 import React from "react";
+import backgroundSVG from "./assets/bg.png";
 import { GrCloudSoftware } from "react-icons/gr";
 import { FaMixcloud } from "react-icons/fa";
 import { GrPerformance } from "react-icons/gr";
@@ -6,7 +7,12 @@ import { MdOutlineLinearScale } from "react-icons/md";
 
 const AboutMe = () => {
   return (
-    <section className="mb-8 bg-white rounded-lg shadow-md sm:p-16 p-6">
+    <section className="mb-8 card sm:p-16 p-6 relative overflow-hidden">
+      <div
+        className="absolute inset-0 bg-no-repeat bg-right-top bg-contain opacity-25 dark:opacity-20 pointer-events-none"
+        style={{ backgroundImage: `url(${backgroundSVG})` }}
+      />
+      <div className="relative z-10">
       <header className="mb-4">
         <h2 className="text-3xl font-bold">About Me</h2>
         <div className="mb-4">
@@ -43,7 +49,7 @@ const AboutMe = () => {
       </article>
       <h3 className="text-2xl font-bold mb-2">What I'm Doing</h3>
       <div className="md:flex md:w-full md:justify-center md:items-center">
-        <div className="mb-4 md:w-80 md:h-80 md:mr-2 border-2 border-gray-600 rounded-xl shadow-md p-6 text-center">
+        <div className="mb-4 md:w-80 md:h-80 md:mr-2 glass p-6 text-center hover:shadow-lg transition">
           <div className="flex justify-center items-center">
             <p>
               <GrCloudSoftware className="w-12 h-12 text-gray-600" />
@@ -57,7 +63,7 @@ const AboutMe = () => {
             some of the aspects I find particularly rewarding in my work.
           </p>
         </div>
-        <div className="mb-4 md:w-80 md:h-80 border-2 border-gray-600 rounded-xl shadow-md p-6 text-center">
+        <div className="mb-4 md:w-80 md:h-80 glass p-6 text-center hover:shadow-lg transition">
           <div className="flex justify-center items-center">
             <p>
               <FaMixcloud className="w-12 h-14 text-gray-600" />
@@ -74,7 +80,7 @@ const AboutMe = () => {
         </div>
       </div>
 
-      <div className="mb-4 md:w-80 md:h-80 md:mx-auto border-2 border-gray-600 rounded-xl shadow-md p-6 text-center">
+      <div className="mb-4 md:w-80 md:h-80 md:mx-auto glass p-6 text-center hover:shadow-lg transition">
         <div className="flex justify-center items-center">
           <p>
             <GrPerformance className="w-12 h-12 text-gray-600" />
@@ -87,6 +93,7 @@ const AboutMe = () => {
           web applications and ensuring their scalability, performance, and
           security.
         </p>
+      </div>
       </div>
     </section>
   );

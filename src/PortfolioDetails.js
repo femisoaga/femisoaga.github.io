@@ -7,6 +7,7 @@ import billerhq from "./assets/billerhq.png";
 import uniswitch from "./assets/uniswitch.png";
 import cloudPractionerCertificateBadge from "./assets/cloudpractioner badge.png";
 import solutionsArchitectCertificateBadge from "./assets/solutions architect badge.png";
+import backgroundSVG from "./assets/bg.png";
 
 const ResumeComponent = () => {
 
@@ -42,11 +43,16 @@ const ResumeComponent = () => {
   }
 
   return (
-    <section className="mb-8 bg-white rounded-lg shadow-md sm:p-16 p-6">
+    <section className="mb-8 card sm:p-16 p-6 relative overflow-hidden">
+      <div
+        className="absolute inset-0 bg-no-repeat bg-right-top bg-contain opacity-25 dark:opacity-20 pointer-events-none"
+        style={{ backgroundImage: `url(${backgroundSVG})` }}
+      />
+      <div className="relative z-10">
       <header className="mb-4">
         <h2 className="text-3xl font-bold">Portfolio</h2>
         <div className="mb-4">
-          <MdOutlineLinearScale className="w-12 h-12 text-gray-600" />
+          <MdOutlineLinearScale className="w-12 h-12 text-slate-600 dark:text-slate-300" />
         </div>
       </header>
 
@@ -54,10 +60,10 @@ const ResumeComponent = () => {
         <div className="flex flex-wrap justify-center">
           {/* Sarepay */}
           <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleSarepayClick}>
+            <div className="p-2 glass m-2 cursor-pointer hover:shadow-lg transition" onClick={handleSarepayClick}>
               <div className="rounded-lg overflow-hidden relative">
                 <img className="h-72 w-full object-cover" src={sarepay} alt="Sarepay" />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent opacity-0 transition duration-300 ease-in-out hover:opacity-100">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
@@ -68,7 +74,7 @@ const ResumeComponent = () => {
                             e.stopPropagation();
                             handleSarepayClick();
                           }}
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
+                          className="btn-primary text-xs w-[7rem] mr-2"
                         >
                           Visit Site
                         </button>
@@ -77,7 +83,7 @@ const ResumeComponent = () => {
                             e.stopPropagation();
                             handleSarepayClick();
                           }}
-                          className="bg-green-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
+                          className="btn-secondary text-xs w-[7rem]"
                         >
                           Learn More
                         </button>
@@ -94,10 +100,10 @@ const ResumeComponent = () => {
 
            {/* Uniswitch */}
           <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleUniswitchClick}>
+            <div className="p-2 glass m-2 cursor-pointer hover:shadow-lg transition" onClick={handleUniswitchClick}>
               <div className="rounded-lg overflow-hidden relative">
                 <img className="h-72 w-full object-cover" src={uniswitch} alt="Uniswitch" />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent opacity-0 transition duration-300 ease-in-out hover:opacity-100">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
@@ -109,7 +115,7 @@ const ResumeComponent = () => {
                             e.stopPropagation();
                             handleUniswitchClick();
                           }}
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
+                          className="btn-primary text-xs w-[7rem] mr-2"
                         >
                           Visit Site
                         </button>
@@ -118,7 +124,7 @@ const ResumeComponent = () => {
                             e.stopPropagation();
                             handleUniswitchClick();
                           }}
-                          className="bg-green-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
+                          className="btn-secondary text-xs w-[7rem]"
                         >
                           Learn More
                         </button>
@@ -135,10 +141,10 @@ const ResumeComponent = () => {
 
           {/* Kekere */}
           <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleKekereClick}>
+            <div className="p-2 glass m-2 cursor-pointer hover:shadow-lg transition" onClick={handleKekereClick}>
               <div className="rounded-lg overflow-hidden relative">
                 <img className="h-72 w-full object-cover" src={kekere}  alt="Kekere" />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent opacity-0 transition duration-300 ease-in-out hover:opacity-100">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
@@ -150,7 +156,7 @@ const ResumeComponent = () => {
                             e.stopPropagation();
                             handleKekereClick();
                           }}
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
+                          className="btn-primary text-xs w-[7rem] mr-2"
                         >
                           Visit Site
                         </button>
@@ -159,7 +165,7 @@ const ResumeComponent = () => {
                             e.stopPropagation();
                             handleKekereClick();
                           }}
-                          className="bg-green-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
+                          className="btn-secondary text-xs w-[7rem]"
                         >
                           Learn More
                         </button>
@@ -177,10 +183,10 @@ const ResumeComponent = () => {
 
           {/* BillerHQ */}
           <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2 cursor-pointer" onClick={handleBillerhqClick}>
+            <div className="p-2 glass m-2 cursor-pointer hover:shadow-lg transition" onClick={handleBillerhqClick}>
               <div className="rounded-lg overflow-hidden relative">
                 <img className="h-72 w-full object-cover" src={billerhq} alt="BillerHQ" />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent opacity-0 transition duration-300 ease-in-out hover:opacity-100">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="font-bold text-xl mb-2">TECH STACK</h2>
@@ -192,7 +198,7 @@ const ResumeComponent = () => {
                             e.stopPropagation();
                             handleBillerhqClick();
                           }}
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
+                          className="btn-primary text-xs w-[7rem] mr-2"
                         >
                           Visit Site
                         </button>
@@ -201,7 +207,7 @@ const ResumeComponent = () => {
                             e.stopPropagation();
                             handleBillerhqClick();
                           }}
-                          className="bg-green-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
+                          className="btn-secondary text-xs w-[7rem]"
                         >
                           Learn More
                         </button>
@@ -218,14 +224,14 @@ const ResumeComponent = () => {
 
           {/* AWS Cloud Practitioner Certificate */}
           <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2">
+            <div className="p-2 glass m-2 hover:shadow-lg transition">
               <div className="rounded-lg overflow-hidden relative">
                 <img
                   src={cloudPractionerCertificateBadge}
                   alt="Certificate Badge"
                   className="h-72"
                 />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent opacity-0 transition duration-300 ease-in-out hover:opacity-100">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center p-2">
                       <h2 className="font-bold text-xl mb-2">
@@ -239,12 +245,12 @@ const ResumeComponent = () => {
                       <div className="flex justify-center items-center my-2">
                         <button
                           onClick={handleCloudBadgeVerification}
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
+                          className="btn-primary text-xs w-[7rem] mr-2"
                         >
                           Verify Badge
                         </button>
                         <a
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
+                          className="btn-primary text-xs w-[7rem] text-center block"
                           href="https://www.coursera.org/articles/aws-cloud-practitioner"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -266,14 +272,14 @@ const ResumeComponent = () => {
 
           {/* AWS Solutions Architect Certificate */}
           <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2">
+            <div className="p-2 glass m-2 hover:shadow-lg transition">
               <div className="rounded-lg overflow-hidden relative">
                 <img
                   src={solutionsArchitectCertificateBadge}
                   alt="Certificate Badge"
                   className="h-72"
                 />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent opacity-0 transition duration-300 ease-in-out hover:opacity-100">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center p-2">
                       <h2 className="font-bold text-xl mb-2">
@@ -284,14 +290,11 @@ const ResumeComponent = () => {
                         understanding of AWS services and technologies.
                       </p>
                       <div className="flex justify-center items-center my-2">
-                        <button
-                          onClick={handleSolutionsBadgeVerification}
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
-                        >
+                        <button onClick={handleSolutionsBadgeVerification} className="btn-primary text-xs w-[7rem] mr-2">
                           Verify Badge
                         </button>
                         <a
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
+                          className="btn-primary text-xs w-[7rem] text-white text-center block"
                           href="https://www.coursera.org/articles/solutions-architect"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -313,10 +316,10 @@ const ResumeComponent = () => {
 
           {/* ALX AWS Cloud Computing */}
           <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2">
+            <div className="p-2 glass m-2 hover:shadow-lg transition">
               <div className="rounded-lg overflow-hidden relative">
                 <img className="h-72" src={alxLogo} alt="Card 1" />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent opacity-0 transition duration-300 ease-in-out hover:opacity-100">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center p-2">
                       <h2 className="font-bold text-xl mb-2">
@@ -327,14 +330,11 @@ const ResumeComponent = () => {
                         Architect and AWS Cloud Practitioner) class from ALX.
                       </p>
                       <div className="flex justify-center items-center my-2">
-                        <button
-                          onClick={handleCloudBadgeVerification}
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
-                        >
+                        <button onClick={handleCloudBadgeVerification} className="btn-primary text-xs w-[7rem] mr-2">
                           Verify Badge
                         </button>
                         <a
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
+                          className="btn-primary text-xs w-[7rem] text-white text-center block"
                           href="https://www.coursera.org/articles/solutions-architect"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -356,23 +356,20 @@ const ResumeComponent = () => {
 
           {/* ALX Foundation */}
           <div className="w-full md:w-1/2">
-            <div className="p-2 bg-gray-100 rounded-lg m-2">
+            <div className="p-2 glass m-2 hover:shadow-lg transition">
               <div className="rounded-lg overflow-hidden relative">
                 <img className="h-72" src={alxLogo} alt="Card 1" />
-                <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 transition duration-300 ease-in-out transform origin-top hover:opacity-80">
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent opacity-0 transition duration-300 ease-in-out hover:opacity-100">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-white text-center">
                       <h2 className="font-bold text-xl mb-2">ALX Foundation</h2>
                       <p>Completed the ALX Foundation Course.</p>
                       <div className="flex justify-center items-center my-2">
-                        <button
-                          onClick={handleCloudBadgeVerification}
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl mr-2"
-                        >
+                        <button onClick={handleCloudBadgeVerification} className="btn-primary text-xs w-[7rem] mr-2">
                           Verify Badge
                         </button>
                         <a
-                          className="bg-blue-600 text-xs w-[7rem] px-4 py-1 rounded-xl text-white text-center block"
+                          className="btn-primary text-xs w-[7rem] text-white text-center block"
                           href="https://www.coursera.org/articles/solutions-architect"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -391,6 +388,7 @@ const ResumeComponent = () => {
           </div>
         </div>
       </section>
+      </div>
     </section>
   );
 };

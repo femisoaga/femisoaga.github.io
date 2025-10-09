@@ -1,20 +1,26 @@
 import React from "react";
 import { MdOutlineLinearScale } from "react-icons/md";
+import backgroundSVG from "./assets/bg.png";
 
 const ResumeComponent = () => {
   return (
-    <section className="mb-8 bg-white rounded-lg shadow-md sm:p-16 p-6">
+    <section className="mb-8 card sm:p-16 p-6 relative overflow-hidden">
+      <div
+        className="absolute inset-0 bg-no-repeat bg-right-top bg-contain opacity-25 dark:opacity-20 pointer-events-none"
+        style={{ backgroundImage: `url(${backgroundSVG})` }}
+      />
+      <div className="relative z-10">
       <header className="mb-4">
         <h2 className="text-3xl font-bold">Resume</h2>
         <div className="mb-4">
-          <MdOutlineLinearScale className="w-12 h-12 text-gray-600" />
+          <MdOutlineLinearScale className="w-12 h-12 text-slate-600 dark:text-slate-300" />
         </div>
       </header>
 
       <section className="mb-8">
         <h2 className="text-xl font-bold mb-4">Work Experience</h2>
-        <article className="mb-6 text-gray-700 ">
-          <h3 className="text-lg font-semibold mb-2 text-gray-900">
+        <article className="mb-6 text-slate-700 dark:text-slate-300 ">
+          <h3 className="text-lg font-semibold mb-2 text-slate-900 dark:text-slate-100">
             Frontend Engineer
           </h3>
           <p className="mb-2">
@@ -35,8 +41,8 @@ const ResumeComponent = () => {
             reducing issue resolution times by 40%
           </p>
         </article>
-        <article className="mb-6 text-gray-700 ">
-          <h3 className="text-lg font-semibold mb-2 text-gray-900">
+        <article className="mb-6 text-slate-700 dark:text-slate-300 ">
+          <h3 className="text-lg font-semibold mb-2 text-slate-900 dark:text-slate-100">
             Frontend Developer
           </h3>
           <p className="mb-2">
@@ -64,8 +70,8 @@ const ResumeComponent = () => {
       </section>
       <section className="mb-8">
         <h2 className="text-xl font-bold mb-4">Education</h2>
-        <article className="mb-6 text-gray-700 ">
-          <h3 className="text-lg font-semibold mb-2 text-gray-900">
+        <article className="mb-6 text-slate-700 dark:text-slate-300 ">
+          <h3 className="text-lg font-semibold mb-2 text-slate-900 dark:text-slate-100">
           Computer Science & Education
           </h3>
           <p className="mb-2">
@@ -73,8 +79,8 @@ const ResumeComponent = () => {
           </p>
         <br></br>
         </article>
-        <article className="mb-6 text-gray-700 ">
-          <h3 className="text-lg font-semibold mb-2 text-gray-900">
+        <article className="mb-6 text-slate-700 dark:text-slate-300 ">
+          <h3 className="text-lg font-semibold mb-2 text-slate-900 dark:text-slate-100">
           Secondary School Certificate
           </h3>
           <p className="mb-2">
@@ -86,7 +92,7 @@ const ResumeComponent = () => {
       </section>
       <section className="mb-8">
           <h2 className="text-xl font-bold mb-4">Skills</h2>
-          <ul className="list-disc list-inside">
+          <ul className="list-disc list-inside text-slate-700 dark:text-slate-300">
             <li className="mb-2">JavaScript (React, Node.js)</li>
             <li className="mb-2">HTML5, CSS3 (Tailwind CSS)</li>
             <li className="mb-2">Typescript</li>
@@ -98,6 +104,7 @@ const ResumeComponent = () => {
             <li className="mb-2">Git, GitHub</li>
           </ul>
         </section>
+      </div>
     </section>
   
 

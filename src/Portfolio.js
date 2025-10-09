@@ -7,15 +7,8 @@ import backgroundSVG from "./assets/bg.png";
 const Portfolio = () => {
   return (
     <div>
-      <div
-        className="bg-gray-200 min-h-screen py-8 bg-center"
-        style={{
-          backgroundImage: `url(${backgroundSVG})`,
-          // backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="max-w-5xl mx-auto px-4 md:flex">
+      <div className="bg-app-light dark:bg-app-dark min-h-screen py-10 relative transition-colors">
+        <div className="container-pro md:flex">
           <Nav />
           <div className="lg:w-full">
             <PersonalInfo />
