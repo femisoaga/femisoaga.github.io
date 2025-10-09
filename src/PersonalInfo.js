@@ -21,7 +21,7 @@ const PersonalInfo = () => {
         </div>
         <header className="text-center md:flex md:flex-col justify-center md:items-center md:text-left mb-3">
           <h1 className="md:mb-2">
-            Oluwafemi Samuel Soaga
+            Oluwafemi Soaga
           </h1>
           <p className="text-gray-500 md:mb-2">Software Engineer | DevOps </p>
           <div className="flex justify-center md:justify-start md:w-full items-center my-2">
