@@ -3,6 +3,28 @@ import { colors } from "./Colors";
 export const Experience = () => {
   const experiences = [
     {
+      company: 'Tech Citadel',
+      role: 'Frontend Developer',
+      period: 'Sep 2024 – Jan 2025',
+      achievements: [
+        'Led rollout of reusable UI kit powering three product squads with consistent motion patterns',
+        'Improved landing-page LCP by 32% via code-splitting, critical CSS, and image streaming',
+        'Partnered with design to systemise tokens across platforms, reducing hand-off time by 40%',
+      ],
+      tech: 'React • Next.js • Storybook • Performance Audits'
+    },
+    {
+      company: 'Freelance',
+      role: 'Product-Focused Frontend Engineer',
+      period: '2024 – Present',
+      achievements: [
+        'Delivered responsive web apps and marketing sites tuned for multiple breakpoints',
+        'Implemented component-driven workflows with visual regression coverage for clients',
+        'Optimised Core Web Vitals for SME platforms, keeping performance budgets intact',
+      ],
+      tech: 'Component Libraries • Tailwind CSS • Core Web Vitals • Client Collaboration'
+    },
+    {
       company: 'UniswitchNg',
       role: 'Frontend Engineer',
       period: 'Jan 2023 – Present',
