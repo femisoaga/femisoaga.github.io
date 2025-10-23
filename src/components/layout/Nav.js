@@ -6,7 +6,8 @@ import { LuCodesandbox } from "react-icons/lu";
 import { PiBookOpenBold } from "react-icons/pi";
 import { GrContact } from "react-icons/gr";
 import { MdHeadsetMic } from "react-icons/md";
-import ThemeToggle from "./ThemeToggle";
+
+import ThemeToggle from "../common/ThemeToggle";
 
 const Nav = () => {
     const location = useLocation();

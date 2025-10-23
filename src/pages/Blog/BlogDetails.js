@@ -1,8 +1,9 @@
 import React from "react";
 import { MdOutlineLinearScale } from "react-icons/md";
-import backgroundSVG from "./assets/bg.png";
 
-const PitchDetails = () => {
+import backgroundSVG from "../../assets/bg.png";
+
+const BlogDetails = () => {
   return (
     <section className="mb-8 card sm:p-16 p-6 relative overflow-hidden">
     <div
@@ -11,7 +12,7 @@ const PitchDetails = () => {
     />
     <div className="relative z-10">
     <header className="mb-4">
-      <h2 className="text-3xl font-bold">Pitch</h2>
+      <h2 className="text-3xl font-bold">Blog</h2>
       <div className="mb-4">
         <MdOutlineLinearScale className="w-12 h-12 text-gray-600" />
       </div>
@@ -24,4 +25,4 @@ const PitchDetails = () => {
   );
 };
 
-export default PitchDetails;
+export default BlogDetails;

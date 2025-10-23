@@ -1,8 +1,9 @@
 import React from "react";
 import { MdOutlineLinearScale } from "react-icons/md";
-import backgroundSVG from "./assets/bg.png";
 
-const ResumeComponent = () => {
+import backgroundSVG from "../../assets/bg.png";
+
+const ResumeDetails = () => {
   return (
     <section className="mb-8 card sm:p-16 p-6 relative overflow-hidden">
       <div
@@ -112,4 +113,4 @@ const ResumeComponent = () => {
   );
 };
 
-export default ResumeComponent;
+export default ResumeDetails;

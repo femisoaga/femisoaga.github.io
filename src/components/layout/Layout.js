@@ -1,8 +1,8 @@
 import React from "react";
+
+import Experience from "../profile/Experience";
+import PersonalInfo from "../profile/PersonalInfo";
 import Nav from "./Nav";
-import PersonalInfo from "./PersonalInfo";
-import Experience from "./Experience";
-import backgroundSVG from "./assets/bg.png";
 
 const Layout = () => {
   return (

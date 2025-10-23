@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
- font-family: 'Nunito', sans-serif;
+html, body {
+  background-color: #020617;
+  min-height: 100%;
+}
 
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #e2e8f0;
+  background-image: radial-gradient(circle at top left, rgba(59,130,246,0.15), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(107,114,128,0.15), transparent 55%);
+  background-attachment: fixed;
 }
 
 /* Scrollbar Styling */
