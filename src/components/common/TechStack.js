@@ -84,7 +84,7 @@ export const TechStack = () => {
         Technical Expertise
       </h2>
       <div
-        className={`backdrop-blur-xl bg-slate-800/40 rounded-2xl p-8 border ${colors.border.default} shadow-xl w-full max-w-4xl`}
+        className={`backdrop-blur-xl ${colors.bg.secondary} rounded-2xl p-8 border ${colors.border.default} shadow-xl w-full max-w-4xl`}
       >
         <p
           className={`${colors.text.accent} text-center text-lg font-semibold mb-4`}
@@ -104,9 +104,9 @@ export const TechStack = () => {
                 {category.technologies.map((tech, techIndex) => (
                   <div
                     key={techIndex}
-                    className={`backdrop-blur-xl bg-slate-800/40 rounded-xl p-4 border ${colors.border.default} shadow-lg hover:bg-slate-800/60 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 group cursor-pointer flex flex-col items-center justify-center gap-2`}
+                    className={`backdrop-blur-xl ${colors.bg.secondary} rounded-xl p-4 border ${colors.border.default} shadow-lg transition-all duration-300 group cursor-pointer flex flex-col items-center justify-center gap-2 hover:border-blue-400/50 hover:shadow-blue-500/20`}
                   >
-                    <span className="group-hover:scale-125 transition-transform duration-300">
+                    <span className="text-blue-600 transition-transform duration-300 group-hover:scale-125 dark:text-blue-300">
                       {tech.icon}
                     </span>
                     <h4

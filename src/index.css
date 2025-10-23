@@ -2,17 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  background-color: #020617;
+html,
+body {
   min-height: 100%;
+  background-color: #f8fafc;
 }
 
 body {
   font-family: 'Nunito', sans-serif;
-  color: #e2e8f0;
-  background-image: radial-gradient(circle at top left, rgba(59,130,246,0.15), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(107,114,128,0.15), transparent 55%);
+  color: #0f172a;
+  background-image: radial-gradient(circle at top left, rgba(59,130,246,0.12), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(99,102,241,0.12), transparent 55%);
   background-attachment: fixed;
+}
+
+.dark body {
+  color: #e2e8f0;
+  background-color: #020617;
+  background-image: radial-gradient(circle at top left, rgba(59,130,246,0.2), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(107,114,128,0.2), transparent 55%);
 }
 
 /* Scrollbar Styling */

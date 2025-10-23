@@ -5,6 +5,7 @@ import { GrPerformance } from "react-icons/gr";
 import { MdOutlineLinearScale } from "react-icons/md";
 
 import backgroundSVG from "../../assets/bg.png";
+import { colors } from "../common/Colors";
 
 const AboutMe = () => {
   return (
@@ -15,7 +16,7 @@ const AboutMe = () => {
       />
       <div className="relative z-10">
       <header className="mb-6">
-        <h2 className="text-3xl font-bold text-slate-100">About Me</h2>
+      <h2 className={`${colors.text.primary} text-3xl font-bold text-slate-100`}>About Me</h2>
         <div className="mb-4 text-slate-400">
           <MdOutlineLinearScale className="h-12 w-12" />
         </div>
@@ -48,7 +49,7 @@ const AboutMe = () => {
           in the tech industry and foster an inclusive global tech community.
         </p>
       </article>
-      <h3 className="mb-4 text-2xl font-bold text-slate-100">What I'm Doing</h3>
+      <h3 className={`${colors.text.primary} mb-4 text-2xl font-bold text-slate-100`}>What I'm Doing</h3>
       <div className="md:flex md:w-full md:justify-center md:items-start md:space-x-4 space-y-4 md:space-y-0">
         <div className="flex-1 rounded-2xl border border-blue-500/20 bg-slate-900/40 p-6 text-center transition hover:border-blue-400/40 hover:shadow-blue-500/20">
           <div className="flex justify-center items-center">

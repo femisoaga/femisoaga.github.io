@@ -9,6 +9,7 @@ import uniswitch from "../../assets/uniswitch.png";
 import cloudPractionerCertificateBadge from "../../assets/cloudpractioner badge.png";
 import solutionsArchitectCertificateBadge from "../../assets/solutions architect badge.png";
 import backgroundSVG from "../../assets/bg.png";
+import { colors } from "../../components/common/Colors";
 
 const PortfolioDetails = () => {
   const handleCloudBadgeVerification = () => {
@@ -102,7 +103,7 @@ const PortfolioDetails = () => {
       />
       <div className="relative z-10 space-y-8">
         <header className="text-center md:text-left">
-          <h2 className="text-3xl font-bold text-slate-100">Portfolio</h2>
+          <h2 className={`${colors.text.primary} text-3xl font-bold text-slate-100`}>Portfolio</h2>
           <div className="mt-3 flex justify-center md:justify-start text-slate-400">
             <MdOutlineLinearScale className="h-10 w-10" />
           </div>

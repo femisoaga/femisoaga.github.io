@@ -3,7 +3,7 @@ import { colors } from "./Colors";
 
 export const SearchInput = () => {
   return (
-    <div className={`backdrop-blur-xl bg-slate-800/40 rounded-2xl p-6 border ${colors.border.glow} w-full max-w-3xl shadow-2xl shadow-blue-900/20`}>
+    <div className={`backdrop-blur-xl ${colors.bg.secondary} rounded-2xl p-6 border ${colors.border.glow} w-full max-w-3xl shadow-2xl shadow-blue-900/10 dark:shadow-blue-900/20`}>
       <textarea
         placeholder="Ask a question or start a conversation..."
         className={`w-full bg-transparent ${colors.text.primary} placeholder-slate-500 outline-none resize-none h-24`}

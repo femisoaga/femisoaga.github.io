@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Linkedin, Mail, MessageSquare, Phone, Twitter } from "lucide-react";
+import {
+  Calendar,
+  Linkedin,
+  Mail,
+  MessageSquare,
+  Phone,
+  Twitter,
+} from "lucide-react";
 
 import { colors } from "../../components/common/Colors";
 
@@ -37,12 +44,21 @@ const ContactMeDetails = () => {
 
   return (
     <section className="mx-auto w-full max-w-3xl text-center">
-      <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <div className="mb-4 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a
+          href="https://cal.com/oluwafemi-soaga-tul2cb"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 rounded-xl border border-blue-300/30 bg-blue-200/40 px-5 py-3 text-base text-blue-700 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-300/40 dark:border-blue-500/30 dark:bg-blue-500/5 dark:text-blue-100 dark:hover:bg-blue-500/15"
+        >
+          <Calendar className="h-5 w-5" />
+          Book a meet
+        </a>
         <a
           href="https://twitter.com/messages/compose?recipient_id=femisoaga"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-xl border border-blue-500/30 bg-blue-500/5 px-5 py-3 text-base text-blue-100 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-500/15"
+          className="flex items-center gap-2 rounded-xl border border-blue-300/30 bg-blue-200/40 px-5 py-3 text-base text-blue-700 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-300/40 dark:border-blue-500/30 dark:bg-blue-500/5 dark:text-blue-100 dark:hover:bg-blue-500/15"
         >
           <Twitter className="h-5 w-5" />
           DM on X
@@ -51,16 +67,16 @@ const ContactMeDetails = () => {
           href="https://www.linkedin.com/in/oluwafemi-soaga-56875999/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-xl border border-blue-500/30 bg-blue-500/5 px-5 py-3 text-base text-blue-100 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-500/15"
+          className="flex items-center gap-2 rounded-xl border border-blue-300/30 bg-blue-200/40 px-5 py-3 text-base text-blue-700 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-300/40 dark:border-blue-500/30 dark:bg-blue-500/5 dark:text-blue-100 dark:hover:bg-blue-500/15"
         >
           <Linkedin className="h-5 w-5" />
           DM on LinkedIn
         </a>
         <a
-          href="https://wa.me/2348160253034"
+          href="https://wa.me/2348022093000"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/5 px-5 py-3 text-base text-emerald-100 transition-all duration-300 hover:border-emerald-400/60 hover:bg-emerald-500/15"
+          className="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-200/40 px-5 py-3 text-base text-emerald-700 transition-all duration-300 hover:border-emerald-500/50 hover:bg-emerald-300/40 dark:border-emerald-500/30 dark:bg-emerald-500/5 dark:text-emerald-100 dark:hover:bg-emerald-500/15"
         >
           <Phone className="h-5 w-5" />
           WhatsApp DM

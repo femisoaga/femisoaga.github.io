@@ -26,7 +26,7 @@ export const Certifications = () => {
         {certs.map((cert, index) => (
           <div
             key={index}
-            className={`backdrop-blur-xl bg-slate-800/40 rounded-2xl p-6 border ${colors.border.default} shadow-xl flex items-start gap-4 hover:border-blue-500/50 transition-all`}
+            className={`backdrop-blur-xl ${colors.bg.secondary} rounded-2xl p-6 border ${colors.border.default} shadow-xl flex items-start gap-4 transition-all hover:border-blue-400/50`}
           >
             <cert.icon className={`w-10 h-10 ${colors.text.accent} flex-shrink-0`} />
             <div>

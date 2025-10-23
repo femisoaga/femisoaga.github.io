@@ -14,11 +14,7 @@ import { Experience } from '../../components/common/Experience';
 import { Certifications } from '../../components/common/Certifications';
 import heroBackdrop from "../../assets/bg.png";
 import batOne from "../../assets/bat-one.png";
-import batTwo from "../../assets/bat-two.png";
-import batThree from "../../assets/bat-three.png";
 import batFour from "../../assets/bat-four.png";
-import batFive from "../../assets/bat-five.png";
-import batSix from "../../assets/bat-six.png";
 
 
 export default function Home() {
@@ -54,7 +50,7 @@ export default function Home() {
         top: "6%",
         left: "10%",
         driftX: 36,
-        driftY: 128,
+        driftY: 58,
         rotate: -6,
         rotateDelta: 4,
         opacity: 0.36,
@@ -113,20 +109,6 @@ export default function Home() {
         mode: "slide",
         slideOrigin: "right",
         slideDistance: 160,
-      },
-      {
-        src: batFour,
-        size: 220,
-        bottom: "10%",
-        left: "30%",
-        driftX: -24,
-        driftY: 48,
-        rotate: -4,
-        rotateDelta: 5,
-        opacity: 0.3,
-        mode: "slide",
-        slideOrigin: "left",
-        slideDistance: 180,
       },
     ],
     []
@@ -223,16 +205,19 @@ export default function Home() {
       `}</style>
       
       <main className="flex flex-col items-center justify-center px-6 pt-8 pb-32">
-        <section ref={heroRef} className="relative flex w-full max-w-5xl flex-col items-center rounded-[2.5rem] border border-blue-500/20 bg-slate-950/40 px-6 py-20 text-center shadow-[0_40px_120px_-40px_rgba(56,189,248,0.45)] backdrop-blur-3xl sm:px-12 lg:px-16">
+        <section
+          ref={heroRef}
+          className="relative flex w-full max-w-5xl flex-col items-center rounded-[2.5rem] border border-blue-300/30 bg-white/80 px-6 py-20 text-center shadow-[0_30px_90px_-35px_rgba(15,23,42,0.25)] backdrop-blur-3xl sm:px-12 lg:px-16 dark:border-blue-500/20 dark:bg-slate-950/40 dark:shadow-[0_40px_120px_-40px_rgba(56,189,248,0.45)]"
+        >
           <div
             aria-hidden="true"
             className="absolute inset-0 -z-10 overflow-hidden rounded-[2.5rem]"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-500/20 via-slate-900/60 to-slate-950/90" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/40 to-transparent dark:from-blue-500/20 dark:via-slate-900/60 dark:to-slate-950/90" />
             <img
               src={heroBackdrop}
               alt=""
-              className="absolute inset-0 h-full w-full object-cover opacity-70"
+              className="absolute inset-0 h-full w-full object-cover opacity-50 dark:opacity-70"
               style={{
                 transform: `translate3d(0, ${heroTransform.translateY}px, 0) scale(${heroTransform.scale})`,
                 opacity: heroTransform.opacity,
@@ -240,8 +225,8 @@ export default function Home() {
                 willChange: "transform, opacity",
               }}
             />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(59,130,246,0.35),transparent_55%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(129,140,248,0.35),transparent_55%)] mix-blend-screen" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(148,163,184,0.25),transparent_55%)] dark:bg-[radial-gradient(circle_at_50%_-10%,rgba(59,130,246,0.35),transparent_55%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(165,180,252,0.3),transparent_55%)] mix-blend-screen dark:bg-[radial-gradient(circle_at_50%_120%,rgba(129,140,248,0.35),transparent_55%)]" />
           </div>
 
           <FadeIn delay={200}>

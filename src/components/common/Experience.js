@@ -35,7 +35,7 @@ export const Experience = () => {
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className={`backdrop-blur-xl bg-slate-800/40 rounded-2xl p-6 md:p-8 border ${colors.border.default} shadow-xl hover:border-blue-500/50 transition-all duration-300`}
+            className={`backdrop-blur-xl ${colors.bg.secondary} rounded-2xl p-6 md:p-8 border ${colors.border.default} shadow-xl transition-all duration-300 hover:border-blue-400/50`}
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
               <div>

@@ -75,7 +75,7 @@ export const Stats = () => {
   ];
 
   return (
-    <div className={`backdrop-blur-xl bg-slate-800/40 rounded-2xl p-8 border ${colors.border.default} shadow-xl w-full max-w-4xl`}>
+    <div className={`backdrop-blur-xl ${colors.bg.secondary} rounded-2xl p-8 border ${colors.border.default} shadow-xl w-full max-w-4xl`}>
       <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
         {stats.map((stat, index) => (
           <AnimatedStat key={stat.label} number={stat.number} label={stat.label} index={index} />
