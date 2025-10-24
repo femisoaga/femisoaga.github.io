@@ -63,7 +63,7 @@ export const projects = [
     description:
       "An online eyewear store providing high-quality glasses and personalized shopping experiences, developed with Next.js, Tailwind CSS, and TypeScript.",
     image: seekoolImage,
-    tags: ["Next.js", "E-com", "Tailwind", "TypeScript"],
+    tags: ["Next.js", "E-commerce", "TypeScript"],
     categoryIds: ["web-apps"],
     href: "https://seekoool-test.vercel.app/",
     date: null,

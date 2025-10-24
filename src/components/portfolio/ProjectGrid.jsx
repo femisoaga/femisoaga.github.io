@@ -67,11 +67,16 @@ export const ProjectGrid = ({ projects = [], activeCategoryId }) => {
   if (shouldShowAll) {
     return (
       <div
-        className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3"
+        className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-3"
         aria-live="polite"
       >
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <div
+            key={project.id}
+            className="mx-auto w-full max-w-[18rem] sm:max-w-sm md:max-w-none"
+          >
+            <ProjectCard project={project} />
+          </div>
         ))}
       </div>
     );

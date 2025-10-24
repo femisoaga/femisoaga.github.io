@@ -72,7 +72,7 @@ export const ProjectCard = ({ project }) => {
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col gap-4 px-6 py-6">
+      <div className="flex flex-1 flex-col gap-4 px-2 md:px-6 py-6">
         <div className="space-y-3">
           <h3 className="text-lg font-semibold text-slate-900 transition-colors duration-200 group-hover:text-blue-600 dark:text-slate-100">
             {title}
@@ -81,13 +81,23 @@ export const ProjectCard = ({ project }) => {
             {description}
           </p>
         </div>
-
         {tags.length > 0 && (
-          <ul className="flex flex-wrap gap-2">
+          <ul
+            className="
+      flex flex-wrap justify-center items-center 
+      gap-x-3 gap-y-3 
+      mt-4 text-center
+    "
+          >
             {tags.map((tag) => (
               <li
                 key={tag}
-                className="rounded-full border border-blue-200/70 bg-blue-50/70 px-3 py-1 text-xs font-semibold text-blue-600/90 dark:border-blue-500/30 dark:bg-blue-500/10 dark:text-blue-200"
+                className="
+          rounded-full border border-blue-200/70 
+          bg-blue-50/70 px-3 py-1 
+          text-xs font-semibold text-blue-600/90 
+          dark:border-blue-500/30 dark:bg-blue-500/10 dark:text-blue-200
+        "
               >
                 {tag}
               </li>
