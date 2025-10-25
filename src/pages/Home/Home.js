@@ -238,7 +238,7 @@ export default function Home() {
           <FadeIn delay={400}>
             <h1 className={`${colors.text.primary} text-5xl font-bold leading-tight md:text-7xl`}>
               Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-black bg-clip-text text-transparent">
                 Oluwafemi Soaga
               </span>
             </h1>
