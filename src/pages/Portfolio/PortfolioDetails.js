@@ -119,7 +119,7 @@ const PortfolioDetails = () => {
               >
                 <div className="relative overflow-hidden">
                   <img src={project.image} alt={project.title} className="h-72 w-full object-cover" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-slate-900/85 via-slate-900/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/75 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <h3 className="mb-2 text-lg font-semibold text-white">Tech Stack</h3>
                     <p className="text-sm text-white/80">{project.tech}</p>
                     <div className="mt-4 flex gap-2">
@@ -161,7 +161,7 @@ const PortfolioDetails = () => {
               >
                 <div className="relative overflow-hidden">
                   <img src={credential.image} alt={credential.title} className="h-72 w-full object-cover" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-t from-slate-900/85 via-slate-900/40 to-transparent p-6 opacity-0 transition-opacity duration-300 hover:opacity-100">
+                  <div className="absolute inset-0 flex flex-col items-center justify-end bg-slate-950/75 p-6 opacity-0 transition-opacity duration-300 hover:opacity-100">
                     <p className="text-sm text-white/80 text-center">{credential.description}</p>
                     <div className="mt-4 flex gap-2">
                       <button

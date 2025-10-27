@@ -213,7 +213,7 @@ export default function Home() {
             aria-hidden="true"
             className="absolute inset-0 -z-10 overflow-hidden rounded-[2.5rem]"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/40 to-transparent dark:from-blue-500/20 dark:via-slate-900/60 dark:to-slate-950/90" />
+            <div className="absolute inset-0 bg-white/60 dark:bg-slate-900/70" />
             <img
               src={heroBackdrop}
               alt=""
@@ -225,8 +225,8 @@ export default function Home() {
                 willChange: "transform, opacity",
               }}
             />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(148,163,184,0.25),transparent_55%)] dark:bg-[radial-gradient(circle_at_50%_-10%,rgba(59,130,246,0.35),transparent_55%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(165,180,252,0.3),transparent_55%)] mix-blend-screen dark:bg-[radial-gradient(circle_at_50%_120%,rgba(129,140,248,0.35),transparent_55%)]" />
+            <div className="absolute inset-0 bg-blue-200/20 dark:bg-blue-500/15" />
+            <div className="absolute inset-0 mix-blend-screen bg-blue-100/10 dark:bg-blue-400/10" />
           </div>
 
           <FadeIn delay={200}>
@@ -238,7 +238,7 @@ export default function Home() {
           <FadeIn delay={400}>
             <h1 className={`${colors.text.primary} text-5xl font-bold leading-tight md:text-7xl`}>
               Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-black bg-clip-text text-transparent">
+              <span className="text-blue-600 dark:text-blue-300">
                 Oluwafemi Soaga
               </span>
             </h1>

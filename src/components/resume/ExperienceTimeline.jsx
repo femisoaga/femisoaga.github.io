@@ -34,14 +34,14 @@ export const ExperienceTimeline = () => {
       </header>
 
       <ol className="relative space-y-10">
-        <span className="absolute left-3 top-0 h-full w-px bg-gradient-to-b from-blue-300/60 via-blue-500/40 to-transparent dark:from-blue-500/60 dark:via-blue-700/30" />
+        <span className="absolute left-3 top-0 h-full w-px bg-blue-400/60 dark:bg-blue-600/40" />
 
         {experienceEntries.map((entry) => (
           <li
             key={entry.company}
             className="relative ml-10 rounded-2xl border border-blue-200/40 bg-white/80 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-blue-400/60 hover:shadow-xl dark:border-blue-500/30 dark:bg-slate-900/70"
           >
-            <span className="absolute -left-10 top-6 flex h-6 w-6 items-center justify-center rounded-full border border-blue-400/50 bg-gradient-to-br from-blue-400 to-indigo-500 text-xs font-semibold text-white shadow-lg">
+            <span className="absolute -left-10 top-6 flex h-6 w-6 items-center justify-center rounded-full border border-blue-400/50 bg-blue-600 text-xs font-semibold text-white shadow-lg shadow-blue-500/40">
               {entry.company.charAt(0)}
             </span>
 
@@ -75,4 +75,3 @@ export const ExperienceTimeline = () => {
     </section>
   );
 };
-

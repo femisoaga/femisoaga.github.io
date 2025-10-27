@@ -1,6 +1,6 @@
 export const colors = {
   bg: {
-    primary: 'bg-gradient-to-br from-slate-100 via-white to-slate-200 dark:from-slate-900 dark:via-blue-950 dark:to-slate-900',
+    primary: 'bg-slate-100 dark:bg-slate-900',
     secondary: 'bg-white/70 dark:bg-slate-800/40',
     input: 'bg-white/70 dark:bg-slate-800/50',
     button: 'bg-blue-600 text-white',

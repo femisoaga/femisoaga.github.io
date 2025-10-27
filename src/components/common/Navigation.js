@@ -24,7 +24,7 @@ const NavItem = ({ to, children, onClick }) => (
           {children}
         </span>
         <span
-          className={`absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-blue-400 to-blue-600 transition-transform duration-300 ${
+          className={`absolute bottom-0 left-0 h-0.5 w-full bg-blue-500 transition-transform duration-300 ${
             isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
           } origin-left`}
         />
@@ -145,7 +145,7 @@ export const Navigation = () => {
             }`}
           />
           <span
-            className={`absolute left-0 right-0 bottom-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600 transition-transform duration-300 origin-left ${
+            className={`absolute left-0 right-0 bottom-0 h-0.5 bg-blue-500 transition-transform duration-300 origin-left ${
               servicesActive
                 ? "scale-x-100"
                 : "scale-x-0 group-hover:scale-x-100"
@@ -164,7 +164,7 @@ export const Navigation = () => {
 
   return (
     <div className="fixed top-6 left-1/2 z-50 w-full max-w-5xl -translate-x-1/2 px-4 sm:px-6">
-      <nav className="relative rounded-2xl border border-blue-300/30 bg-gradient-to-br from-white/85 via-white/70 to-blue-50/40 px-4 py-4 sm:px-6 shadow-2xl shadow-slate-400/20 backdrop-blur-2xl transition-colors duration-500 dark:border-blue-500/20 dark:from-slate-950/90 dark:via-slate-900/80 dark:to-blue-950/70 dark:shadow-blue-900/30">
+      <nav className="relative rounded-2xl border border-blue-300/30 bg-white/85 px-4 py-4 sm:px-6 shadow-2xl shadow-slate-400/20 backdrop-blur-2xl transition-colors duration-500 dark:border-blue-500/20 dark:bg-slate-950/85 dark:shadow-blue-900/30">
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-2xl opacity-70">
           <div className="absolute -top-32 left-10 h-64 w-64 rounded-full bg-blue-200/40 blur-3xl dark:bg-blue-500/20" />
           <div className="absolute -bottom-40 right-0 h-64 w-64 rounded-full bg-cyan-200/40 blur-3xl dark:bg-cyan-500/20" />
@@ -226,7 +226,7 @@ export const Navigation = () => {
                 <Mail className="h-4 w-4" />
                 Let's Talk
               </span>
-              <span className="absolute inset-0 translate-x-[-110%] bg-gradient-to-r from-transparent via-blue-400/30 to-transparent transition-transform duration-700 group-hover:translate-x-[110%]" />
+              <span className="absolute inset-0 translate-x-[-110%] bg-blue-400/30 transition-transform duration-700 group-hover:translate-x-[110%]" />
             </NavLink>
           </div>
 

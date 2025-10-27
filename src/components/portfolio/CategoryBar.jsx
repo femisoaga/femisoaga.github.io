@@ -98,7 +98,7 @@ export const CategoryBar = ({ activeCategoryId, onChange, counts }) => {
               aria-hidden="true"
               className={`pointer-events-none absolute bottom-0 left-2 right-2 h-0.5 rounded-full transition-all duration-200 ${
                 isActive
-                  ? "bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400 shadow-[0_8px_22px_-14px_rgba(59,130,246,0.8)]"
+                  ? "bg-blue-500 shadow-[0_8px_22px_-14px_rgba(59,130,246,0.8)]"
                   : "bg-transparent"
               }`}
             />

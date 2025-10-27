@@ -81,7 +81,7 @@ const PersonalInfo = () => {
     <section className="card mt-4 mb-3">
       <div className="container md:flex md:items-center md:justify-between">
         <div className="my-2 flex items-center justify-center">
-          <div className="flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-primary-200 to-primary-400 p-1">
+          <div className="flex h-32 w-32 items-center justify-center rounded-full bg-blue-500 p-1 shadow-lg shadow-blue-400/40">
             <img className="h-32 w-32 rounded-full bg-white object-cover" src={dp} alt="Oluwafemi Soaga" />
           </div>
         </div>

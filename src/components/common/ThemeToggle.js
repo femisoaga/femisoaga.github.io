@@ -44,7 +44,7 @@ const ThemeToggle = ({ compact = false, className = '' }) => {
       }`}
       onClick={() => setIsDark((v) => !v)}
     >
-      <span className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-white/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 dark:from-slate-200/30 dark:via-transparent dark:to-transparent" />
+      <span className="pointer-events-none absolute inset-0 rounded-lg bg-white/30 opacity-0 transition-opacity duration-300 dark:bg-slate-200/20" />
       <span className="relative z-10">{icon}</span>
     </button>
   );
