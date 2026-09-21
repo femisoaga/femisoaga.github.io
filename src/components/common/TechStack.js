@@ -27,7 +27,7 @@ import {
 } from "react-icons/si";
 
 export const TechStack = () => {
-  const iconStyle = "text-3xl text-blue-400 transition-colors duration-300";
+  const iconStyle = "text-3xl text-[#718317] dark:text-[#dfff4f] transition-colors duration-300";
 
   const categories = [
     {
@@ -79,15 +79,15 @@ export const TechStack = () => {
   return (
     <>
       <h2
-        className={`${colors.text.primary} text-3xl md:text-4xl font-bold text-center mb-12 mt-20`}
+        className="section-title mb-12 mt-20 text-left"
       >
-        Technical Expertise
+        Tools of the trade.
       </h2>
       <div
-        className={`backdrop-blur-xl ${colors.bg.secondary} rounded-2xl p-8 border ${colors.border.default} shadow-xl w-full max-w-4xl`}
+        className="editorial-card w-full max-w-6xl rounded-[1.75rem] p-6 sm:p-10"
       >
         <p
-          className={`${colors.text.accent} text-center text-lg font-semibold mb-4`}
+          className="eyebrow mb-8"
         >
           Technologies I Work With
         </p>
@@ -104,9 +104,9 @@ export const TechStack = () => {
                 {category.technologies.map((tech, techIndex) => (
                   <div
                     key={techIndex}
-                    className={`backdrop-blur-xl ${colors.bg.secondary} rounded-xl p-4 border ${colors.border.default} shadow-lg transition-all duration-300 group cursor-pointer flex flex-col items-center justify-center gap-2 hover:border-blue-400/50 hover:shadow-blue-500/20`}
+                    className="group flex cursor-default flex-col items-center justify-center gap-3 rounded-xl border border-black/10 bg-[#f3f1e8] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#a9c52a] dark:border-white/10 dark:bg-[#11130f]"
                   >
-                    <span className="text-blue-600 transition-transform duration-300 group-hover:scale-125 dark:text-blue-300">
+                    <span className="transition-transform duration-300 group-hover:scale-110">
                       {tech.icon}
                     </span>
                     <h4

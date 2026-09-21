@@ -49,32 +49,30 @@ export const Experience = () => {
   ];
 
   return (
-    <div id="work" className="w-full max-w-5xl">
-      <h2 className={`${colors.text.primary} text-3xl md:text-4xl font-bold text-center mb-12 mt-20`}>
-        Proven Track Record
-      </h2>
+    <div id="work" className="w-full max-w-6xl">
+      <div className="mb-10 mt-28"><p className="eyebrow mb-5">Experience</p><h2 className="section-title">Built in the real world.</h2></div>
       <div className="space-y-6">
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className={`backdrop-blur-xl ${colors.bg.secondary} rounded-2xl p-6 md:p-8 border ${colors.border.default} shadow-xl transition-all duration-300 hover:border-blue-400/50`}
+            className="editorial-card rounded-[1.75rem] p-6 transition-all duration-300 hover:border-[#a9c52a] md:p-8"
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
               <div>
                 <h3 className={`${colors.text.primary} text-2xl font-bold`}>{exp.role}</h3>
-                <p className={`${colors.text.accent} text-lg`}>{exp.company}</p>
+                <p className="mt-1 font-bold text-[#718317] dark:text-[#dfff4f]">{exp.company}</p>
               </div>
               <p className={`${colors.text.secondary} text-sm mt-2 md:mt-0`}>{exp.period}</p>
             </div>
             <ul className="space-y-2 mb-4">
               {exp.achievements.map((achievement, idx) => (
                 <li key={idx} className={`${colors.text.secondary} text-sm flex gap-2`}>
-                  <span className={`${colors.text.accent} mt-1`}>▹</span>
+                  <span className="mt-1 text-[#91a620]">●</span>
                   <span>{achievement}</span>
                 </li>
               ))}
             </ul>
-            <p className={`${colors.text.accent} text-xs font-mono`}>{exp.tech}</p>
+            <p className="mt-6 border-t border-black/10 pt-5 text-xs font-bold uppercase tracking-[0.12em] text-[#718317] dark:border-white/10 dark:text-[#dfff4f]">{exp.tech}</p>
           </div>
         ))}
       </div>

@@ -35,13 +35,13 @@ export const ProjectGrid = ({ projects = [], activeCategoryId }) => {
     return (
       <section
         key={categoryId}
-        className="space-y-6 rounded-3xl border border-slate-200/60 bg-white/70 p-6 text-left shadow-[0_14px_40px_-32px_rgba(15,23,42,0.45)] transition-colors duration-200 dark:border-slate-700/60 dark:bg-slate-900/50"
+        className="space-y-6 text-left"
       >
         <header className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+          <h2 className="font-heading text-2xl font-semibold text-[#171a15] dark:text-[#f4f3eb]">
             {category.label}
           </h2>
-          <span className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-500/70 dark:text-blue-300/70">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#718317] dark:text-[#dfff4f]">
             {items.length} project{items.length === 1 ? "" : "s"}
           </span>
         </header>
@@ -67,7 +67,7 @@ export const ProjectGrid = ({ projects = [], activeCategoryId }) => {
   if (shouldShowAll) {
     return (
       <div
-        className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-3"
+        className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3"
         aria-live="polite"
       >
         {projects.map((project) => (

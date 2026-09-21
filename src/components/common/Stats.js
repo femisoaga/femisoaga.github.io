@@ -54,14 +54,14 @@ const AnimatedStat = ({ number, label, index }) => {
   }, [inView, index, target]);
 
   return (
-    <div ref={setRef} className="text-center transition-transform duration-300 group hover:scale-105">
+    <div ref={setRef} className="group border-l border-black/10 px-5 text-left first:border-l-0 dark:border-white/10">
       <div
-        className={`mb-2 text-4xl font-bold ${colors.text.accent} transition-colors group-hover:text-blue-300`}
+        className="mb-1 font-heading text-4xl font-semibold tracking-[-0.05em] text-[#171a15] dark:text-[#dfff4f] sm:text-5xl"
         aria-label={`${target}${suffix}`}
       >
         {`${displayValue}${suffix}`}
       </div>
-      <div className={`${colors.text.secondary} text-sm`}>{label}</div>
+      <div className={`${colors.text.secondary} text-xs font-bold uppercase tracking-[0.14em]`}>{label}</div>
     </div>
   );
 };
@@ -75,8 +75,8 @@ export const Stats = () => {
   ];
 
   return (
-    <div className={`backdrop-blur-xl ${colors.bg.secondary} rounded-2xl p-8 border ${colors.border.default} shadow-xl w-full max-w-4xl`}>
-      <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+    <div className={`editorial-card w-full rounded-[1.75rem] p-6 sm:p-8`}>
+      <div className="grid grid-cols-2 gap-y-8 md:grid-cols-4">
         {stats.map((stat, index) => (
           <AnimatedStat key={stat.label} number={stat.number} label={stat.label} index={index} />
         ))}

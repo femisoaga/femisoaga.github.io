@@ -1,17 +1,17 @@
 export const colors = {
   bg: {
-    primary: 'bg-slate-100 dark:bg-slate-900',
-    secondary: 'bg-white/70 dark:bg-slate-800/40',
+    primary: 'bg-[#f3f1e8] dark:bg-[#11130f]',
+    secondary: 'bg-[#faf9f3] dark:bg-[#191c17]',
     input: 'bg-white/70 dark:bg-slate-800/50',
-    button: 'bg-blue-600 text-white',
+    button: 'bg-[#171a15] text-white dark:bg-[#dfff4f] dark:text-[#15180f]',
   },
   text: {
-    primary: 'text-slate-900 dark:text-white',
-    secondary: 'text-slate-600 dark:text-slate-400',
-    accent: 'text-blue-600 dark:text-blue-300',
+    primary: 'text-[#171a15] dark:text-[#f4f3eb]',
+    secondary: 'text-[#62675c] dark:text-[#aeb5a5]',
+    accent: 'text-[#5c7010] dark:text-[#dfff4f]',
   },
   border: {
-    default: 'border-slate-200/70 dark:border-slate-700/50',
-    glow: 'border-blue-400/40 dark:border-blue-500/30',
+    default: 'border-[#d8d8cb] dark:border-white/10',
+    glow: 'border-[#b7d535]/60 dark:border-[#dfff4f]/30',
   },
 };

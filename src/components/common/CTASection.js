@@ -22,11 +22,11 @@ export const CTASection = () => {
 
   return (
     <section id="contact-cta" className="w-full max-w-4xl">
-      <FrostedPanel className="w-full space-y-8 p-8 text-center sm:p-12">
+      <FrostedPanel className="w-full space-y-8 bg-[#171a15] p-8 text-center sm:p-14 dark:bg-[#dfff4f]">
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button
             variant="ghost"
-            className="border border-blue-300/40 bg-blue-200/40 text-blue-700 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-300/40 dark:border-blue-500/30 dark:bg-blue-500/10 dark:text-blue-100 dark:hover:bg-blue-500/20"
+            className="border border-white/20 text-white hover:bg-white/10 dark:border-black/20 dark:text-[#171a15] dark:hover:bg-black/5"
             onClick={handleViewWork}
           >
             View My Work
@@ -35,10 +35,10 @@ export const CTASection = () => {
         </div>
 
         <header className="space-y-4 my-6">
-          <h2 className={`${colors.text.primary} text-3xl font-bold md:text-4xl`}>
+          <h2 className="font-heading text-3xl font-semibold text-white md:text-5xl dark:text-[#171a15]">
             Ready to Bring Your Ideas to Life?
           </h2>
-          <p className={`${colors.text.secondary} mx-auto max-w-2xl text-base md:text-lg`}>
+          <p className="mx-auto max-w-2xl text-base text-white/65 md:text-lg dark:text-[#384025]">
             X DM is recommended — I respond quickest there. Still, I&apos;m happy to hop on a call or answer a good old-fashioned email.
           </p>
         </header>
@@ -48,7 +48,7 @@ export const CTASection = () => {
             href="https://cal.com/oluwafemi-soaga-tul2cb"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-xl border border-blue-300/30 bg-blue-200/40 px-5 py-3 text-base text-blue-700 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-300/40 dark:border-blue-500/30 dark:bg-blue-500/5 dark:text-blue-100 dark:hover:bg-blue-500/15"
+            className="flex items-center gap-2 rounded-full bg-[#dfff4f] px-5 py-3 text-sm font-bold text-[#171a15] transition hover:-translate-y-0.5 dark:bg-[#171a15] dark:text-white"
           >
             <Calendar className="h-5 w-5" />
             Book a meet
@@ -57,7 +57,7 @@ export const CTASection = () => {
             href="https://twitter.com/messages/compose?recipient_id=femisoaga"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-xl border border-blue-300/30 bg-blue-200/40 px-5 py-3 text-base text-blue-700 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-300/40 dark:border-blue-500/30 dark:bg-blue-500/5 dark:text-blue-100 dark:hover:bg-blue-500/15"
+            className="flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10 dark:border-black/20 dark:text-[#171a15] dark:hover:bg-black/5"
           >
             <Twitter className="h-5 w-5" />
             DM on X
@@ -66,7 +66,7 @@ export const CTASection = () => {
             href="https://www.linkedin.com/in/oluwafemi-soaga-56875999/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-xl border border-blue-300/30 bg-blue-200/40 px-5 py-3 text-base text-blue-700 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-300/40 dark:border-blue-500/30 dark:bg-blue-500/5 dark:text-blue-100 dark:hover:bg-blue-500/15"
+            className="flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10 dark:border-black/20 dark:text-[#171a15] dark:hover:bg-black/5"
           >
             <Linkedin className="h-5 w-5" />
             DM on LinkedIn
@@ -75,7 +75,7 @@ export const CTASection = () => {
             href="https://wa.me/2348022093000"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-200/40 px-5 py-3 text-base text-emerald-700 transition-all duration-300 hover:border-emerald-500/50 hover:bg-emerald-300/40 dark:border-emerald-500/30 dark:bg-emerald-500/5 dark:text-emerald-100 dark:hover:bg-emerald-500/15"
+            className="flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/10 dark:border-black/20 dark:text-[#171a15] dark:hover:bg-black/5"
           >
             <Phone className="h-5 w-5" />
             WhatsApp DM
@@ -83,7 +83,7 @@ export const CTASection = () => {
         </div>
 
         <div className="mx-auto w-full max-w-xl text-left flex justify-center">
-          <p className={`${colors.text.secondary} mb-3 flex items-center justify-center gap-2 text-sm sm:justify-start`}>
+          <p className="mb-3 flex items-center justify-center gap-2 text-sm text-white/60 dark:text-[#505b35] sm:justify-start">
             <MessageSquare className="h-4 w-4 text-blue-400" />
             Prefer email? Drop a message below.
             <a

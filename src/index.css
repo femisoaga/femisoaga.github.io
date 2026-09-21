@@ -9,14 +9,15 @@ body {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
-  color: #0f172a;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: #171a15;
   background-attachment: fixed;
 }
 
 .dark body {
-  color: #e2e8f0;
-  background-color: #020617;
+  color: #f4f3eb;
+  background-color: #11130f;
 }
 
 /* Scrollbar Styling */
@@ -25,7 +26,7 @@ body {
 }
  
 ::-webkit-scrollbar-track {
-    background-color: #ebebeb;
+    background-color: #e6e4db;
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
@@ -33,7 +34,7 @@ body {
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: #6d6d6d; 
+    background: #8b984e;
 }
 
 @layer base {
@@ -42,21 +43,21 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, .heading {
-    @apply font-heading text-slate-900 dark:text-slate-100 tracking-tight;
+    @apply font-heading text-[#171a15] dark:text-[#f4f3eb] tracking-[-0.035em];
   }
   h1 { @apply text-3xl md:text-4xl font-extrabold; }
   h2 { @apply text-2xl md:text-3xl font-bold; }
   h3 { @apply text-xl md:text-2xl font-semibold; }
   p, li, span, small, a {
-    @apply text-slate-700 dark:text-slate-300;
+    @apply text-[#62675c] dark:text-[#aeb5a5];
   }
-  ::selection { @apply bg-primary-500/20; }
-  :focus-visible { @apply outline-none ring-2 ring-primary-400 ring-offset-2 ring-offset-white dark:ring-offset-slate-900; }
+  ::selection { background: #dfff4f; color: #171a15; }
+  :focus-visible { @apply outline-none ring-2 ring-[#9bb51d] ring-offset-2 ring-offset-[#f3f1e8] dark:ring-offset-[#11130f]; }
 }
 
 @layer components {
   .container-pro {
-    @apply max-w-6xl mx-auto px-4;
+    @apply max-w-6xl mx-auto px-5 sm:px-8;
   }
   .glass {
     @apply bg-white/80 dark:bg-white/10 backdrop-blur border border-white/40 dark:border-white/10 shadow-soft rounded-xl;
@@ -69,6 +70,46 @@ body {
   .btn-secondary { @apply btn bg-accent-600 text-white hover:bg-accent-500; }
   .btn-ghost { @apply btn bg-transparent text-slate-700 dark:text-slate-200 hover:bg-slate-100/60 dark:hover:bg-white/10; }
   .tag { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium bg-slate-100 dark:bg-white/10 text-slate-700 dark:text-slate-200; }
+}
+
+.grid-noise {
+  background-image:
+    linear-gradient(rgba(23, 26, 21, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 26, 21, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+.dark .grid-noise {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#697914] dark:text-[#dfff4f];
+}
+
+.eyebrow::before {
+  content: '';
+  @apply h-2 w-2 rounded-full bg-[#a9c52a] shadow-[0_0_0_4px_rgba(169,197,42,0.16)];
+}
+
+.section-title {
+  @apply font-heading text-3xl font-semibold leading-[1.05] tracking-[-0.045em] sm:text-5xl;
+}
+
+.editorial-card {
+  @apply border border-[#d8d8cb] bg-[#faf9f3]/90 shadow-[0_18px_50px_-38px_rgba(23,26,21,0.45)] dark:border-white/10 dark:bg-[#191c17]/90;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @layer utilities {

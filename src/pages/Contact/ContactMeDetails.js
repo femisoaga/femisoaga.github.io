@@ -43,13 +43,13 @@ const ContactMeDetails = () => {
   };
 
   return (
-    <section className="mx-auto w-full max-w-3xl text-center">
+    <section className="mx-auto w-full max-w-4xl text-center">
       <div className="mb-4 flex flex-col items-center justify-center gap-4 sm:flex-row">
         <a
           href="https://cal.com/oluwafemi-soaga-tul2cb"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-xl border border-blue-300/30 bg-blue-200/40 px-5 py-3 text-base text-blue-700 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-300/40 dark:border-blue-500/30 dark:bg-blue-500/5 dark:text-blue-100 dark:hover:bg-blue-500/15"
+          className="flex items-center gap-2 rounded-full border border-black/10 px-5 py-3 text-sm font-bold text-[#171a15] transition hover:border-[#a9c52a] dark:border-white/10 dark:text-white"
         >
           <Calendar className="h-5 w-5" />
           Book a meet
@@ -58,7 +58,7 @@ const ContactMeDetails = () => {
           href="https://twitter.com/messages/compose?recipient_id=femisoaga"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-xl border border-blue-300/30 bg-blue-200/40 px-5 py-3 text-base text-blue-700 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-300/40 dark:border-blue-500/30 dark:bg-blue-500/5 dark:text-blue-100 dark:hover:bg-blue-500/15"
+          className="flex items-center gap-2 rounded-full border border-black/10 px-5 py-3 text-sm font-bold text-[#171a15] transition hover:border-[#a9c52a] dark:border-white/10 dark:text-white"
         >
           <Twitter className="h-5 w-5" />
           DM on X
@@ -67,7 +67,7 @@ const ContactMeDetails = () => {
           href="https://www.linkedin.com/in/oluwafemi-soaga-56875999/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-xl border border-blue-300/30 bg-blue-200/40 px-5 py-3 text-base text-blue-700 transition-all duration-300 hover:border-blue-400/60 hover:bg-blue-300/40 dark:border-blue-500/30 dark:bg-blue-500/5 dark:text-blue-100 dark:hover:bg-blue-500/15"
+          className="flex items-center gap-2 rounded-full border border-black/10 px-5 py-3 text-sm font-bold text-[#171a15] transition hover:border-[#a9c52a] dark:border-white/10 dark:text-white"
         >
           <Linkedin className="h-5 w-5" />
           DM on LinkedIn
@@ -76,7 +76,7 @@ const ContactMeDetails = () => {
           href="https://wa.me/2348022093000"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-200/40 px-5 py-3 text-base text-emerald-700 transition-all duration-300 hover:border-emerald-500/50 hover:bg-emerald-300/40 dark:border-emerald-500/30 dark:bg-emerald-500/5 dark:text-emerald-100 dark:hover:bg-emerald-500/15"
+          className="flex items-center gap-2 rounded-full bg-[#dfff4f] px-5 py-3 text-sm font-bold text-[#171a15] transition hover:-translate-y-0.5"
         >
           <Phone className="h-5 w-5" />
           WhatsApp DM
@@ -111,7 +111,7 @@ const ContactMeDetails = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Jane Doe"
-              className="w-full rounded-xl border border-blue-500/20 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/40"
+              className="w-full rounded-xl border border-black/10 bg-[#f3f1e8] px-4 py-3 text-sm text-[#171a15] placeholder:text-[#969b8d] focus:border-[#9bb51d] focus:outline-none focus:ring-2 focus:ring-[#9bb51d]/20 dark:border-white/10 dark:bg-[#11130f] dark:text-white"
             />
           </div>
           <div className="space-y-2">
@@ -128,7 +128,7 @@ const ContactMeDetails = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="johndoe69@xyz.com"
-              className="w-full rounded-xl border border-blue-500/20 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/40"
+              className="w-full rounded-xl border border-black/10 bg-[#f3f1e8] px-4 py-3 text-sm text-[#171a15] placeholder:text-[#969b8d] focus:border-[#9bb51d] focus:outline-none focus:ring-2 focus:ring-[#9bb51d]/20 dark:border-white/10 dark:bg-[#11130f] dark:text-white"
             />
           </div>
           <div className="space-y-2">
@@ -145,13 +145,14 @@ const ContactMeDetails = () => {
               value={formData.message}
               onChange={handleChange}
               placeholder="Type your message here."
-              className="w-full rounded-xl border border-blue-500/20 bg-slate-950/60 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/40"
+              className="w-full rounded-xl border border-black/10 bg-[#f3f1e8] px-4 py-3 text-sm text-[#171a15] placeholder:text-[#969b8d] focus:border-[#9bb51d] focus:outline-none focus:ring-2 focus:ring-[#9bb51d]/20 dark:border-white/10 dark:bg-[#11130f] dark:text-white"
             />
           </div>
+          <button type="submit" className="w-full rounded-full bg-[#171a15] px-6 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 dark:bg-[#dfff4f] dark:text-[#171a15]">Send message</button>
         </form>
 
         {formSubmitted && (
-          <div className="mt-4 rounded-xl border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-100">
+          <div className="mt-4 rounded-xl border border-[#9bb51d]/30 bg-[#dfff4f]/15 px-4 py-3 text-sm text-[#56650e] dark:text-[#dfff4f]">
             Thanks for reaching out! I&apos;ll reply shortly.
           </div>
         )}

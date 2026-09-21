@@ -6,14 +6,14 @@ import { ExperienceTimeline } from "../../components/resume/ExperienceTimeline";
 
 const ResumeDetails = () => {
   return (
-    <section className="relative mb-8 overflow-hidden rounded-3xl border border-blue-200/40 bg-white/80 p-6 shadow-soft sm:p-16 dark:border-blue-500/30 dark:bg-slate-900/70">
+    <section className="relative mb-8 overflow-hidden rounded-[1.75rem] p-3 sm:p-8">
       <div
         className="pointer-events-none absolute inset-0 bg-contain bg-right-top bg-no-repeat opacity-20 dark:opacity-15"
         style={{ backgroundImage: `url(${backgroundSVG})` }}
       />
-      <div className="relative z-10 space-y-12">
+      <div className="relative z-10 space-y-14">
         <header className="space-y-4">
-          <div className="flex items-center gap-3 text-primary-500">
+          <div className="flex items-center gap-3 text-[#718317] dark:text-[#dfff4f]">
             <MdOutlineLinearScale className="h-10 w-10" />
             <span className="text-sm uppercase tracking-[0.4em]">
               Resume
@@ -32,7 +32,7 @@ const ResumeDetails = () => {
         <ExperienceTimeline />
 
         <section className="grid gap-8 md:grid-cols-2">
-          <div className="rounded-2xl border border-blue-200/40 bg-white/70 p-6 dark:border-blue-500/20 dark:bg-slate-900/60">
+          <div className="rounded-[1.5rem] border border-black/10 bg-[#f3f1e8] p-6 dark:border-white/10 dark:bg-[#11130f]">
             <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
               Education
             </h3>
@@ -52,7 +52,7 @@ const ResumeDetails = () => {
             </ul>
           </div>
 
-          <div className="rounded-2xl border border-blue-200/40 bg-white/70 p-6 dark:border-blue-500/20 dark:bg-slate-900/60">
+          <div className="rounded-[1.5rem] border border-black/10 bg-[#f3f1e8] p-6 dark:border-white/10 dark:bg-[#11130f]">
             <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
               Core Skillset
             </h3>
@@ -69,9 +69,9 @@ const ResumeDetails = () => {
               ].map((skill) => (
                 <li
                   key={skill}
-                  className="flex items-center gap-2 rounded-full border border-blue-200/40 bg-blue-50/60 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 dark:border-blue-500/30 dark:bg-blue-500/10 dark:text-blue-200"
+                  className="flex items-center gap-2 rounded-full border border-black/10 bg-[#faf9f3] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#62675c] dark:border-white/10 dark:bg-[#191c17] dark:text-[#b7beae]"
                 >
-                  <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#9bb51d]" />
                   {skill}
                 </li>
               ))}

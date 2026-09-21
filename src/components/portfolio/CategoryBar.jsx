@@ -50,8 +50,8 @@ export const CategoryBar = ({ activeCategoryId, onChange, counts }) => {
         // Desktop and up: revert to flex layout
         "md:flex md:flex-wrap md:items-center md:justify-center",
         // Styling
-        "rounded-2xl border border-slate-200/70 bg-white/50 p-2 shadow-sm transition-colors duration-200",
-        "dark:border-slate-700/60 dark:bg-slate-900/40",
+        "rounded-[1.4rem] border border-black/10 bg-[#e9e8de]/70 p-2 transition-colors duration-200",
+        "dark:border-white/10 dark:bg-white/5",
       ].join(" ")}
     >
       {categories.map((category) => {
@@ -60,7 +60,7 @@ export const CategoryBar = ({ activeCategoryId, onChange, counts }) => {
 
         const buttonClasses = [
           "group relative inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200",
-          "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white",
+          isActive ? "bg-[#171a15] text-white dark:bg-[#dfff4f] dark:text-[#171a15]" : "text-[#62675c] hover:text-[#171a15] dark:text-[#aeb5a5] dark:hover:text-white",
           "focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900",
           // Left-align text and make full width on small screens
           "w-full justify-start text-left md:w-auto",
@@ -69,13 +69,13 @@ export const CategoryBar = ({ activeCategoryId, onChange, counts }) => {
 
         const labelClasses = [
           "transition-colors duration-200",
-          isActive ? "text-blue-600 dark:text-blue-300" : "",
+          isActive ? "text-white dark:text-[#171a15]" : "",
         ]
           .filter(Boolean)
           .join(" ");
 
         const countClasses = isActive
-          ? "text-blue-500/80 dark:text-blue-300/80"
+          ? "text-[#dfff4f] dark:text-[#445000]"
           : "text-slate-400 dark:text-slate-500";
 
         return (
@@ -83,7 +83,6 @@ export const CategoryBar = ({ activeCategoryId, onChange, counts }) => {
             key={category.id}
             type="button"
             role="tab"
-            aria-pressed={isActive}
             aria-selected={isActive}
             onClick={() => handleSelect(category.id)}
             onKeyDown={handleKeyDown}
@@ -97,9 +96,7 @@ export const CategoryBar = ({ activeCategoryId, onChange, counts }) => {
             <span
               aria-hidden="true"
               className={`pointer-events-none absolute bottom-0 left-2 right-2 h-0.5 rounded-full transition-all duration-200 ${
-                isActive
-                  ? "bg-blue-500 shadow-[0_8px_22px_-14px_rgba(59,130,246,0.8)]"
-                  : "bg-transparent"
+                "bg-transparent"
               }`}
             />
           </button>

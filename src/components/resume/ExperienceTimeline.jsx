@@ -25,7 +25,7 @@ export const ExperienceTimeline = () => {
   return (
     <section aria-label="Experience timeline" className="space-y-8">
       <header>
-        <p className="text-xs uppercase tracking-[0.45em] text-blue-400/70">
+        <p className="eyebrow mb-3">
           Experience
         </p>
         <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
@@ -34,14 +34,14 @@ export const ExperienceTimeline = () => {
       </header>
 
       <ol className="relative space-y-10">
-        <span className="absolute left-3 top-0 h-full w-px bg-blue-400/60 dark:bg-blue-600/40" />
+        <span className="absolute left-3 top-0 h-full w-px bg-[#bdc498] dark:bg-white/15" />
 
         {experienceEntries.map((entry) => (
           <li
             key={entry.company}
-            className="relative ml-10 rounded-2xl border border-blue-200/40 bg-white/80 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-blue-400/60 hover:shadow-xl dark:border-blue-500/30 dark:bg-slate-900/70"
+            className="relative ml-10 rounded-[1.5rem] border border-black/10 bg-[#faf9f3] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#a9c52a] dark:border-white/10 dark:bg-[#191c17]"
           >
-            <span className="absolute -left-10 top-6 flex h-6 w-6 items-center justify-center rounded-full border border-blue-400/50 bg-blue-600 text-xs font-semibold text-white shadow-lg shadow-blue-500/40">
+            <span className="absolute -left-10 top-6 flex h-6 w-6 items-center justify-center rounded-full bg-[#dfff4f] text-xs font-bold text-[#171a15]">
               {entry.company.charAt(0)}
             </span>
 
@@ -51,7 +51,7 @@ export const ExperienceTimeline = () => {
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
                     {entry.company}
                   </h3>
-                  <p className="text-sm font-medium text-primary-600 dark:text-primary-300">
+                  <p className="text-sm font-bold text-[#718317] dark:text-[#dfff4f]">
                     {entry.role}
                   </p>
                 </div>
@@ -63,7 +63,7 @@ export const ExperienceTimeline = () => {
               <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-200">
                 {entry.bullets.map((bullet) => (
                   <li key={bullet} className="flex gap-2">
-                    <span aria-hidden="true" className="mt-1 h-1.5 w-1.5 rounded-full bg-primary-400" />
+                    <span aria-hidden="true" className="mt-1 h-1.5 w-1.5 rounded-full bg-[#9bb51d]" />
                     <span>{bullet}</span>
                   </li>
                 ))}

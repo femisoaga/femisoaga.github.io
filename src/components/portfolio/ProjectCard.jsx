@@ -1,3 +1,5 @@
+import { ArrowUpRight } from "lucide-react";
+
 export const ProjectCard = ({ project }) => {
   const {
     title,
@@ -9,21 +11,20 @@ export const ProjectCard = ({ project }) => {
     categoryIds = [],
   } = project;
 
-  const isWebApp = categoryIds.includes("web-apps");
   const isCertification = categoryIds.includes("devops-cert");
   const hasVisitLink = Boolean(href);
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200/60 bg-white/75 p-2 shadow-[0_8px_24px_-18px_rgba(15,23,42,0.35)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_20px_40px_-22px_rgba(56,189,248,0.35)] dark:border-slate-700/60 dark:bg-slate-900/60 dark:hover:border-blue-400/60">
-      <div className="relative overflow-hidden rounded-2xl">
+    <article className="editorial-card group flex h-full flex-col overflow-hidden rounded-[1.75rem] p-2 transition-all duration-300 hover:-translate-y-1 hover:border-[#a9c52a]">
+      <div className="relative overflow-hidden rounded-[1.35rem] bg-[#e6e5dc] dark:bg-[#23271f]">
         <img
           src={image}
           alt={`${title} preview`}
-          className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-52 w-full object-cover transition duration-700 group-hover:scale-[1.04]"
           loading="lazy"
         />
         <div
-          className={`pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 px-6 text-center opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:bg-slate-950/65 group-hover:backdrop-blur-sm group-hover:opacity-100 ${
+          className={`pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center gap-4 px-6 text-center opacity-0 transition-all duration-300 group-hover:pointer-events-auto group-hover:bg-[#171a15]/75 group-hover:backdrop-blur-sm group-hover:opacity-100 ${
             isCertification ? "sm:justify-end sm:pb-12" : ""
           }`}
         >
@@ -35,7 +36,7 @@ export const ProjectCard = ({ project }) => {
               <div className="flex flex-col gap-3 sm:flex-row">
                 {hasVisitLink && (
                   <a
-                    className="pointer-events-auto inline-flex items-center justify-center rounded-full border border-blue-200/70 bg-blue-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white transition-colors duration-200 hover:bg-blue-400"
+                    className="pointer-events-auto inline-flex items-center justify-center rounded-full bg-[#dfff4f] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#171a15]"
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -57,12 +58,12 @@ export const ProjectCard = ({ project }) => {
             </>
           ) : hasVisitLink ? (
             <a
-              className="pointer-events-auto inline-flex items-center justify-center rounded-full border border-slate-100/80 bg-white/85 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-slate-900 transition-colors duration-200 hover:bg-white"
+              className="pointer-events-auto inline-flex items-center justify-center gap-2 rounded-full bg-[#dfff4f] px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#171a15]"
               href={href}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Visit
+              Visit <ArrowUpRight className="h-4 w-4" />
             </a>
           ) : (
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-white/80">
@@ -72,32 +73,21 @@ export const ProjectCard = ({ project }) => {
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col gap-4 px-2 md:px-6 py-6">
+      <div className="flex flex-1 flex-col gap-4 px-3 py-6 md:px-5">
         <div className="space-y-3">
-          <h3 className="text-lg font-semibold text-slate-900 transition-colors duration-200 group-hover:text-blue-600 dark:text-slate-100">
+          <h3 className="font-heading text-xl font-semibold leading-tight text-[#171a15] transition-colors duration-200 dark:text-[#f4f3eb]">
             {title}
           </h3>
-          <p className="text-sm text-slate-600 dark:text-slate-300">
+          <p className="text-sm leading-relaxed text-[#62675c] dark:text-[#aeb5a5]">
             {description}
           </p>
         </div>
         {tags.length > 0 && (
-          <ul
-            className="
-      flex flex-wrap justify-center items-center 
-      gap-x-3 gap-y-3 
-      mt-4 text-center
-    "
-          >
+          <ul className="mt-auto flex flex-wrap gap-2 pt-3">
             {tags.map((tag) => (
               <li
                 key={tag}
-                className="
-          rounded-full border border-blue-200/70 
-          bg-blue-50/70 px-3 py-1 
-          text-xs font-semibold text-blue-600/90 
-          dark:border-blue-500/30 dark:bg-blue-500/10 dark:text-blue-200
-        "
+                className="rounded-full border border-black/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#69705f] dark:border-white/10 dark:text-[#b6bdac]"
               >
                 {tag}
               </li>

@@ -1,104 +1,53 @@
-import React from "react";
-import { GrCloudSoftware } from "react-icons/gr";
-import { FaMixcloud } from "react-icons/fa";
-import { GrPerformance } from "react-icons/gr";
-import { MdOutlineLinearScale } from "react-icons/md";
+import { Cloud, Code2, ServerCog } from "lucide-react";
 
-import backgroundSVG from "../../assets/bg.png";
-import { colors } from "../common/Colors";
+const disciplines = [
+  {
+    icon: Code2,
+    number: "01",
+    title: "Frontend engineering",
+    copy: "I turn product intent into expressive, accessible interfaces with thoughtful interaction, strong performance, and a component system that scales.",
+  },
+  {
+    icon: Cloud,
+    number: "02",
+    title: "Cloud & DevOps",
+    copy: "I design secure cloud foundations and automate delivery with CI/CD, infrastructure as code, containers, and pragmatic observability.",
+  },
+  {
+    icon: ServerCog,
+    number: "03",
+    title: "Backend systems",
+    copy: "I build dependable server-side logic and APIs with scalability, security, and maintainability considered from day one.",
+  },
+];
 
-const AboutMe = () => {
-  return (
-    <section className="relative overflow-hidden">
-      <div
-        className="pointer-events-none absolute inset-0 bg-no-repeat bg-right-top bg-contain opacity-20 dark:opacity-10"
-        style={{ backgroundImage: `url(${backgroundSVG})` }}
-      />
-      <div className="relative z-10">
-      <header className="mb-6">
-      <h2 className={`${colors.text.primary} text-3xl font-bold text-slate-100`}>About Me</h2>
-        <div className="mb-4 text-slate-400">
-          <MdOutlineLinearScale className="h-12 w-12" />
-        </div>
-      </header>
-      <article className="mb-8 mt-2 space-y-3 text-slate-300">
-        <p>
-          Samuel Oluwafemi Soaga is a versatile professional excelling in
-          frontend engineering, backend development, and DevOps. With four years
-          of coding experience and a degree in Computer Science and Education
-          from the University of Nigeria Nsukka, Femi seamlessly integrates
-          technical prowess with a passion for education.
-        </p>
-        <p>
-          Mastering frontend technologies like HTML, CSS, JavaScript, and
-          frameworks such as React, Angular, and Vue.js, Femi crafts captivating
-          user experiences. He has also delved into backend development with
-          Node.js and MongoDB, enabling end-to-end application development.
-        </p>
-        <p>
-          Recently, Femi has embraced DevOps and cloud engineering, earning
-          certifications in AWS and proficient in infrastructure as code with
-          Terraform. Implementing CI/CD pipelines and containerization with
-          Docker and Kubernetes, he optimizes deployment processes and
-          infrastructure performance.
-        </p>
-        <p>
-          Driven by a commitment to innovation, Femi aims to spearhead
-          transformative projects blending technology and education. With a
-          dedication to continuous learning, he aspires to drive positive change
-          in the tech industry and foster an inclusive global tech community.
-        </p>
-      </article>
-      <h3 className={`${colors.text.primary} mb-4 text-2xl font-bold text-slate-100`}>What I'm Doing</h3>
-      <div className="md:flex md:w-full md:justify-center md:items-start md:space-x-4 space-y-4 md:space-y-0">
-        <div className="flex-1 rounded-2xl border border-blue-500/20 bg-slate-900/40 p-6 text-center transition hover:border-blue-400/40 hover:shadow-blue-500/20">
-          <div className="flex justify-center items-center">
-            <p>
-              <GrCloudSoftware className="h-12 w-12 text-blue-300" />
-            </p>
+const AboutMe = () => (
+  <section>
+    <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
+      <div>
+        <p className="eyebrow mb-5">The short version</p>
+        <h2 className="section-title">Engineer, educator, lifelong learner.</h2>
+      </div>
+      <div className="space-y-5 text-base leading-8 text-[#62675c] dark:text-[#aeb5a5]">
+        <p>I&apos;m Samuel Oluwafemi Soaga, a multidisciplinary engineer working across frontend, backend, and cloud infrastructure. My Computer Science and Education background shapes how I work: break down complexity, communicate clearly, and build systems people can actually understand.</p>
+        <p>Over the last four years, I&apos;ve worked with React, Angular, Vue, Node.js, AWS, Terraform, Docker, and Kubernetes—helping ideas move from early prototypes into resilient production software.</p>
+        <p>I&apos;m especially interested in work where thoughtful product design meets strong engineering: products that feel simple on the surface because the hard systems thinking happened underneath.</p>
+      </div>
+    </div>
+
+    <div className="mt-16 grid gap-5 md:grid-cols-3">
+      {disciplines.map(({ icon: Icon, number, title, copy }) => (
+        <article key={title} className="group rounded-[1.6rem] border border-black/10 bg-[#f3f1e8] p-6 transition hover:-translate-y-1 hover:border-[#a9c52a] dark:border-white/10 dark:bg-[#11130f]">
+          <div className="mb-10 flex items-center justify-between">
+            <span className="grid h-11 w-11 place-items-center rounded-full bg-[#dfff4f] text-[#171a15]"><Icon className="h-5 w-5" /></span>
+            <span className="font-heading text-sm text-[#969b8d]">{number}</span>
           </div>
-          <p className="mb-3 text-xl font-semibold text-slate-100">Frontend Developer</p>
-          <p className="text-sm text-slate-300">
-            I enjoy bringing designs to life and creating seamless user
-            experiences through frontend development. Crafting intuitive
-            interfaces, optimizing performance, and ensuring accessibility are
-            some of the aspects I find particularly rewarding in my work.
-          </p>
-        </div>
-        <div className="flex-1 rounded-2xl border border-blue-500/20 bg-slate-900/40 p-6 text-center transition hover:border-blue-400/40 hover:shadow-blue-500/20">
-          <div className="flex justify-center items-center">
-            <p>
-              <FaMixcloud className="h-14 w-14 text-blue-300" />
-            </p>
-          </div>
-          <p className="mb-3 text-xl font-semibold text-slate-100">
-            Cloud Engineering & DevOps
-          </p>
-          <p className="text-sm text-slate-300">
-            I enjoy design, secure and maintenance of an organization’s
-            cloud-based infrastructure and application and I also enjoy to
-            improve the speed and quality of delivery, automate and achieve CICD
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-4 rounded-2xl border border-blue-500/20 bg-slate-900/40 p-6 text-center transition hover:border-blue-400/40 hover:shadow-blue-500/20">
-        <div className="flex justify-center items-center">
-          <p>
-            <GrPerformance className="h-12 w-12 text-blue-300" />
-          </p>
-        </div>
-
-        <p className="mb-3 text-xl font-semibold text-slate-100">Backend Developer</p>
-        <p className="text-sm text-slate-300">
-          I specialize in developing and maintaining the server-side logic of
-          web applications and ensuring their scalability, performance, and
-          security.
-        </p>
-      </div>
-      </div>
-    </section>
-  );
-};
+          <h3 className="font-heading text-xl font-semibold text-[#171a15] dark:text-[#f4f3eb]">{title}</h3>
+          <p className="mt-3 text-sm leading-6 text-[#62675c] dark:text-[#aeb5a5]">{copy}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+);
 
 export default AboutMe;

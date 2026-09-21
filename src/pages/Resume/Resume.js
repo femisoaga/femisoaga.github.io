@@ -7,13 +7,13 @@ import ResumeDetails from "./ResumeDetails";
 
 const Resume = () => {
   return (
-    <div className="relative px-6 pt-32 pb-24">
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-10">
+    <div className="relative px-5 pb-24 pt-36 sm:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
         <FadeIn delay={200}>
-          <FrostedPanel className="p-8 sm:p-12">
-            <div className="space-y-5">
-              <p className="text-sm uppercase tracking-[0.45em] text-blue-300/70">Resume</p>
-              <h1 className={`${colors.text.primary} text-4xl font-bold md:text-5xl`}>
+          <div className="py-10 sm:py-16">
+            <div className="max-w-4xl space-y-6">
+              <p className="eyebrow">Résumé</p>
+              <h1 className={`${colors.text.primary} font-heading text-5xl font-semibold leading-[0.98] tracking-[-0.055em] md:text-7xl`}>
                 Experience, education, and the skills I rely on to ship quality software.
               </h1>
               <p className={`${colors.text.secondary} max-w-3xl text-base md:text-lg`}>
@@ -21,7 +21,7 @@ const Resume = () => {
                 backend, and DevOps initiatives.
               </p>
             </div>
-          </FrostedPanel>
+          </div>
         </FadeIn>
 
         <FadeIn delay={400}>

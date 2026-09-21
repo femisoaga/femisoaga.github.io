@@ -7,25 +7,25 @@ import ContactMeDetails from "./ContactMeDetails";
 
 const ContactMe = () => {
   return (
-    <div className="relative px-6 pt-32 pb-24">
-      <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-10 text-center">
+    <div className="relative px-5 pb-24 pt-36 sm:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
         <FadeIn delay={200}>
-          <FrostedPanel className="p-8 sm:p-12">
-            <div className="space-y-5">
-              <p className="text-xs uppercase tracking-[0.45em] text-blue-300/70">Let&apos;s Collaborate</p>
-              <h1 className={`${colors.text.primary} text-4xl font-bold md:text-5xl`}>
+          <div className="py-10 text-left sm:py-16">
+            <div className="max-w-4xl space-y-6">
+              <p className="eyebrow">Let&apos;s collaborate</p>
+              <h1 className={`${colors.text.primary} font-heading text-5xl font-semibold leading-[0.98] tracking-[-0.055em] md:text-7xl`}>
                 Ready to build your next experience? I&apos;d love to hear from you.
               </h1>
-              <p className={`${colors.text.secondary} mx-auto max-w-2xl text-base md:text-lg`}>
+              <p className={`${colors.text.secondary} max-w-2xl text-base md:text-lg`}>
                 Share a few details about the challenge you&apos;re exploring, and I&apos;ll respond with
                 ideas, timelines, and next steps.
               </p>
             </div>
-          </FrostedPanel>
+          </div>
         </FadeIn>
 
         <FadeIn delay={400}>
-          <FrostedPanel className="w-full p-6 sm:p-8">
+          <FrostedPanel className="w-full p-6 sm:p-10">
             <ContactMeDetails />
           </FrostedPanel>
         </FadeIn>

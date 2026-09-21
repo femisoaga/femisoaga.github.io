@@ -18,15 +18,15 @@ export const Certifications = () => {
   ];
 
   return (
-    <div className="w-full max-w-5xl mb-10">
-      <h3 className={`${colors.text.primary} text-2xl font-bold text-center mb-8`}>
+    <div className="mb-10 w-full max-w-6xl">
+      <h3 className={`${colors.text.primary} mb-8 text-2xl font-bold`}>
         Certifications
       </h3>
       <div className="grid md:grid-cols-2 gap-6">
         {certs.map((cert, index) => (
           <div
             key={index}
-            className={`backdrop-blur-xl ${colors.bg.secondary} rounded-2xl p-6 border ${colors.border.default} shadow-xl flex items-start gap-4 transition-all hover:border-blue-400/50`}
+            className="editorial-card flex items-start gap-4 rounded-[1.5rem] p-6 transition-all hover:border-[#a9c52a]"
           >
             <cert.icon className={`w-10 h-10 ${colors.text.accent} flex-shrink-0`} />
             <div>

@@ -29,7 +29,7 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          'Nunito',
+          'DM Sans',
           'ui-sans-serif',
           'system-ui',
           '-apple-system',
@@ -41,8 +41,7 @@ module.exports = {
           'sans-serif',
         ],
         heading: [
-          'Poppins',
-          'Montserrat',
+          'Space Grotesk',
           'ui-sans-serif',
           'system-ui',
           'Segoe UI',

@@ -76,26 +76,25 @@ export const Services = () => {
   ];
 
   return (
-    <div id="services" className="w-full max-w-6xl">
-      <h2 className={`${colors.text.primary} text-3xl md:text-4xl font-bold text-center mb-4 mt-20`}>
-        What I Can Do For You
-      </h2>
-      <p className={`${colors.text.secondary} text-center mb-12 max-w-2xl mx-auto`}>
-        Versatile full-stack development expertise across industries—from startups to enterprise applications
-      </p>
+    <div id="services" className="w-full max-w-6xl scroll-mt-32">
+      <div className="mb-10 mt-28 max-w-3xl">
+        <p className="eyebrow mb-5">Capabilities</p>
+        <h2 className="section-title">From rough idea to reliable product.</h2>
+        <p className={`${colors.text.secondary} mt-5 max-w-2xl text-lg`}>Focused engineering support for startups and teams that care about craft, speed, and sustainable foundations.</p>
+      </div>
       <div className="grid gap-6 md:grid-cols-3">
         {services.map((service, index) => (
           <div
             key={index}
-            className={`backdrop-blur-xl ${colors.bg.secondary} rounded-2xl p-6 border ${colors.border.default} shadow-xl transition-all duration-300 hover:scale-105 hover:border-blue-400/50 group`}
+            className="editorial-card group relative overflow-hidden rounded-[1.75rem] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#a9c52a]"
           >
-            <div className="relative mb-4 h-14 w-14">
-              <div className="absolute inset-0 rounded-full bg-blue-200/40 opacity-0 transition-opacity duration-300 dark:bg-blue-500/10" />
-              <service.icon className={`relative z-10 h-12 w-12 ${colors.text.accent} transition-transform duration-500 group-hover:rotate-[360deg]`} />
+            <span className="absolute right-6 top-5 font-heading text-sm text-[#969b8d]">0{index + 1}</span>
+            <div className="mb-10 grid h-12 w-12 place-items-center rounded-full bg-[#dfff4f] text-[#171a15]">
+              <service.icon className="h-6 w-6 transition-transform duration-500 group-hover:rotate-12" />
             </div>
-            <h3 className={`${colors.text.primary} text-xl font-semibold mb-3`}>{service.title}</h3>
-            <p className={`${colors.text.secondary} mb-4 text-sm leading-relaxed`}>{service.description}</p>
-            <p className={`${colors.text.accent} text-xs font-mono`}>{service.tech}</p>
+            <h3 className={`${colors.text.primary} mb-3 text-xl font-semibold`}>{service.title}</h3>
+            <p className={`${colors.text.secondary} mb-8 text-sm leading-relaxed`}>{service.description}</p>
+            <p className="border-t border-black/10 pt-5 text-xs font-bold uppercase tracking-[0.12em] text-[#6f7f1c] dark:border-white/10 dark:text-[#dfff4f]">{service.tech}</p>
           </div>
         ))}
       </div>

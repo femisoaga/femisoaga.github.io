@@ -1,10 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ArrowRight, Github, Linkedin, Mail, Sparkles, Twitter } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, MapPin, Twitter } from "lucide-react";
 import { FadeIn } from '../../components/common/FadeIn';
-import { TypewriterText } from '../../components/common/TypewritterText';
 import { TechStack } from '../../components/common/TechStack';
-import { Badge } from '../../components/common/Badge';
 import { colors } from '../../components/common/Colors';
 import { Button } from '../../components/common/Button';
 import { Stats } from '../../components/common/Stats';
@@ -12,22 +10,16 @@ import { CTASection } from '../../components/common/CTASection';
 import { Services } from '../../components/common/Services';
 import { Experience } from '../../components/common/Experience';
 import { Certifications } from '../../components/common/Certifications';
-import heroBackdrop from "../../assets/bg.png";
+import portrait from "../../assets/dp.jpg";
 import batOne from "../../assets/bat-one.png";
 import batFour from "../../assets/bat-four.png";
 
 
 export default function Home() {
-  const typewriterTexts = [
-    "Frontend Engineer",
-    "DevOps Engineer",
-    "Problem Solver"
-    ];
   const heroRef = useRef(null);
   const parallaxRef = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
-  const [heroTransform, setHeroTransform] = useState({ scale: 1, translateY: 0, opacity: 1 });
   const [parallaxActive, setParallaxActive] = useState(false);
   const [parallaxProgress, setParallaxProgress] = useState(0);
 
@@ -137,20 +129,8 @@ export default function Home() {
     let animationFrame;
 
     const handleScroll = () => {
-      const heroElement = heroRef.current;
       const parallaxElement = parallaxRef.current;
       const viewportHeight = window.innerHeight || 0;
-
-      let nextHeroTransform = null;
-      if (heroElement) {
-        const { top, height } = heroElement.getBoundingClientRect();
-        const progress = Math.min(1, Math.max(0, (viewportHeight - top) / (viewportHeight + height)));
-        const scale = 1 + progress * 0.25;
-        const translateY = progress * 60;
-        const opacity = 0.35 + (1 - progress) * 0.25;
-
-        nextHeroTransform = { scale, translateY, opacity };
-      }
 
       let nextParallaxActive = false;
       let nextParallaxProgress = 0;
@@ -169,9 +149,6 @@ export default function Home() {
 
       if (animationFrame) cancelAnimationFrame(animationFrame);
       animationFrame = requestAnimationFrame(() => {
-        if (nextHeroTransform) {
-          setHeroTransform(nextHeroTransform);
-        }
         setParallaxActive(nextParallaxActive);
         setParallaxProgress(nextParallaxActive ? nextParallaxProgress : 0);
       });
@@ -188,91 +165,55 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen pt-28">
-      <style>{`
-        @keyframes fadeInDown {
-          from {
-            opacity: 0;
-            transform: translate(-50%, -20px);
-          }
-          to {
-            opacity: 1;
-            transform: translate(-50%, 0);
-          }
-        }
-        .animate-fadeInDown {
-          animation: fadeInDown 0.8s ease-out;
-        }
-      `}</style>
-      
-      <main className="flex flex-col items-center justify-center px-6 pt-8 pb-32">
+      <main className="flex flex-col items-center justify-center px-5 pb-24 pt-8 sm:px-8">
         <section
           ref={heroRef}
-          className="relative flex w-full max-w-5xl flex-col items-center rounded-[2.5rem] border border-blue-300/30 bg-white/80 px-6 py-20 text-center shadow-[0_30px_90px_-35px_rgba(15,23,42,0.25)] backdrop-blur-3xl sm:px-12 lg:px-16 dark:border-blue-500/20 dark:bg-slate-950/40 dark:shadow-[0_40px_120px_-40px_rgba(56,189,248,0.45)]"
+          className="editorial-card relative grid w-full max-w-6xl overflow-hidden rounded-[2rem] lg:min-h-[660px] lg:grid-cols-[1.25fr_0.75fr]"
         >
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 -z-10 overflow-hidden rounded-[2.5rem]"
-          >
-            <div className="absolute inset-0 bg-white/60 dark:bg-slate-900/70" />
-            <img
-              src={heroBackdrop}
-              alt=""
-              className="absolute inset-0 h-full w-full object-cover opacity-50 dark:opacity-70"
-              style={{
-                transform: `translate3d(0, ${heroTransform.translateY}px, 0) scale(${heroTransform.scale})`,
-                opacity: heroTransform.opacity,
-                transition: "transform 80ms linear, opacity 120ms ease-out",
-                willChange: "transform, opacity",
-              }}
-            />
-            <div className="absolute inset-0 bg-blue-200/20 dark:bg-blue-500/15" />
-            <div className="absolute inset-0 mix-blend-screen bg-blue-100/10 dark:bg-blue-400/10" />
+          <div className="flex flex-col justify-between p-7 sm:p-12 lg:p-16">
+            <FadeIn delay={100}>
+              <div className="eyebrow">Available for select projects</div>
+            </FadeIn>
+
+            <div className="py-16 lg:py-10">
+              <FadeIn delay={250}>
+                <p className="mb-5 font-heading text-lg font-medium text-[#697914] dark:text-[#dfff4f]">Frontend + cloud engineering</p>
+                <h1 className="max-w-3xl font-heading text-[clamp(3.25rem,7vw,6.8rem)] font-semibold leading-[0.88] tracking-[-0.07em] text-[#171a15] dark:text-[#f4f3eb]">
+                  I build digital products that <span className="italic text-[#718317] dark:text-[#dfff4f]">perform.</span>
+                </h1>
+              </FadeIn>
+
+              <FadeIn delay={450}>
+                <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[#62675c] sm:text-xl dark:text-[#aeb5a5]">
+                  I&apos;m Oluwafemi Soaga, an engineer turning ambitious ideas into fast, resilient web products—from refined interfaces to reliable cloud infrastructure.
+                </p>
+              </FadeIn>
+            </div>
+
+            <FadeIn delay={650}>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button variant="cta" onClick={handleViewWork}>Explore selected work <ArrowRight className="h-5 w-5" /></Button>
+                <Button variant="ghost" className="border border-black/15 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10" onClick={handleScrollToCTA}><Mail className="h-5 w-5" /> Let&apos;s talk</Button>
+              </div>
+            </FadeIn>
           </div>
 
-          <FadeIn delay={200}>
-            <div className="mb-8 flex justify-center">
-              <Badge icon={Sparkles}>Available for Freelance & Contract Work</Badge>
+          <div className="relative min-h-[440px] overflow-hidden bg-[#cad864] lg:min-h-full">
+            <img src={portrait} alt="Oluwafemi Soaga" className="absolute inset-0 h-full w-full object-cover object-top grayscale transition duration-700 hover:grayscale-0" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#171a15]/75 via-transparent to-transparent" />
+            <div className="absolute right-5 top-5 rounded-full bg-[#dfff4f] px-4 py-2 font-heading text-xs font-bold uppercase tracking-[0.16em] text-[#171a15]">4+ years shipping</div>
+            <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-7 text-white sm:p-9">
+              <div>
+                <p className="font-heading text-2xl font-semibold text-white">Oluwafemi Soaga</p>
+                <p className="mt-1 flex items-center gap-2 text-sm text-white/75"><MapPin className="h-4 w-4" /> Lagos, Nigeria · Working globally</p>
+              </div>
+              <span className="h-3 w-3 animate-pulse rounded-full bg-[#dfff4f] shadow-[0_0_0_8px_rgba(223,255,79,0.18)]" />
             </div>
-          </FadeIn>
-
-          <FadeIn delay={400}>
-            <h1 className={`${colors.text.primary} text-5xl font-bold leading-tight md:text-7xl`}>
-              Hi, I'm{" "}
-              <span className="text-blue-600 dark:text-blue-300">
-                Oluwafemi Soaga
-              </span>
-            </h1>
-          </FadeIn>
-
-          <FadeIn delay={600}>
-            <div className={`${colors.text.primary} mb-6 flex min-h-[60px] items-center justify-center text-3xl font-semibold md:text-4xl`}>
-              <TypewriterText texts={typewriterTexts} />
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={800}>
-            <p className={`${colors.text.secondary} mb-12 max-w-2xl text-lg md:text-xl`}>
-              I turn complex problems into elegant solutions.
-I specialize in building high-performance, user-centric web applications — from responsive frontends to scalable backend and cloud infrastructure that drive business growth.
-            </p>
-          </FadeIn>
-
-          <FadeIn delay={1000}>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Button variant="cta" onClick={handleScrollToCTA}>
-                <Mail className="h-5 w-5" />
-                Get In Touch
-              </Button>
-              <Button variant="ghost" className="hover:bg-blue-500/10" onClick={handleViewWork}>
-                View My Work
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-            </div>
-          </FadeIn>
+          </div>
         </section>
 
         <FadeIn delay={1200}>
-          <div className="mt-20 w-full max-w-5xl">
+          <div className="mt-8 w-full max-w-6xl">
             <Stats />
           </div>
         </FadeIn>
