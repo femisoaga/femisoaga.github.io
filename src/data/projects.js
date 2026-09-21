@@ -1,234 +1,287 @@
-// src/data/projects.js
-
 import sarepayImage from "../assets/sarepay.png";
 import uniswitchImage from "../assets/uniswitch.png";
 import kekereImage from "../assets/kekere.png";
-import billerhqImage from "../assets/billerhq.png";
+import bbwmlImage from "../assets/bbwml.png";
+import seekoolImage from "../assets/seekool.png";
 import cloudPractitionerBadge from "../assets/cloudpractioner badge.png";
 import solutionsArchitectBadge from "../assets/solutions architect badge.png";
 import alxLogo from "../assets/Alx-logo-black.svg";
-import celoxImage from "../assets/celox.png";
 import estazImage from "../assets/estaz.png";
-import stainbockImage from "../assets/stainbock.png";
-import nolabelImage from "../assets/nolabel.png";
-import bbwmlImage from "../assets/bbwml.png";
-import seekoolImage from "../assets/seekool.png";
-import hrdeskImage from "../assets/hrdesk.png";
 
-// ---------------------------------------------
-// Categories
-// ---------------------------------------------
-export const categories = [
-  { id: "web-apps", label: "Web Apps" },
-  { id: "wordpress", label: "WordPress Sites" },
-  { id: "devops-cert", label: "Certifications" },
-  { id: "product-experiments", label: "Product Experiments" },
-];
-
-// ---------------------------------------------
-// Utilities
-// ---------------------------------------------
-export const sortProjectsByDateDesc = (arr) =>
-  [...arr].sort((a, b) => {
-    const ad = a?.date ? new Date(a.date).getTime() : -Infinity;
-    const bd = b?.date ? new Date(b.date).getTime() : -Infinity;
-    return bd - ad;
-  });
-
-export const byCategory = (arr, categoryId) =>
-  arr.filter((p) => p.categoryIds?.includes(categoryId));
-
-export const featuredFirst = (arr) =>
-  [...arr].sort((a, b) => Number(b.featured) - Number(a.featured));
-
-// ---------------------------------------------
-// Projects
-// ---------------------------------------------
 export const projects = [
-  // ---------- WEB APPS ----------
   {
-    id: "bbwml",
-    title: "BBWML — Wealth Management Platform",
-    description:
-      "A corporate wealth management platform offering advisory and investment solutions, built with Next.js, Tailwind CSS, and TypeScript.",
-    image: bbwmlImage,
-    tags: ["Next.js", "Tailwind", "TypeScript"],
-    categoryIds: ["web-apps"],
-    href: "https://bbwml.com/",
-    date: null,
+    id: "business-central",
+    slug: "business-central",
+    title: "Business Central",
+    category: "Enterprise Fintech Platform",
+    categoryIds: ["featured"],
+    status: "Internal Product — Private Access",
+    description: "A multi-module banking operations platform supporting business banking, mobile banking, POS operations, credit facilities, administration, approvals and provider configuration.",
+    role: "Frontend delivery across complex banking and operational workflows.",
+    tags: ["React", "TypeScript", "REST APIs", "RBAC"],
+    features: ["Business and mobile banking operations", "POS and credit-facility workflows", "Permission-gated actions and approval policies", "API-backed tables, filtering and pagination", "Document uploads, exports and audit trails", "Provider, KYC and tenant configuration"],
+    decisions: ["Kept sensitive product access private while documenting reusable engineering patterns.", "Modelled loading, validation, error and permission states as first-class UI states."],
+    confidentialityNote: "No internal URLs, source code, customer records, transactions or proprietary screenshots are shown.",
+    accent: "#dfff4f",
   },
   {
-    id: "seekoool",
-    title: "Seekoool — Eyewear E-Commerce",
-    description:
-      "An online eyewear store providing high-quality glasses and personalized shopping experiences, developed with Next.js, Tailwind CSS, and TypeScript.",
-    image: seekoolImage,
-    tags: ["Next.js", "E-commerce", "TypeScript"],
-    categoryIds: ["web-apps"],
-    href: "https://seekoool-test.vercel.app/",
-    date: null,
+    id: "bucks-invest-partners",
+    slug: "bucks-invest-partners",
+    title: "Bucks Invest Partners",
+    category: "Investment Management Platform",
+    categoryIds: ["featured"],
+    status: "Internal Product — Private Access",
+    description: "A partner-facing investment platform supporting organisational onboarding, KYB, investment-product operations, portfolio activity, reporting and administration.",
+    role: "Frontend implementation for onboarding, investment operations and administration.",
+    tags: ["Next.js", "TypeScript", "TanStack Query", "Zustand"],
+    features: ["Registration, authentication and OTP verification", "Multi-step KYB and document uploads", "Bank-account verification and authorised signatories", "Investment product creation, approval and publishing", "Portfolio dashboards, analytics and CSV exports", "Server-Sent Events notifications and audit history"],
+    decisions: ["Separated authentication, session-expiry and token-refresh concerns from product workflows.", "Used server-state and client-state tools for distinct responsibilities."],
+    confidentialityNote: "Legacy investor and settlement routes are not presented as completed. No private URLs or financial records are exposed.",
+    accent: "#ff714b",
+  },
+  {
+    id: "alert-evaluate",
+    slug: "alert-evaluate",
+    title: "AlertEvaluate",
+    category: "Enterprise HR Platform",
+    categoryIds: ["featured"],
+    status: "Internal Product — Private Access",
+    description: "A role-based employee appraisal platform supporting enrolment, self-assessment, manager review, approval, return, acceptance and HR administration.",
+    role: "Owned the frontend implementation across employee, manager and HR workflows.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack Query", "Zustand"],
+    features: ["Zoho SSO and role-aware access", "Department and staff imports", "Supervisor relationships and enrolment", "Self-assessment and manager review", "Approval, return and acceptance workflows", "Reports, exports and prerequisite guidance"],
+    decisions: ["Built role-specific states around one shared appraisal domain.", "Created reusable loading, pagination, restricted-state and import components."],
+    confidentialityNote: "Employee information, internal URLs and proprietary screens are excluded.",
+    accent: "#93c5fd",
+  },
+  {
+    id: "sahara-centre",
+    slug: "sahara-centre",
+    title: "The Sahara Centre",
+    category: "WordPress Website & Research Platform",
+    categoryIds: ["featured"],
+    status: "Live Client Project",
+    description: "Built The Sahara Centre’s complete WordPress website, combining institutional storytelling, initiatives, events and engagement pathways with a searchable African indigenous-knowledge research database.",
+    role: "Built the complete WordPress website and its information architecture.",
+    tags: ["WordPress", "Content Architecture", "Responsive UI", "Search & Filtering"],
+    features: ["Mission-led institutional website", "Research database with multi-facet filtering", "Publication detail, preview and download journeys", "Initiatives, events and organisation history", "Team, fellows and advisory-board content", "Partnership, volunteering, careers and donation pathways"],
+    improvements: ["Use a cleaner canonical research-database URL.", "Improve CTA consistency and the previous-events journey.", "Correct duplicated or malformed content where present."],
+    liveUrl: "https://saharacentre.org/",
+    accent: "#f59e0b",
+  },
+  {
+    id: "kindrel-partners",
+    slug: "kindrel-partners",
+    title: "Kindrel Partners",
+    category: "Next.js Client Website",
+    categoryIds: ["featured"],
+    status: "Live Client Project",
+    description: "Built and deployed a responsive Next.js website for a Jersey-based people-experience business covering relocation, bespoke HR and high-impact experiences.",
+    role: "Frontend delivery, content architecture and production deployment.",
+    tags: ["Next.js", "SEO", "cPanel", "PHPMailer"],
+    features: ["Responsive service-led website", "SEO metadata, sitemap and robots configuration", "Static Next.js export", "Namecheap shared-hosting and cPanel deployment", "PHP/PHPMailer contact endpoint with authenticated SMTP", "Honeypot handling, logging and deployment troubleshooting"],
+    improvements: ["Restore a publicly trusted SSL certificate before linking visitors to the live site."],
+    confidentialityNote: "The live button is withheld because the current certificate could not be verified during this update.",
+    accent: "#c4b5fd",
+  },
+  {
+    id: "vendorcredit",
+    slug: "vendorcredit",
+    title: "VendorCredit",
+    category: "Mini Personal Full-Stack Project",
+    categoryIds: ["selected"],
+    status: "Personal Project — Improvement in Progress",
+    description: "A small full-stack loan-request application where authenticated users can submit requests and view account-specific request history.",
+    tags: ["React", "TypeScript", "ASP.NET Core", "Firebase"],
+    features: ["Account creation and sign-in", "Protected routes and bearer-token API calls", "Loan request form with client and server validation", "Firebase token verification in ASP.NET Core", "User-scoped Firestore records", "Loading, empty, success and error states"],
+    improvements: ["Correct the frontend entry-file mismatch and verify the application end to end.", "Improve accessibility and add automated tests.", "Review production CORS, Swagger, error handling and deployment configuration."],
+    accent: "#60a5fa",
+  },
+  {
+    id: "mylga",
+    slug: "mylga",
+    title: "MyLGA",
+    category: "Civic Technology / Data Platform",
+    categoryIds: ["selected"],
+    status: "Personal Product — In Development",
+    description: "A civic-technology platform intended to help Nigerians understand leadership and public information across the country’s 774 local governments.",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Zod"],
+    features: ["LGA directory and selector", "Official and LGA profile cards", "Source and verification labels", "Typed data validation", "API route and Prisma data model", "Published records remain limited to verified available data"],
+    improvements: ["Continue verified data collection beyond the current published coverage.", "Keep allocation, budget, project, audit and community features labelled as planned until implemented."],
+    accent: "#34d399",
+  },
+  {
+    id: "amaanah-admin",
+    slug: "amaanah-admin",
+    title: "Amaanah Admin",
+    category: "Fintech Client Prototype",
+    categoryIds: ["selected"],
+    status: "Private Client Project — In Development",
+    description: "An early-stage frontend prototype for a non-interest finance operations portal, with responsive dashboard foundations, typed forms and reusable finance-oriented interface components.",
+    tags: ["Next.js", "TypeScript", "React Hook Form", "Zod"],
+    features: ["Login and two-factor verification interfaces", "Responsive dashboard journey", "Typed, schema-validated forms", "Reusable finance-oriented UI components", "Loading and empty interface states"],
+    improvements: ["Replace mocked authentication and static dashboard data.", "Complete backend integration and authorization before operational use."],
+    confidentialityNote: "Authentication and dashboard data are mocked; this is not presented as an operational finance system.",
+    accent: "#2dd4bf",
   },
   {
     id: "sarepay",
-    title: "Sarepay — Payment Platform",
-    description:
-      "A fintech web app for seamless business payments and settlements, built with Next.js, Tailwind CSS, and TypeScript.",
+    slug: "sarepay",
+    title: "Sarepay",
+    category: "Payment Platform",
+    categoryIds: ["selected"],
+    status: "Live Client Project",
+    description: "A responsive fintech experience for business payments and settlement workflows.",
     image: sarepayImage,
-    tags: ["Next.js", "Tailwind", "TypeScript"],
-    categoryIds: ["web-apps"],
-    featured: true,
-    href: "https://sarepay.com",
-    date: "2024-03-15",
+    imageAlt: "Sarepay payment platform interface",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://sarepay.com",
   },
   {
     id: "kekere",
-    title: "Kekere — Real Estate Investment",
-    description:
-      "A property investment platform enabling users to invest in rental and off-plan real estate, developed with Next.js, Tailwind CSS, and TypeScript.",
+    slug: "kekere",
+    title: "Kekere",
+    category: "Real Estate Investment Platform",
+    categoryIds: ["selected"],
+    status: "Live Client Project",
+    description: "A responsive property-investment experience for rental and off-plan real estate opportunities.",
     image: kekereImage,
-    tags: ["Next.js", "Tailwind", "TypeScript"],
-    categoryIds: ["web-apps"],
-    featured: true,
-    href: "https://kekere.com",
-    date: "2023-09-18",
+    imageAlt: "Kekere real estate investment interface",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://kekere.com",
   },
   {
-    id: "billerhq",
-    title: "BillerHQ — Bill Management Platform",
-    description:
-      "A billing automation dashboard for enterprises, featuring role-based access and real-time analytics, built with React and Tailwind CSS.",
-    image: billerhqImage,
-    tags: ["React", "Tailwind"],
-    categoryIds: ["web-apps"],
-    href: "https://billerhq.com",
-    date: "2023-05-09",
+    id: "bbwml",
+    slug: "bbwml",
+    title: "BBWML",
+    category: "Wealth Management Website",
+    categoryIds: ["selected"],
+    status: "Live Client Project",
+    description: "A responsive corporate website presenting wealth-management advisory and investment services.",
+    image: bbwmlImage,
+    imageAlt: "BBWML wealth management website",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://bbwml.com/",
   },
   {
-    id: "celox-assist",
-    title: "Celox Assist — Loan Management System",
-    description:
-      "An internal loan management system for handling onboarding, compliance, and disbursement, built with Next.js, Tailwind CSS, and TypeScript.",
-    image: celoxImage,
-    tags: ["Next.js", "Tailwind", "TypeScript"],
-    categoryIds: ["web-apps"],
-    href: "https://assist.celoxtech.com/",
-    date: null,
-  },
-  {
-    id: "hrdesk-staging",
-    title: "HRDesk — Workforce Management Portal",
-    description:
-      "An HR platform for managing employees, roles, and workflows, developed with Next.js, Tailwind CSS, and TypeScript.",
-    image: hrdeskImage,
-    tags: ["Next.js", "Tailwind", "TypeScript"],
-    categoryIds: ["web-apps"],
-    href: "https://staging-dashboard.hrdesk.africa/",
-    date: null,
+    id: "seekoool",
+    slug: "seekoool",
+    title: "Seekoool",
+    category: "E-commerce Experience",
+    categoryIds: ["selected"],
+    status: "Public Preview",
+    description: "A responsive eyewear shopping experience focused on product discovery and clear purchasing journeys.",
+    image: seekoolImage,
+    imageAlt: "Seekoool eyewear storefront",
+    tags: ["Next.js", "TypeScript", "E-commerce"],
+    liveUrl: "https://seekoool-test.vercel.app/",
   },
   {
     id: "uniswitch",
-    title: "Uniswitch — Fintech Company Website",
-    description:
-      "A responsive marketing and information site for Uniswitch, showcasing fintech services and integrations, built with Next.js, Tailwind CSS, and TypeScript.",
+    slug: "uniswitch",
+    title: "Uniswitch",
+    category: "Fintech Company Website",
+    categoryIds: ["selected"],
+    status: "Live Client Project",
+    description: "A responsive company website presenting fintech services and integration capabilities.",
     image: uniswitchImage,
-    tags: ["Next.js", "Tailwind", "TypeScript"],
-    categoryIds: ["web-apps"],
-    featured: true,
-    href: "https://www.uniswitchng.com",
-    date: "2023-12-01",
-  },
-
-  // ---------- WORDPRESS ----------
-  {
-    id: "stainbock",
-    title: "Stainbock — IT Services Website",
-    description:
-      "A WordPress-based site for an IT company offering managed services, cloud solutions, and infrastructure support.",
-    image: stainbockImage,
-    tags: ["WordPress", "Elementor"],
-    categoryIds: ["wordpress"],
-    href: "https://stainbock.co.uk/",
-    date: null,
-  },
-  {
-    id: "nolabelent",
-    title: "No Label Entertainment — Creative Brand",
-    description:
-      "A multimedia WordPress platform for an entertainment brand combining music, fashion, and culture.",
-    image: nolabelImage,
-    tags: ["WordPress", "E-commerce", "Media"],
-    categoryIds: ["wordpress"],
-    href: "https://nolabelent.com/",
-    date: null,
+    imageAlt: "Uniswitch fintech company website",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://www.uniswitchng.com",
   },
   {
     id: "estaz",
-    title: "Estaz Clothing — Fashion E-Commerce",
-    description:
-      "A WordPress e-commerce platform for a sustainable fashion brand focused on culture, innovation, and design.",
+    slug: "estaz",
+    title: "Estaz E-commerce",
+    category: "E-commerce Implementation",
+    categoryIds: ["selected"],
+    status: "Client Project",
+    description: "A WooCommerce implementation involving payments, logistics rules and production troubleshooting for a fashion retailer.",
     image: estazImage,
-    tags: ["WordPress", "E-commerce", "Fashion"],
-    categoryIds: ["wordpress"],
-    href: "https://estazclothing.com/",
-    date: null,
+    imageAlt: "Estaz fashion e-commerce website",
+    tags: ["WordPress", "WooCommerce", "Paystack", "DHL"],
+    features: ["Paystack payment integration", "DHL and weight-based shipping", "Product weight and dimension configuration", "Conditional shipping rules", "Plugin-constraint and production troubleshooting"],
+    confidentialityNote: "The previous public URL no longer resolves, so no live-site action is shown.",
   },
-
-  // ---------- CERTIFICATIONS ----------
   {
-    id: "aws-cloud-practitioner",
-    title: "AWS Certified Cloud Practitioner",
-    description:
-      "Certification validating AWS cloud fundamentals, security, and cost-optimization principles.",
-    image: cloudPractitionerBadge,
-    tags: ["AWS", "Certification"],
-    categoryIds: ["devops-cert"],
-    href: "https://www.credly.com/badges/0148e939-c4d0-4aa2-8451-c1c0d027ae35",
-    date: "2023-11-12",
+    id: "agronetiq",
+    slug: "agronetiq",
+    title: "AgroNetiq",
+    category: "Mobile Product",
+    categoryIds: ["experiments"],
+    status: "In Development",
+    description: "An in-development mobile marketplace exploring digital infrastructure for African agricultural markets.",
+    tags: ["React Native", "Expo", "TypeScript", "Expo Router"],
+    features: ["Buyer and seller navigation flows", "Registration, login and OTP interfaces", "Product, cart, order and store-management screens", "AsyncStorage-backed session and theme persistence", "API service abstraction with an offline mock implementation"],
+    confidentialityNote: "Notifications are currently mocked and the product is not described as released or production-ready.",
+    accent: "#84cc16",
+  },
+  {
+    id: "macrozone",
+    slug: "macrozone",
+    title: "Macrozone",
+    category: "React Native Learning Project",
+    categoryIds: ["experiments"],
+    status: "Learning Prototype",
+    description: "A local-first meal and macronutrient tracker built while developing practical React Native and Expo experience.",
+    tags: ["React Native", "Expo", "TypeScript", "AsyncStorage"],
+    features: ["Meal entry and nutrition totals", "Local persistence and meal history", "Individual deletion and clear-all actions", "Native sharing, clipboard and haptic feedback", "Scheduled meal reminders"],
+    improvements: ["Filter daily totals by date.", "Complete Android notification configuration and release setup.", "Resolve repository TypeScript issues, unintended routes and missing tests."],
+    accent: "#fb7185",
+  },
+  {
+    id: "finop",
+    slug: "finop",
+    title: "FinOp",
+    category: "Fintech Product Exploration",
+    categoryIds: ["experiments"],
+    status: "In Development",
+    description: "A frontend exploration of a responsive financial-operations dashboard and team workspace.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Clerk"],
+    features: ["Responsive dashboard foundation", "Authentication scaffolding", "Team directory and profile settings", "Loading and empty states", "Reusable interface components"],
+    confidentialityNote: "Metrics are mocked and no AI-powered workflow is presented as implemented.",
+    accent: "#a78bfa",
   },
   {
     id: "aws-solutions-architect",
     title: "AWS Certified Solutions Architect – Associate",
-    description:
-      "Certification demonstrating expertise in designing resilient, scalable, and cost-efficient AWS architectures.",
+    category: "AWS Certification",
+    categoryIds: ["credentials"],
+    status: "Verified Credential",
+    description: "AWS credential covering resilient, scalable and cost-conscious cloud architecture.",
     image: solutionsArchitectBadge,
-    tags: ["AWS", "Architecture"],
-    categoryIds: ["devops-cert"],
-    href: "https://www.credly.com/badges/7a37ac9b-3286-4a18-9928-efd86f1b19d8",
+    imageAlt: "AWS Solutions Architect Associate certification badge",
+    tags: ["AWS", "Cloud Architecture"],
+    liveUrl: "https://www.credly.com/badges/7a37ac9b-3286-4a18-9928-efd86f1b19d8",
+    actionLabel: "Verify credential",
     date: "2023-09-07",
   },
   {
-    id: "alx-aws",
-    title: "ALX — AWS Cloud Computing Specialization",
-    description:
-      "A hands-on program covering key AWS services, automation, and operational excellence.",
-    image: alxLogo,
-    tags: ["Cloud", "Specialization"],
-    categoryIds: ["devops-cert", "product-experiments"],
-    href: "https://www.alxafrica.com/",
-    date: "2023-06-20",
+    id: "aws-cloud-practitioner",
+    title: "AWS Certified Cloud Practitioner",
+    category: "AWS Certification",
+    categoryIds: ["credentials"],
+    status: "Verified Credential",
+    description: "AWS credential covering cloud concepts, security, services and cost fundamentals.",
+    image: cloudPractitionerBadge,
+    imageAlt: "AWS Cloud Practitioner certification badge",
+    tags: ["AWS", "Cloud Fundamentals"],
+    liveUrl: "https://www.credly.com/badges/0148e939-c4d0-4aa2-8451-c1c0d027ae35",
+    actionLabel: "Verify credential",
+    date: "2023-11-12",
   },
   {
-    id: "alx-foundation",
-    title: "ALX Foundation Program",
-    description:
-      "An intensive foundation program focused on product thinking, agile teamwork, and delivery practices.",
+    id: "alx-aws",
+    title: "ALX AWS Cloud Computing Specialization",
+    category: "Training & Specialization",
+    categoryIds: ["credentials"],
+    status: "Training Credential",
+    description: "A practical specialization covering AWS services, automation and cloud operations.",
     image: alxLogo,
-    tags: ["Collaboration", "Product"],
-    categoryIds: ["product-experiments"],
-    date: "2022-12-10",
+    imageAlt: "ALX logo",
+    tags: ["AWS", "Cloud", "Specialization"],
+    date: "2023-06-20",
   },
 ];
 
-// ---------------------------------------------
-// Helpers
-// ---------------------------------------------
-export const projectsByCategory = {
-  webApps: sortProjectsByDateDesc(byCategory(projects, "web-apps")),
-  wordpress: sortProjectsByDateDesc(byCategory(projects, "wordpress")),
-  certs: sortProjectsByDateDesc(byCategory(projects, "devops-cert")),
-  experiments: sortProjectsByDateDesc(
-    byCategory(projects, "product-experiments")
-  ),
-};
-
-export const featuredProjects = featuredFirst(projects).slice(0, 6);
+export const getProjectBySlug = (slug) => projects.find((project) => project.slug === slug);

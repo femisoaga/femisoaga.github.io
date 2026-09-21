@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React from "react";
 import { useSearchParams } from "react-router-dom";
 
 import { FadeIn } from "../../components/common/FadeIn";
@@ -20,28 +20,12 @@ const Portfolio = () => {
   );
   const activeCategoryId = activeCategory?.id ?? defaultCategoryId;
 
-  useEffect(() => {
-    if (!activeCategory && defaultCategoryId) {
-      setSearchParams({ cat: defaultCategoryId }, { replace: true });
-    }
-  }, [activeCategory, setSearchParams]);
-
-  const counts = useMemo(() => {
-    const base = {};
-
-    const totalProjects = projects.length;
-    categories.forEach((category) => {
-      if (category.catchAll) {
-        base[category.id] = totalProjects;
-      } else {
-        base[category.id] = projects.filter((project) =>
-          project.categoryIds?.includes(category.id)
-        ).length;
-      }
-    });
-
+  const counts = categories.reduce((base, category) => {
+    base[category.id] = category.catchAll
+      ? projects.length
+      : projects.filter((project) => project.categoryIds?.includes(category.id)).length;
     return base;
-  }, []);
+  }, {});
 
   const handleCategoryChange = (categoryId) => {
     setSearchParams({ cat: categoryId }, { replace: true });
@@ -55,11 +39,10 @@ const Portfolio = () => {
             <div className="max-w-4xl space-y-6">
               <p className="eyebrow">Selected work</p>
               <h1 className={`${colors.text.primary} font-heading text-5xl font-semibold leading-[0.98] tracking-[-0.055em] md:text-7xl`}>
-                Products, platforms, and experiments I&apos;ve helped bring to life.
+                Frontend-led products, built beyond the interface.
               </h1>
               <p className={`${colors.text.secondary} max-w-2xl text-base md:text-lg`}>
-                From fintech dashboards to cloud-native infrastructure, these projects highlight how I
-                blend design intuition with engineering rigor to deliver meaningful outcomes.
+                Featured enterprise platforms, live client work, independent products and focused learning—presented with honest access labels and verified scope.
               </p>
             </div>
           </div>

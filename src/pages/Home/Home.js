@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ArrowRight, Github, Linkedin, Mail, MapPin, Twitter } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail, MapPin, Twitter } from "lucide-react";
 import { FadeIn } from '../../components/common/FadeIn';
 import { TechStack } from '../../components/common/TechStack';
 import { colors } from '../../components/common/Colors';
@@ -13,6 +13,7 @@ import { Certifications } from '../../components/common/Certifications';
 import portrait from "../../assets/dp.jpg";
 import batOne from "../../assets/bat-one.png";
 import batFour from "../../assets/bat-four.png";
+import resumePdf from "../../assets/OluwafemiResume.pdf";
 
 
 export default function Home() {
@@ -177,23 +178,24 @@ export default function Home() {
 
             <div className="py-16 lg:py-10">
               <FadeIn delay={250}>
-                <p className="mb-5 font-heading text-lg font-medium text-[#697914] dark:text-[#dfff4f]">Frontend + cloud engineering</p>
+                <p className="mb-5 font-heading text-lg font-medium text-[#697914] dark:text-[#dfff4f]">Frontend Engineer · Product Builder</p>
                 <h1 className="max-w-3xl font-heading text-[clamp(3.25rem,7vw,6.8rem)] font-semibold leading-[0.88] tracking-[-0.07em] text-[#171a15] dark:text-[#f4f3eb]">
-                  I build digital products that <span className="italic text-[#718317] dark:text-[#dfff4f]">perform.</span>
+                  Frontend Engineer building complete <span className="italic text-[#718317] dark:text-[#dfff4f]">web & mobile products.</span>
                 </h1>
               </FadeIn>
 
               <FadeIn delay={450}>
                 <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[#62675c] sm:text-xl dark:text-[#aeb5a5]">
-                  I&apos;m Oluwafemi Soaga, an engineer turning ambitious ideas into fast, resilient web products—from refined interfaces to reliable cloud infrastructure.
+                  I build responsive interfaces, enterprise workflows, mobile experiences and backend-integrated products with React, Next.js, TypeScript and React Native—and help take them through deployment and production.
                 </p>
               </FadeIn>
             </div>
 
             <FadeIn delay={650}>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <Button variant="cta" onClick={handleViewWork}>Explore selected work <ArrowRight className="h-5 w-5" /></Button>
-                <Button variant="ghost" className="border border-black/15 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10" onClick={handleScrollToCTA}><Mail className="h-5 w-5" /> Let&apos;s talk</Button>
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <Button variant="cta" onClick={handleViewWork}>View selected work <ArrowRight className="h-5 w-5" /></Button>
+                <a href={resumePdf} download="Oluwafemi-Soaga-CV.pdf" className="flex items-center justify-center gap-2 rounded-full border border-black/15 px-6 py-3.5 text-sm font-bold text-[#171a15] transition hover:-translate-y-0.5 hover:bg-black/5 dark:border-white/15 dark:text-white dark:hover:bg-white/10"><Download className="h-5 w-5" /> Download CV</a>
+                <Button variant="ghost" className="border border-black/15 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10" onClick={handleScrollToCTA}><Mail className="h-5 w-5" /> Contact me</Button>
               </div>
             </FadeIn>
           </div>
@@ -201,7 +203,7 @@ export default function Home() {
           <div className="relative min-h-[440px] overflow-hidden bg-[#cad864] lg:min-h-full">
             <img src={portrait} alt="Oluwafemi Soaga" className="absolute inset-0 h-full w-full object-cover object-top grayscale transition duration-700 hover:grayscale-0" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#171a15]/75 via-transparent to-transparent" />
-            <div className="absolute right-5 top-5 rounded-full bg-[#dfff4f] px-4 py-2 font-heading text-xs font-bold uppercase tracking-[0.16em] text-[#171a15]">4+ years shipping</div>
+            <div className="absolute right-5 top-5 rounded-full bg-[#dfff4f] px-4 py-2 font-heading text-xs font-bold uppercase tracking-[0.16em] text-[#171a15]">Frontend first</div>
             <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-7 text-white sm:p-9">
               <div>
                 <p className="font-heading text-2xl font-semibold text-white">Oluwafemi Soaga</p>
@@ -292,20 +294,20 @@ export default function Home() {
             <FadeIn delay={400}>
               <div className="mt-8 flex flex-col items-center gap-3">
                 <div className="flex gap-4">
-                  <a href="https://twitter.com/femi_soaga" target="_blank" rel="noopener noreferrer" className={`${colors.text.secondary} hover:${colors.text.primary} transition-colors`}>
-                    <Twitter className="w-6 h-6" />
+                  <a href="https://twitter.com/femi_soaga" target="_blank" rel="noopener noreferrer" aria-label="Oluwafemi Soaga on X" className={`${colors.text.secondary} hover:${colors.text.primary} transition-colors`}>
+                    <Twitter aria-hidden="true" className="w-6 h-6" />
                   </a>
-                  <a href="https://github.com/femisoaga" target="_blank" rel="noopener noreferrer" className={`${colors.text.secondary} hover:${colors.text.primary} transition-colors`}>
-                    <Github className="w-6 h-6" />
+                  <a href="https://github.com/femisoaga" target="_blank" rel="noopener noreferrer" aria-label="Oluwafemi Soaga on GitHub" className={`${colors.text.secondary} hover:${colors.text.primary} transition-colors`}>
+                    <Github aria-hidden="true" className="w-6 h-6" />
                   </a>
-                  <a href="https://www.linkedin.com/in/oluwafemi-soaga-56875999/" target="_blank" rel="noopener noreferrer" className={`${colors.text.secondary} hover:${colors.text.primary} transition-colors`}>
-                    <Linkedin className="w-6 h-6" />
+                  <a href="https://www.linkedin.com/in/oluwafemi-soaga-56875999/" target="_blank" rel="noopener noreferrer" aria-label="Oluwafemi Soaga on LinkedIn" className={`${colors.text.secondary} hover:${colors.text.primary} transition-colors`}>
+                    <Linkedin aria-hidden="true" className="w-6 h-6" />
                   </a>
-                  <a href="mailto:samuelsoaga@gmail.com" className={`${colors.text.secondary} hover:${colors.text.primary} transition-colors`}>
-                    <Mail className="w-6 h-6" />
+                  <a href="mailto:samuelsoaga@gmail.com" aria-label="Email Oluwafemi Soaga" className={`${colors.text.secondary} hover:${colors.text.primary} transition-colors`}>
+                    <Mail aria-hidden="true" className="w-6 h-6" />
                   </a>
                 </div>
-                <p className={`${colors.text.secondary} text-sm`}>© 2025 Oluwafemi Soaga. Built with React & Tailwind CSS</p>
+                <p className={`${colors.text.secondary} text-sm`}>© {new Date().getFullYear()} Oluwafemi Soaga. Built with React &amp; Tailwind CSS</p>
               </div>
             </FadeIn>
           </div>

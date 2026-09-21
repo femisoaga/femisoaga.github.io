@@ -1,7 +1,7 @@
 export const categories = [
-  { id: "web-apps", label: "Web Apps", default: true },
-  { id: "wordpress", label: "WordPress" },
-  { id: "devops-cert", label: "DevOps / Certifications" },
-  { id: "product-experiments", label: "Product Experiments" },
-  { id: "all", label: "All", catchAll: true },
+  { id: "all", label: "All work", default: true, catchAll: true },
+  { id: "featured", label: "Featured work" },
+  { id: "selected", label: "Selected projects" },
+  { id: "experiments", label: "Experiments" },
+  { id: "credentials", label: "Credentials" },
 ];

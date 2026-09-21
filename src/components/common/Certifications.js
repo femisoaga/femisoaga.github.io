@@ -1,42 +1,22 @@
-import { Award } from "lucide-react";
-import { colors } from "./Colors";
+import { Award, ExternalLink } from "lucide-react";
+import { projects } from "../../data/projects";
 
 export const Certifications = () => {
-  const certs = [
-    {
-      title: 'AWS Solutions Architect - Associate',
-      issuer: 'Amazon Web Services',
-      date: '2024-03-13',
-      icon: Award
-    },
-    {
-      title: 'AWS Cloud Practitioner',
-      issuer: 'Amazon Web Services',
-      date: '2023-10-19',
-      icon: Award
-    },
-  ];
-
+  const credentials = projects.filter((project) => project.categoryIds.includes("credentials"));
   return (
-    <div className="mb-10 w-full max-w-6xl">
-      <h3 className={`${colors.text.primary} mb-8 text-2xl font-bold`}>
-        Certifications
-      </h3>
-      <div className="grid md:grid-cols-2 gap-6">
-        {certs.map((cert, index) => (
-          <div
-            key={index}
-            className="editorial-card flex items-start gap-4 rounded-[1.5rem] p-6 transition-all hover:border-[#a9c52a]"
-          >
-            <cert.icon className={`w-10 h-10 ${colors.text.accent} flex-shrink-0`} />
-            <div>
-              <h4 className={`${colors.text.primary} font-semibold mb-1`}>{cert.title}</h4>
-              <p className={`${colors.text.secondary} text-sm mb-1`}>{cert.issuer}</p>
-              <p className={`${colors.text.accent} text-xs`}>Active: {cert.date}</p>
-            </div>
-          </div>
+    <section className="mb-10 w-full max-w-6xl" aria-labelledby="credentials-title">
+      <p className="eyebrow mb-5">Continuous learning</p>
+      <h2 id="credentials-title" className="section-title mb-8">Credentials</h2>
+      <div className="grid gap-5 md:grid-cols-3">
+        {credentials.map((credential) => (
+          <article key={credential.id} className="editorial-card flex h-full flex-col rounded-[1.5rem] p-6 transition-all hover:border-[#a9c52a]">
+            <Award aria-hidden="true" className="mb-8 h-9 w-9 text-[#718317] dark:text-[#dfff4f]" />
+            <h3 className="text-lg font-semibold">{credential.title}</h3>
+            <p className="mt-2 flex-1 text-sm leading-relaxed text-[#62675c] dark:text-[#aeb5a5]">{credential.description}</p>
+            {credential.liveUrl && <a href={credential.liveUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#697914] hover:underline dark:text-[#dfff4f]">Verify credential <ExternalLink aria-hidden="true" className="h-4 w-4" /></a>}
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };

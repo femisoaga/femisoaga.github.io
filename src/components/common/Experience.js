@@ -1,81 +1,15 @@
-import { colors } from "./Colors";
+import { experienceEntries } from "../../data/experience";
 
-export const Experience = () => {
-  const experiences = [
-    {
-      company: 'Tech Citadel',
-      role: 'Frontend Developer',
-      period: 'Sep 2024 – Jan 2025',
-      achievements: [
-        'Led rollout of reusable UI kit powering three product squads with consistent motion patterns',
-        'Improved landing-page LCP by 32% via code-splitting, critical CSS, and image streaming',
-        'Partnered with design to systemise tokens across platforms, reducing hand-off time by 40%',
-      ],
-      tech: 'React • Next.js • Storybook • Performance Audits'
-    },
-    {
-      company: 'Freelance',
-      role: 'Product-Focused Frontend Engineer',
-      period: '2024 – Present',
-      achievements: [
-        'Delivered responsive web apps and marketing sites tuned for multiple breakpoints',
-        'Implemented component-driven workflows with visual regression coverage for clients',
-        'Optimised Core Web Vitals for SME platforms, keeping performance budgets intact',
-      ],
-      tech: 'Component Libraries • Tailwind CSS • Core Web Vitals • Client Collaboration'
-    },
-    {
-      company: 'UniswitchNg',
-      role: 'Frontend Engineer',
-      period: 'Jan 2023 – Present',
-      achievements: [
-        'Spearheaded Sarepay Checkout - secure payment gateway processing 1000s of monthly transactions',
-        'Enhanced HRDesk platform performance by 40%, boosting user retention by 25%',
-        'Integrated GraphQL APIs, reducing query response times by 35%',
-      ],
-      tech: 'React.js • Vue.js • GraphQL • AWS'
-    },
-    {
-      company: 'Bincom Dev Center',
-      role: 'Frontend Developer',
-      period: 'Jan 2021 – Dec 2022',
-      achievements: [
-        'Developed enterprise mobile apps with Ionic + Angular, improving engagement by 20%',
-        'Built responsive cross-platform solutions optimized for mobile-first users',
-        'Mentored junior developers and conducted code reviews',
-      ],
-      tech: 'Ionic • Angular • TypeScript • REST APIs'
-    },
-  ];
-
-  return (
-    <div id="work" className="w-full max-w-6xl">
-      <div className="mb-10 mt-28"><p className="eyebrow mb-5">Experience</p><h2 className="section-title">Built in the real world.</h2></div>
-      <div className="space-y-6">
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="editorial-card rounded-[1.75rem] p-6 transition-all duration-300 hover:border-[#a9c52a] md:p-8"
-          >
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <div>
-                <h3 className={`${colors.text.primary} text-2xl font-bold`}>{exp.role}</h3>
-                <p className="mt-1 font-bold text-[#718317] dark:text-[#dfff4f]">{exp.company}</p>
-              </div>
-              <p className={`${colors.text.secondary} text-sm mt-2 md:mt-0`}>{exp.period}</p>
-            </div>
-            <ul className="space-y-2 mb-4">
-              {exp.achievements.map((achievement, idx) => (
-                <li key={idx} className={`${colors.text.secondary} text-sm flex gap-2`}>
-                  <span className="mt-1 text-[#91a620]">●</span>
-                  <span>{achievement}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6 border-t border-black/10 pt-5 text-xs font-bold uppercase tracking-[0.12em] text-[#718317] dark:border-white/10 dark:text-[#dfff4f]">{exp.tech}</p>
-          </div>
-        ))}
-      </div>
+export const Experience = () => (
+  <section id="work" className="w-full max-w-6xl">
+    <div className="mb-10 mt-28 max-w-3xl"><p className="eyebrow mb-5">Experience</p><h2 className="section-title">Frontend leadership across real products.</h2><p className="mt-5 text-lg leading-relaxed text-[#62675c] dark:text-[#aeb5a5]">Enterprise fintech, employee workflows, client delivery and cross-functional implementation—from requirements to production.</p></div>
+    <div className="space-y-5">
+      {experienceEntries.map((entry) => (
+        <article key={`${entry.company}-${entry.dates}`} className="editorial-card grid gap-6 rounded-[1.75rem] p-6 transition hover:border-[#a9c52a] md:grid-cols-[0.38fr_1fr] md:p-8">
+          <div><p className="text-xs font-bold uppercase tracking-[0.15em] text-[#819616] dark:text-[#dfff4f]">{entry.dates}</p><h3 className="mt-3 font-heading text-2xl font-semibold text-[#171a15] dark:text-white">{entry.role}</h3><p className="mt-1 font-bold text-[#62675c] dark:text-[#aeb5a5]">{entry.company}</p></div>
+          <div><p className="leading-relaxed text-[#43483f] dark:text-[#c3c9bc]">{entry.summary}</p><ul className="mt-5 space-y-2">{entry.bullets.map((bullet) => <li key={bullet} className="flex gap-3 text-sm leading-relaxed text-[#62675c] dark:text-[#aeb5a5]"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#9bb51d]" />{bullet}</li>)}</ul><ul className="mt-6 flex flex-wrap gap-2" aria-label={`${entry.company} technologies`}>{entry.tech.map((tech) => <li key={tech} className="rounded-full border border-black/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.08em] dark:border-white/10">{tech}</li>)}</ul></div>
+        </article>
+      ))}
     </div>
-  );
-};
+  </section>
+);

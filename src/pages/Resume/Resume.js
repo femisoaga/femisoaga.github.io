@@ -14,11 +14,11 @@ const Resume = () => {
             <div className="max-w-4xl space-y-6">
               <p className="eyebrow">Résumé</p>
               <h1 className={`${colors.text.primary} font-heading text-5xl font-semibold leading-[0.98] tracking-[-0.055em] md:text-7xl`}>
-                Experience, education, and the skills I rely on to ship quality software.
+                Frontend leadership grounded in complete product delivery.
               </h1>
               <p className={`${colors.text.secondary} max-w-3xl text-base md:text-lg`}>
-                A snapshot of the teams I&apos;ve supported and the impact delivered across frontend,
-                backend, and DevOps initiatives.
+                Experience building enterprise workflows, product interfaces and the supporting
+                integrations needed to move software from requirement to production.
               </p>
             </div>
           </div>

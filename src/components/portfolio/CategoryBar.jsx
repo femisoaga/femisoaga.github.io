@@ -61,7 +61,7 @@ export const CategoryBar = ({ activeCategoryId, onChange, counts }) => {
         const buttonClasses = [
           "group relative inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200",
           isActive ? "bg-[#171a15] text-white dark:bg-[#dfff4f] dark:text-[#171a15]" : "text-[#62675c] hover:text-[#171a15] dark:text-[#aeb5a5] dark:hover:text-white",
-          "focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900",
+          "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9bb51d] focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900",
           // Left-align text and make full width on small screens
           "w-full justify-start text-left md:w-auto",
           "whitespace-nowrap",

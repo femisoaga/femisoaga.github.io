@@ -14,12 +14,10 @@ const About = () => {
             <div className="max-w-4xl space-y-6">
               <p className="eyebrow">About</p>
               <h1 className={`${colors.text.primary} font-heading text-5xl font-semibold leading-[0.98] tracking-[-0.055em] md:text-7xl`}>
-                Building immersive experiences with clean, scalable engineering.
+                Frontend-focused engineering with practical end-to-end ownership.
               </h1>
               <p className={`${colors.text.secondary} max-w-2xl text-base leading-relaxed md:text-lg`}>
-                I’m Oluwafemi Soaga, a multi-disciplinary engineer blending frontend craft, backend
-                reliability, and DevOps discipline. From rapid prototypes to production-grade systems,
-                I focus on shipping resilient software that feels effortless to use.
+                I build responsive interfaces and complex product workflows first, then work across APIs, mobile, cloud and deployment when the product requires it.
               </p>
             </div>
           </div>

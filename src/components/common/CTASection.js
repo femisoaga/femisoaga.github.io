@@ -3,7 +3,6 @@ import {
   Calendar,
   Linkedin,
   Mail,
-  MessageSquare,
   Phone,
   Twitter,
 } from "lucide-react";
@@ -11,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 
 import FrostedPanel from "../layout/FrostedPanel";
 import { Button } from "./Button";
-import { colors } from "./Colors";
 
 export const CTASection = () => {
   const navigate = useNavigate();
@@ -39,7 +37,7 @@ export const CTASection = () => {
             Ready to Bring Your Ideas to Life?
           </h2>
           <p className="mx-auto max-w-2xl text-base text-white/65 md:text-lg dark:text-[#384025]">
-            X DM is recommended — I respond quickest there. Still, I&apos;m happy to hop on a call or answer a good old-fashioned email.
+            Building a product or strengthening an existing team? Choose the channel that works best for you.
           </p>
         </header>
 
@@ -82,46 +80,7 @@ export const CTASection = () => {
           </a>
         </div>
 
-        <div className="mx-auto w-full max-w-xl text-left flex justify-center">
-          <p className="mb-3 flex items-center justify-center gap-2 text-sm text-white/60 dark:text-[#505b35] sm:justify-start">
-            <MessageSquare className="h-4 w-4 text-blue-400" />
-            Prefer email? Drop a message below.
-            <a
-              href="mailto:samuelsoaga@gmail.com"
-              className={`${colors.text.secondary} transition-colors hover:${colors.text.primary}`}
-            >
-              <Mail className="h-5 w-5" />
-            </a>
-          </p>
-          {/* <form className="space-y-4">
-            <div className="space-y-2">
-              <label htmlFor="cta-email" className={`${colors.text.secondary} text-sm font-medium`}>
-                Your Email
-              </label>
-              <input
-                id="cta-email"
-                type="email"
-                placeholder="johndoe69@xyz.com"
-                className="w-full rounded-xl border border-slate-300/60 bg-white/85 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/40 dark:border-blue-500/20 dark:bg-slate-950/60 dark:text-slate-100 dark:placeholder:text-slate-500"
-              />
-            </div>
-            <div className="space-y-2">
-              <label htmlFor="cta-message" className={`${colors.text.secondary} text-sm font-medium`}>
-                Your message
-              </label>
-              <textarea
-                id="cta-message"
-                rows={4}
-                placeholder="Type your message here."
-                className="w-full rounded-xl border border-slate-300/60 bg-white/85 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/40 dark:border-blue-500/20 dark:bg-slate-950/60 dark:text-slate-100 dark:placeholder:text-slate-500"
-              />
-            </div>
-            <Button variant="cta" type="submit" className="flex w-full items-center justify-center gap-2 text-sm md:text-base">
-              <Mail className="h-4 w-4" />
-              Send message
-            </Button>
-          </form> */}
-        </div>
+        <a href="mailto:samuelsoaga@gmail.com" className="mx-auto inline-flex items-center gap-2 text-sm font-bold text-white underline decoration-white/30 underline-offset-4 dark:text-[#171a15] dark:decoration-black/30"><Mail aria-hidden="true" className="h-4 w-4" /> samuelsoaga@gmail.com</a>
       </FrostedPanel>
     </section>
   );

@@ -17,8 +17,8 @@ const ContactMe = () => {
                 Ready to build your next experience? I&apos;d love to hear from you.
               </h1>
               <p className={`${colors.text.secondary} max-w-2xl text-base md:text-lg`}>
-                Share a few details about the challenge you&apos;re exploring, and I&apos;ll respond with
-                ideas, timelines, and next steps.
+                For product engineering, frontend architecture, client work or a role conversation,
+                use any of the direct channels below.
               </p>
             </div>
           </div>

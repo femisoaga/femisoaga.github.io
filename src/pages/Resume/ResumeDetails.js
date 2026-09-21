@@ -23,9 +23,8 @@ const ResumeDetails = () => {
             Crafting resilient products with frontend as the driver.
           </h2>
           <p className="max-w-2xl text-sm text-slate-600 dark:text-slate-300">
-            A closer look at the systems, teams, and outcomes that have shaped
-            my approach across UI engineering, performance optimisation, and
-            cross-functional collaboration.
+            A closer look at the systems and teams that shaped my approach to
+            frontend architecture, product delivery and cross-functional collaboration.
           </p>
         </header>
 
@@ -62,10 +61,12 @@ const ResumeDetails = () => {
                 "TypeScript & JavaScript",
                 "Design Systems",
                 "Tailwind CSS",
-                "Accessibility (WCAG)",
+                "Accessible UI",
+                "TanStack Query & Zustand",
+                "React Native & Expo",
                 "Node.js & Express",
-                "SQL & NoSQL",
-                "CI/CD & GitHub Actions",
+                "ASP.NET Core & Firebase",
+                "AWS & CI/CD",
               ].map((skill) => (
                 <li
                   key={skill}

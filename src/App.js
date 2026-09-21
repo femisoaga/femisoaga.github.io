@@ -3,11 +3,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Navigation } from "./components/common/Navigation";
 import { colors } from "./components/common/Colors";
 import About from "./pages/About/About";
-import Blog from "./pages/Blog/Blog";
 import ContactMe from "./pages/Contact/ContactMe";
 import Home from "./pages/Home/Home";
-import Pitch from "./pages/Pitch/Pitch";
 import Portfolio from "./pages/Portfolio/Portfolio";
+import PortfolioDetails from "./pages/Portfolio/PortfolioDetails";
 import Resume from "./pages/Resume/Resume";
 
 function App() {
@@ -26,11 +25,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio/:slug" element={<PortfolioDetails />} />
             <Route path="/about" element={<About />} />
             <Route path="/resume" element={<Resume />} />
-            <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<ContactMe />} />
-            <Route path="/pitch" element={<Pitch />} />
           </Routes>
         </div>
       </div>
