@@ -9,7 +9,7 @@ export const Certifications = () => {
       <h2 id="credentials-title" className="section-title mb-8">Credentials</h2>
       <div className="grid gap-5 md:grid-cols-3">
         {credentials.map((credential) => (
-          <article key={credential.id} className="editorial-card flex h-full flex-col rounded-[1.5rem] p-6 transition-all hover:border-[#3b82f6]">
+          <article key={credential.id} className="editorial-card flex h-full flex-col rounded-[1.5rem] p-6 transition-all card-hover">
             <Award aria-hidden="true" className="mb-8 h-9 w-9 text-[#1d4ed8] dark:text-[#93c5fd]" />
             <h3 className="text-lg font-semibold">{credential.title}</h3>
             <p className="mt-2 flex-1 text-sm leading-relaxed text-[#475569] dark:text-[#94a3b8]">{credential.description}</p>

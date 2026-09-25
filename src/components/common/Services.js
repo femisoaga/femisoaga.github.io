@@ -18,7 +18,7 @@ export const Services = () => (
     </div>
     <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {services.map((service, index) => (
-        <article key={service.title} className="editorial-card group relative overflow-hidden rounded-[1.75rem] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#3b82f6]">
+        <article key={service.title} className="editorial-card group relative overflow-hidden rounded-[1.75rem] p-7 transition-all duration-300 hover:-translate-y-1 card-hover">
           <span className="absolute right-6 top-5 font-heading text-sm text-[#64748b] dark:text-slate-400">0{index + 1}</span>
           <div className="mb-9 grid h-12 w-12 place-items-center rounded-full bg-[#93c5fd] text-[#0f172a]"><service.icon aria-hidden="true" className="h-6 w-6 transition-transform duration-300 group-hover:rotate-6" /></div>
           <h3 className="mb-3 text-xl font-semibold">{service.title}</h3>

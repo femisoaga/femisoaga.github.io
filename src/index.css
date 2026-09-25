@@ -11,6 +11,8 @@
   --accent-interactive: #2563eb;
   --accent-soft: rgba(59, 130, 246, 0.10);
   --accent-border: rgba(37, 99, 235, 0.35);
+  --card-hover-border: #a6b8cf;
+  --portrait-tint: rgba(59, 130, 246, 0.10);
 }
 
 .dark {
@@ -22,6 +24,8 @@
   --accent: #60a5fa;
   --accent-interactive: #93c5fd;
   --accent-border: rgba(96, 165, 250, 0.28);
+  --card-hover-border: #435670;
+  --portrait-tint: rgba(59, 130, 246, 0.14);
 }
 
 .site-header {
@@ -46,8 +50,8 @@
   border-color: rgba(148, 163, 184, 0.22);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 28px rgba(0, 0, 0, 0.16);
 }
-.site-header[data-scrolled="true"] .header-glass { background: rgba(248, 250, 252, 0.9); }
-.dark .site-header[data-scrolled="true"] .header-glass { background: rgba(16, 24, 39, 0.9); }
+.site-header[data-scrolled="true"] .header-glass { background: rgba(248, 250, 252, 0.52); }
+.dark .site-header[data-scrolled="true"] .header-glass { background: rgba(16, 24, 39, 0.52); }
 .header-bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 10px 12px 10px 20px; }
 .header-brand { display: flex; align-items: center; min-height: 44px; flex-shrink: 0; border-radius: 6px; }
 .header-desktop-links, .header-actions { display: flex; align-items: center; gap: 6px; }
@@ -93,8 +97,8 @@
 .site-header :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 @supports not ((backdrop-filter: blur(24px)) or (-webkit-backdrop-filter: blur(24px))) {
-  .header-glass { background: #f8fafc; }
-  .dark .header-glass { background: #101827; }
+  .site-header .header-glass, .site-header[data-scrolled="true"] .header-glass { background: #f8fafc; }
+  .dark .site-header .header-glass, .dark .site-header[data-scrolled="true"] .header-glass { background: #101827; }
 }
 
 @media (max-width: 959px) {
@@ -187,6 +191,8 @@
 .hero-link:hover { color: var(--accent-interactive); }
 .hero-link-primary:hover { border-color: var(--accent); }
 .hero-portrait {
+  position: relative;
+  overflow: hidden;
   display: block;
   width: 100%;
   max-width: 352px;
@@ -198,6 +204,22 @@
   justify-self: end;
   background: var(--surface);
 }
+.hero-portrait img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.hero-portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.16)), var(--portrait-tint);
+}
+.card-hover:hover, .dark .card-hover:hover { border-color: var(--card-hover-border); }
 .home-sections { display: grid; gap: clamp(64px, 8vw, 112px); margin-top: 56px; }
 
 @media (max-width: 719px) {

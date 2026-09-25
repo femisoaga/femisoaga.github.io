@@ -24,10 +24,12 @@ export default function Home() {
             <Link className="hero-link" to="/contact">Let’s talk</Link>
           </div>
         </div>
-        <img className="hero-portrait" src={portrait} srcSet={`${portrait} 810w`}
-          sizes="(min-width: 1152px) 352px, (min-width: 720px) 31vw, (min-width: 360px) 280px, 240px"
-          width={810} height={1080} alt="Oluwafemi Soaga, Product Engineer"
-          loading="eager" fetchpriority="high" decoding="async" />
+        <div className="hero-portrait">
+          <img src={portrait} srcSet={`${portrait} 810w`}
+            sizes="(min-width: 1152px) 352px, (min-width: 720px) 31vw, (min-width: 360px) 280px, 240px"
+            width={810} height={1080} alt="Oluwafemi Soaga, Product Engineer"
+            loading="eager" fetchpriority="high" decoding="async" />
+        </div>
       </section>
       <div className="home-sections">
         <section aria-labelledby="selected-work-title">

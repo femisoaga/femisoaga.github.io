@@ -17,7 +17,7 @@ export const ProjectCard = ({ project, compact = false }) => {
   const hasCaseStudy = Boolean(project.slug && (project.features || project.role || project.improvements));
 
   return (
-    <article className="editorial-card group flex h-full flex-col overflow-hidden rounded-[1.75rem] p-2 transition-all duration-300 hover:-translate-y-1 hover:border-[#3b82f6]">
+    <article className="editorial-card group flex h-full flex-col overflow-hidden rounded-[1.75rem] p-2 transition-all duration-300 hover:-translate-y-1 card-hover">
       <div className={`relative overflow-hidden rounded-[1.35rem] ${compact ? "h-40" : "h-56"}`}>
         {project.image && !imageFailed ? (
           <img

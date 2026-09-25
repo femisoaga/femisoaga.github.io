@@ -49,7 +49,7 @@ const AboutMe = () => (
 
     <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {disciplines.map(({ icon: Icon, number, title, copy }) => (
-        <article key={title} className="group rounded-[1.6rem] border border-black/10 bg-[#f8fafc] p-6 transition hover:-translate-y-1 hover:border-[#3b82f6] dark:border-white/10 dark:bg-[#080d18]">
+        <article key={title} className="group rounded-[1.6rem] border border-black/10 bg-[#f8fafc] p-6 transition hover:-translate-y-1 card-hover dark:border-white/10 dark:bg-[#080d18]">
           <div className="mb-10 flex items-center justify-between">
             <span className="grid h-11 w-11 place-items-center rounded-full bg-[#93c5fd] text-[#0f172a]"><Icon className="h-5 w-5" /></span>
             <span className="font-heading text-sm text-[#64748b] dark:text-slate-400">{number}</span>
