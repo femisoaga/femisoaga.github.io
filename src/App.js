@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
 import { Navigation } from "./components/common/Navigation";
 import { colors } from "./components/common/Colors";
@@ -9,16 +10,20 @@ import Portfolio from "./pages/Portfolio/Portfolio";
 import PortfolioDetails from "./pages/Portfolio/PortfolioDetails";
 import Resume from "./pages/Resume/Resume";
 
+function RouteScroll() {
+  const { pathname, state } = useLocation();
+  useEffect(() => {
+    if (state?.scrollTo !== "services") window.scrollTo(0, 0);
+  }, [pathname, state]);
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
+      <RouteScroll />
       <div className={`site-shell relative min-h-screen ${colors.bg.primary} text-slate-900 dark:text-slate-100`}>
-        <div className="pointer-events-none fixed inset-0 overflow-hidden" aria-hidden="true">
-          <div className="absolute -right-32 top-24 h-[28rem] w-[28rem] rounded-full bg-[#dfff4f]/20 blur-[110px] dark:bg-[#dfff4f]/10" />
-          <div className="absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-[#ff714b]/10 blur-[100px] dark:bg-[#ff714b]/5" />
-          <div className="grid-noise absolute inset-0 opacity-50 dark:opacity-25" />
-        </div>
-
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <Navigation />
 
         <div className="relative z-10">

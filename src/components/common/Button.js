@@ -4,7 +4,7 @@ export const Button = ({ children, variant = 'primary', className = '', ...props
   const variants = {
     primary: `${colors.bg.button} hover:opacity-90`,
     ghost: `${colors.text.secondary} hover:${colors.text.primary}`,
-    cta: `bg-[#171a15] text-white hover:bg-[#30352b] dark:bg-[#dfff4f] dark:text-[#171a15] dark:hover:bg-[#c9eb35]`,
+    cta: `bg-[#0f172a] text-white hover:bg-[#1e293b] dark:bg-[#93c5fd] dark:text-[#0f172a] dark:hover:bg-[#60a5fa]`,
   };
 
   return (

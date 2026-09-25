@@ -7,14 +7,14 @@ import ContactMeDetails from "./ContactMeDetails";
 
 const ContactMe = () => {
   return (
-    <div className="relative px-5 pb-24 pt-36 sm:px-8">
+    <main id="main-content" className="relative px-5 pb-24 pt-36 sm:px-8">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
         <FadeIn delay={200}>
           <div className="py-10 text-left sm:py-16">
             <div className="max-w-4xl space-y-6">
               <p className="eyebrow">Let&apos;s collaborate</p>
               <h1 className={`${colors.text.primary} font-heading text-5xl font-semibold leading-[0.98] tracking-[-0.055em] md:text-7xl`}>
-                Ready to build your next experience? I&apos;d love to hear from you.
+                Have a product problem worth solving?
               </h1>
               <p className={`${colors.text.secondary} max-w-2xl text-base md:text-lg`}>
                 For product engineering, frontend architecture, client work or a role conversation,
@@ -30,7 +30,7 @@ const ContactMe = () => {
           </FrostedPanel>
         </FadeIn>
       </div>
-    </div>
+    </main>
   );
 };
 

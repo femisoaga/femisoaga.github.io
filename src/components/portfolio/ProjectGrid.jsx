@@ -32,8 +32,8 @@ const ProjectSection = ({ id, projects }) => {
     <section className="space-y-7" aria-labelledby={`${id}-heading`}>
       <header className="max-w-3xl">
         <p className="eyebrow mb-3">{config.eyebrow}</p>
-        <h2 id={`${id}-heading`} className="font-heading text-3xl font-semibold tracking-[-0.04em] text-[#171a15] sm:text-4xl dark:text-[#f4f3eb]">{config.title}</h2>
-        <p className="mt-3 leading-relaxed text-[#62675c] dark:text-[#aeb5a5]">{config.description}</p>
+        <h2 id={`${id}-heading`} className="font-heading text-3xl font-semibold tracking-[-0.04em] text-[#0f172a] sm:text-4xl dark:text-[#f8fafc]">{config.title}</h2>
+        <p className="mt-3 leading-relaxed text-[#475569] dark:text-[#94a3b8]">{config.description}</p>
       </header>
       <div className={`grid gap-5 ${id === "featured" ? "md:grid-cols-2" : "sm:grid-cols-2 xl:grid-cols-3"}`}>
         {projects.map((project) => <ProjectCard key={project.id} project={project} compact={compact} />)}

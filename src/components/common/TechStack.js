@@ -11,15 +11,15 @@ const capabilityGroups = [
 export const TechStack = () => (
   <section className="w-full max-w-6xl" aria-labelledby="skills-title">
     <p className="eyebrow mb-5">Working toolkit</p>
-    <h2 id="skills-title" className="section-title mb-5">Capabilities, not a logo wall.</h2>
-    <p className="mb-10 max-w-2xl text-[#62675c] dark:text-[#aeb5a5]">Tools are selected around the product and team. These are the technologies and practices I can support with current project evidence.</p>
+    <h2 id="skills-title" className="section-title mb-5">The tools behind the work.</h2>
+    <p className="mb-10 max-w-2xl text-[#475569] dark:text-[#94a3b8]">I choose tools around the product, the team, and the constraints. Frontend engineering is my foundation, supported by mobile, backend, and delivery experience.</p>
     <div className="grid gap-5 md:grid-cols-2">
       {capabilityGroups.map((group) => (
         <article key={group.title} className="editorial-card rounded-[1.75rem] p-7 sm:p-8">
           <h3 className="text-xl font-semibold">{group.title}</h3>
-          <p className="mt-3 text-sm leading-relaxed text-[#62675c] dark:text-[#aeb5a5]">{group.description}</p>
+          <p className="mt-3 text-sm leading-relaxed text-[#475569] dark:text-[#94a3b8]">{group.description}</p>
           <ul className="mt-6 flex flex-wrap gap-2" aria-label={`${group.title} skills`}>
-            {group.skills.map((skill) => <li key={skill} className="rounded-full border border-black/10 bg-[#f3f1e8] px-3 py-1.5 text-xs font-semibold text-[#62675c] dark:border-white/10 dark:bg-[#11130f] dark:text-[#b7beae]">{skill}</li>)}
+            {group.skills.map((skill) => <li key={skill} className="rounded-full border border-black/10 bg-[#f8fafc] px-3 py-1.5 text-xs font-semibold text-[#475569] dark:border-white/10 dark:bg-[#080d18] dark:text-[#cbd5e1]">{skill}</li>)}
           </ul>
         </article>
       ))}

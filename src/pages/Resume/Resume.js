@@ -7,7 +7,7 @@ import ResumeDetails from "./ResumeDetails";
 
 const Resume = () => {
   return (
-    <div className="relative px-5 pb-24 pt-36 sm:px-8">
+    <main id="main-content" className="relative px-5 pb-24 pt-36 sm:px-8">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10">
         <FadeIn delay={200}>
           <div className="py-10 sm:py-16">
@@ -30,7 +30,7 @@ const Resume = () => {
           </FrostedPanel>
         </FadeIn>
       </div>
-    </div>
+    </main>
   );
 };
 

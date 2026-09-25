@@ -88,7 +88,7 @@ const PersonalInfo = () => {
 
         <header className="mb-3 flex flex-col items-center text-center md:items-start md:text-left">
           <h1 className="md:mb-2">Oluwafemi Soaga</h1>
-          <p className="text-gray-500 md:mb-2">Software Engineer | DevOps</p>
+          <p className="text-gray-500 md:mb-2">Product Engineer</p>
           <nav aria-label="Social media" className="my-2 flex justify-center md:justify-start">
             <ul className="flex">
               {SOCIAL_LINKS.map(({ id, label, Icon }) => (

@@ -10,8 +10,8 @@ export const Stats = () => (
     <div className="grid gap-y-7 sm:grid-cols-2 lg:grid-cols-4">
       {signals.map((signal) => (
         <div key={signal.label} className="border-l border-black/10 px-5 first:border-l-0 dark:border-white/10">
-          <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#819616] dark:text-[#dfff4f]">{signal.label}</p>
-          <p className="mt-2 font-heading text-lg font-semibold leading-tight text-[#171a15] dark:text-white">{signal.value}</p>
+          <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#1d4ed8] dark:text-[#93c5fd]">{signal.label}</p>
+          <p className="mt-2 font-heading text-lg font-semibold leading-tight text-[#0f172a] dark:text-white">{signal.value}</p>
         </div>
       ))}
     </div>

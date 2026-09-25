@@ -1,11 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-beforeEach(() => window.history.pushState({}, '', '/'));
+beforeEach(() => {
+  window.scrollTo = jest.fn();
+  window.history.pushState({}, '', '/');
+});
 
 test('renders the portfolio introduction', () => {
   render(<App />);
-  expect(screen.getByRole('heading', { name: /frontend engineer building complete web & mobile products/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /product engineer building digital experiences people care about/i })).toBeInTheDocument();
 });
 
 test('renders a case study at its direct route', () => {

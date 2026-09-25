@@ -11,6 +11,7 @@ import estazImage from "../assets/estaz.png";
 export const projects = [
   {
     id: "business-central",
+    problem: "Bring banking operations, approvals, and administration into role-aware workflows, with clear permission and transaction states.",
     slug: "business-central",
     title: "Business Central",
     category: "Enterprise Fintech Platform",
@@ -22,10 +23,11 @@ export const projects = [
     features: ["Business and mobile banking operations", "POS and credit-facility workflows", "Permission-gated actions and approval policies", "API-backed tables, filtering and pagination", "Document uploads, exports and audit trails", "Provider, KYC and tenant configuration"],
     decisions: ["Kept sensitive product access private while documenting reusable engineering patterns.", "Modelled loading, validation, error and permission states as first-class UI states."],
     confidentialityNote: "No internal URLs, source code, customer records, transactions or proprietary screenshots are shown.",
-    accent: "#dfff4f",
+    accent: "#93c5fd",
   },
   {
     id: "bucks-invest-partners",
+    problem: "Support partners from organisational onboarding through investment operations, while keeping verification, session handling, and reporting understandable.",
     slug: "bucks-invest-partners",
     title: "Bucks Invest Partners",
     category: "Investment Management Platform",
@@ -41,6 +43,7 @@ export const projects = [
   },
   {
     id: "alert-evaluate",
+    problem: "Connect employee self-assessment, manager review, and HR administration in one role-based appraisal journey.",
     slug: "alert-evaluate",
     title: "AlertEvaluate",
     category: "Enterprise HR Platform",
@@ -56,6 +59,7 @@ export const projects = [
   },
   {
     id: "sahara-centre",
+    problem: "Help visitors explore the institution and find relevant indigenous-knowledge research through a searchable, filterable database.",
     slug: "sahara-centre",
     title: "The Sahara Centre",
     category: "WordPress Website & Research Platform",
@@ -71,6 +75,7 @@ export const projects = [
   },
   {
     id: "kindrel-partners",
+    problem: "Explain relocation and people-experience services clearly and support enquiries within the client’s shared-hosting setup.",
     slug: "kindrel-partners",
     title: "Kindrel Partners",
     category: "Next.js Client Website",
@@ -99,6 +104,7 @@ export const projects = [
   },
   {
     id: "mylga",
+    problem: "Make local-government leadership and public information easier to explore, while keeping source verification and incomplete coverage visible.",
     slug: "mylga",
     title: "MyLGA",
     category: "Civic Technology / Data Platform",
@@ -108,7 +114,7 @@ export const projects = [
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Zod"],
     features: ["LGA directory and selector", "Official and LGA profile cards", "Source and verification labels", "Typed data validation", "API route and Prisma data model", "Published records remain limited to verified available data"],
     improvements: ["Continue verified data collection beyond the current published coverage.", "Keep allocation, budget, project, audit and community features labelled as planned until implemented."],
-    accent: "#34d399",
+    accent: "#60a5fa",
   },
   {
     id: "amaanah-admin",
@@ -122,7 +128,7 @@ export const projects = [
     features: ["Login and two-factor verification interfaces", "Responsive dashboard journey", "Typed, schema-validated forms", "Reusable finance-oriented UI components", "Loading and empty interface states"],
     improvements: ["Replace mocked authentication and static dashboard data.", "Complete backend integration and authorization before operational use."],
     confidentialityNote: "Authentication and dashboard data are mocked; this is not presented as an operational finance system.",
-    accent: "#2dd4bf",
+    accent: "#93c5fd",
   },
   {
     id: "sarepay",
@@ -201,10 +207,11 @@ export const projects = [
     imageAlt: "Estaz fashion e-commerce website",
     tags: ["WordPress", "WooCommerce", "Paystack", "DHL"],
     features: ["Paystack payment integration", "DHL and weight-based shipping", "Product weight and dimension configuration", "Conditional shipping rules", "Plugin-constraint and production troubleshooting"],
-    confidentialityNote: "The previous public URL no longer resolves, so no live-site action is shown.",
+    liveUrl: "https://www.estazbrand.com/",
   },
   {
     id: "agronetiq",
+    problem: "Explore buyer and seller journeys for an agricultural marketplace, with clear boundaries between working screens and mocked services.",
     slug: "agronetiq",
     title: "AgroNetiq",
     category: "Mobile Product",
@@ -214,7 +221,7 @@ export const projects = [
     tags: ["React Native", "Expo", "TypeScript", "Expo Router"],
     features: ["Buyer and seller navigation flows", "Registration, login and OTP interfaces", "Product, cart, order and store-management screens", "AsyncStorage-backed session and theme persistence", "API service abstraction with an offline mock implementation"],
     confidentialityNote: "Notifications are currently mocked and the product is not described as released or production-ready.",
-    accent: "#84cc16",
+    accent: "#3b82f6",
   },
   {
     id: "macrozone",

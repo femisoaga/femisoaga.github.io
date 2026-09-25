@@ -42,7 +42,7 @@ export const CategoryBar = ({ activeCategoryId, onChange, counts }) => {
 
   return (
     <div
-      role="tablist"
+      role="group"
       aria-label="Project categories"
       className={[
         // Mobile: grid layout (2 columns)
@@ -50,7 +50,7 @@ export const CategoryBar = ({ activeCategoryId, onChange, counts }) => {
         // Desktop and up: revert to flex layout
         "md:flex md:flex-wrap md:items-center md:justify-center",
         // Styling
-        "rounded-[1.4rem] border border-black/10 bg-[#e9e8de]/70 p-2 transition-colors duration-200",
+        "rounded-[1.4rem] border border-black/10 bg-[#e2e8f0]/70 p-2 transition-colors duration-200",
         "dark:border-white/10 dark:bg-white/5",
       ].join(" ")}
     >
@@ -60,8 +60,8 @@ export const CategoryBar = ({ activeCategoryId, onChange, counts }) => {
 
         const buttonClasses = [
           "group relative inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200",
-          isActive ? "bg-[#171a15] text-white dark:bg-[#dfff4f] dark:text-[#171a15]" : "text-[#62675c] hover:text-[#171a15] dark:text-[#aeb5a5] dark:hover:text-white",
-          "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9bb51d] focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900",
+          isActive ? "bg-[#0f172a] text-white dark:bg-[#93c5fd] dark:text-[#0f172a]" : "text-[#475569] hover:text-[#0f172a] dark:text-[#94a3b8] dark:hover:text-white",
+          "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563eb] focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900",
           // Left-align text and make full width on small screens
           "w-full justify-start text-left md:w-auto",
           "whitespace-nowrap",
@@ -69,21 +69,20 @@ export const CategoryBar = ({ activeCategoryId, onChange, counts }) => {
 
         const labelClasses = [
           "transition-colors duration-200",
-          isActive ? "text-white dark:text-[#171a15]" : "",
+          isActive ? "text-white dark:text-[#0f172a]" : "",
         ]
           .filter(Boolean)
           .join(" ");
 
         const countClasses = isActive
-          ? "text-[#dfff4f] dark:text-[#445000]"
-          : "text-slate-400 dark:text-slate-500";
+          ? "text-[#93c5fd] dark:text-[#1e3a8a]"
+          : "text-slate-600 dark:text-slate-400";
 
         return (
           <button
             key={category.id}
             type="button"
-            role="tab"
-            aria-selected={isActive}
+            aria-pressed={isActive}
             onClick={() => handleSelect(category.id)}
             onKeyDown={handleKeyDown}
             className={buttonClasses}

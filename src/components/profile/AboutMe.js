@@ -40,22 +40,22 @@ const AboutMe = () => (
         <p className="eyebrow mb-5">The short version</p>
         <h2 className="section-title">Frontend depth, with the range to ship.</h2>
       </div>
-      <div className="space-y-5 text-base leading-8 text-[#62675c] dark:text-[#aeb5a5]">
-        <p>I&apos;m a frontend-focused software engineer experienced in turning complex requirements into clear, reliable digital products. My strongest work is in React, Next.js and TypeScript, building enterprise dashboards, fintech workflows and responsive user experiences.</p>
+      <div className="space-y-5 text-base leading-8 text-[#475569] dark:text-[#94a3b8]">
+        <p>I’m Oluwafemi, a Product Engineer. I start by understanding who will use a product, what they need to accomplish, and how the business works. My strongest tools are React, Next.js and TypeScript; my focus is making complex workflows feel clear.</p>
         <p>Beyond the interface, I work with REST APIs, authentication, databases and cloud services, build mobile applications with React Native, and take products through deployment and production troubleshooting.</p>
-        <p>My work spans banking platforms, investment products, employee-management workflows, public websites and independently developed products. I value interfaces that feel simple because the architecture, edge cases and operational states were handled deliberately.</p>
+        <p>I care about usability, accessibility, performance and maintainability. I balance delivery speed with technical constraints, work through edge cases, and stay involved beyond the hand-off to help the product work reliably in practice.</p>
       </div>
     </div>
 
     <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {disciplines.map(({ icon: Icon, number, title, copy }) => (
-        <article key={title} className="group rounded-[1.6rem] border border-black/10 bg-[#f3f1e8] p-6 transition hover:-translate-y-1 hover:border-[#a9c52a] dark:border-white/10 dark:bg-[#11130f]">
+        <article key={title} className="group rounded-[1.6rem] border border-black/10 bg-[#f8fafc] p-6 transition hover:-translate-y-1 hover:border-[#3b82f6] dark:border-white/10 dark:bg-[#080d18]">
           <div className="mb-10 flex items-center justify-between">
-            <span className="grid h-11 w-11 place-items-center rounded-full bg-[#dfff4f] text-[#171a15]"><Icon className="h-5 w-5" /></span>
-            <span className="font-heading text-sm text-[#969b8d]">{number}</span>
+            <span className="grid h-11 w-11 place-items-center rounded-full bg-[#93c5fd] text-[#0f172a]"><Icon className="h-5 w-5" /></span>
+            <span className="font-heading text-sm text-[#64748b] dark:text-slate-400">{number}</span>
           </div>
-          <h3 className="font-heading text-xl font-semibold text-[#171a15] dark:text-[#f4f3eb]">{title}</h3>
-          <p className="mt-3 text-sm leading-6 text-[#62675c] dark:text-[#aeb5a5]">{copy}</p>
+          <h3 className="font-heading text-xl font-semibold text-[#0f172a] dark:text-[#f8fafc]">{title}</h3>
+          <p className="mt-3 text-sm leading-6 text-[#475569] dark:text-[#94a3b8]">{copy}</p>
         </article>
       ))}
     </div>

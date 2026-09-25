@@ -37,7 +37,7 @@ const ThemeToggle = ({ compact = false, className = '' }) => {
     <button
       type="button"
       aria-label="Toggle theme"
-      className={`relative overflow-hidden rounded-lg border transition-all duration-300 ${glowClass} ${className} ${
+      className={`relative grid h-11 w-11 place-items-center overflow-hidden rounded-lg border transition-all duration-300 ${glowClass} ${className} ${
         isDark
           ? "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10"
           : "border-slate-200/70 bg-white/70 text-slate-700 hover:bg-slate-100/70"

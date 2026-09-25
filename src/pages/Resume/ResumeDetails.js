@@ -1,19 +1,15 @@
 import React from "react";
 import { MdOutlineLinearScale } from "react-icons/md";
 
-import backgroundSVG from "../../assets/bg.png";
+import resumePdf from "../../assets/OluwafemiResume.pdf";
 import { ExperienceTimeline } from "../../components/resume/ExperienceTimeline";
 
 const ResumeDetails = () => {
   return (
     <section className="relative mb-8 overflow-hidden rounded-[1.75rem] p-3 sm:p-8">
-      <div
-        className="pointer-events-none absolute inset-0 bg-contain bg-right-top bg-no-repeat opacity-20 dark:opacity-15"
-        style={{ backgroundImage: `url(${backgroundSVG})` }}
-      />
       <div className="relative z-10 space-y-14">
         <header className="space-y-4">
-          <div className="flex items-center gap-3 text-[#718317] dark:text-[#dfff4f]">
+          <div className="flex items-center gap-3 text-[#1d4ed8] dark:text-[#93c5fd]">
             <MdOutlineLinearScale className="h-10 w-10" />
             <span className="text-sm uppercase tracking-[0.4em]">
               Resume
@@ -28,10 +24,11 @@ const ResumeDetails = () => {
           </p>
         </header>
 
+        <a href={resumePdf} download="Oluwafemi-Soaga-CV.pdf" className="hero-link hero-link-primary">Download CV</a>
         <ExperienceTimeline />
 
         <section className="grid gap-8 md:grid-cols-2">
-          <div className="rounded-[1.5rem] border border-black/10 bg-[#f3f1e8] p-6 dark:border-white/10 dark:bg-[#11130f]">
+          <div className="rounded-[1.5rem] border border-black/10 bg-[#f8fafc] p-6 dark:border-white/10 dark:bg-[#080d18]">
             <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
               Education
             </h3>
@@ -51,7 +48,7 @@ const ResumeDetails = () => {
             </ul>
           </div>
 
-          <div className="rounded-[1.5rem] border border-black/10 bg-[#f3f1e8] p-6 dark:border-white/10 dark:bg-[#11130f]">
+          <div className="rounded-[1.5rem] border border-black/10 bg-[#f8fafc] p-6 dark:border-white/10 dark:bg-[#080d18]">
             <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
               Core Skillset
             </h3>
@@ -70,9 +67,9 @@ const ResumeDetails = () => {
               ].map((skill) => (
                 <li
                   key={skill}
-                  className="flex items-center gap-2 rounded-full border border-black/10 bg-[#faf9f3] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#62675c] dark:border-white/10 dark:bg-[#191c17] dark:text-[#b7beae]"
+                  className="flex items-center gap-2 rounded-full border border-black/10 bg-[#ffffff] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-[#475569] dark:border-white/10 dark:bg-[#101827] dark:text-[#cbd5e1]"
                 >
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#9bb51d]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#2563eb]" />
                   {skill}
                 </li>
               ))}
