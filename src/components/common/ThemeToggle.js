@@ -1,4 +1,5 @@
 import React from 'react';
+import { RiSunFill } from 'react-icons/ri';
 
 const ThemeToggle = ({ compact = false, className = '' }) => {
   const [isDark, setIsDark] = React.useState(() => {
@@ -24,9 +25,7 @@ const ThemeToggle = ({ compact = false, className = '' }) => {
       <path d="M21.64 13A9 9 0 1 1 11 2.36 7 7 0 1 0 21.64 13z" />
     </svg>
   ) : (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-      <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
-    </svg>
+    <RiSunFill className="w-5 h-5" aria-hidden="true" />
   );
 
   const glowClass = isDark
