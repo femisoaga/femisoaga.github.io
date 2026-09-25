@@ -13,7 +13,7 @@ const Resume = () => {
           <div className="py-10 sm:py-16">
             <div className="max-w-4xl space-y-6">
               <p className="eyebrow">Résumé</p>
-              <h1 className={`${colors.text.primary} font-heading text-5xl font-semibold leading-[0.98] tracking-[-0.055em] md:text-7xl`}>
+              <h1 className={`${colors.text.primary} font-heading text-4xl font-semibold leading-[0.98] tracking-[-0.055em] md:text-7xl`}>
                 Frontend leadership grounded in complete product delivery.
               </h1>
               <p className={`${colors.text.secondary} max-w-3xl text-base md:text-lg`}>

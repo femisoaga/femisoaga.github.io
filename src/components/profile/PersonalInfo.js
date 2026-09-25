@@ -6,7 +6,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineFileDownload, MdOutlineMail } from "react-icons/md";
 import { PiSmileyBold } from "react-icons/pi";
 
-import dp from "../../assets/dp.jpg";
+import dp from "../../assets/dp.jpeg";
 import OluwafemiResume from "../../assets/OluwafemiResume.pdf";
 
 const SOCIAL_LINKS = [
@@ -42,7 +42,7 @@ const OTHER_DETAILS = [
     value: (
       <a
         href={OluwafemiResume}
-        download="Oluwafemi-Resume"
+        download="Oluwafemi_Soaga_Frontend_Engineer_CV.pdf"
         target="_blank"
         rel="noreferrer"
         className="hover:text-primary-600"

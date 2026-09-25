@@ -24,7 +24,7 @@ const ResumeDetails = () => {
           </p>
         </header>
 
-        <a href={resumePdf} download="Oluwafemi-Soaga-CV.pdf" className="hero-link hero-link-primary">Download CV</a>
+        <a href={resumePdf} download="Oluwafemi_Soaga_Frontend_Engineer_CV.pdf" className="hero-link hero-link-primary">Download CV</a>
         <ExperienceTimeline />
 
         <section className="grid gap-8 md:grid-cols-2">

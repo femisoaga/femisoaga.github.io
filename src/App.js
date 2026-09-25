@@ -11,10 +11,10 @@ import PortfolioDetails from "./pages/Portfolio/PortfolioDetails";
 import Resume from "./pages/Resume/Resume";
 
 function RouteScroll() {
-  const { pathname, state } = useLocation();
+  const { pathname } = useLocation();
   useEffect(() => {
-    if (state?.scrollTo !== "services") window.scrollTo(0, 0);
-  }, [pathname, state]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return null;
 }
 

@@ -25,12 +25,11 @@ an introduction, a portrait, and links to selected work and contact. Shared them
 tokens live in `src/index.css`; the common color helpers live in
 `src/components/common/Colors.js`. Both light and dark themes are supported.
 
-The existing `src/assets/dp.jpg` portrait is 800 × 800 and visibly soft. It is served
-unchanged, with explicit dimensions, responsive size information, and high fetch
-priority. Display size is capped at 352px on desktop and 280px on mobile. CRA has
-no built-in image optimization component. A sharper original (ideally at least
-1200 × 1200) is needed before enlarging the image or promising crisp high-density
-output. Do not upscale the current source.
+The portrait at `src/assets/dp.jpeg` is 810 × 1080. It is served unchanged, with
+explicit source dimensions, responsive size information, and high fetch priority.
+Its square display crop is capped at 352px on desktop and 280px on mobile (240px on
+the smallest screens). CRA has no built-in image optimization component. Use a
+larger original before increasing the display size; do not upscale the source.
 
 Project briefs are grounded in the existing project descriptions and feature
 lists. Employer names, job titles, dates, delivery status, and confidentiality

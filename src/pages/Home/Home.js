@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ArrowRight, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { FadeIn } from '../../components/common/FadeIn';
 import { TechStack } from '../../components/common/TechStack';
@@ -11,16 +10,9 @@ import { Certifications } from '../../components/common/Certifications';
 import { ProductApproach } from '../../components/common/ProductApproach';
 import { ProjectCard } from '../../components/portfolio/ProjectCard';
 import { projects } from '../../data/projects';
-import portrait from "../../assets/dp.jpg";
+import portrait from "../../assets/dp.jpeg";
 
 export default function Home() {
-  const location = useLocation();
-  useEffect(() => {
-    if (location.state?.scrollTo === "services") {
-      document.getElementById("services-section")?.scrollIntoView({ block: "start" });
-    }
-  }, [location]);
-
   return (
     <main id="main-content" className="home-page container-pro">
       <section className="hero" aria-labelledby="hero-title">
@@ -32,24 +24,22 @@ export default function Home() {
             <Link className="hero-link" to="/contact">Let’s talk</Link>
           </div>
         </div>
-        <img className="hero-portrait" src={portrait} srcSet={`${portrait} 800w`}
+        <img className="hero-portrait" src={portrait} srcSet={`${portrait} 810w`}
           sizes="(min-width: 1152px) 352px, (min-width: 720px) 31vw, (min-width: 360px) 280px, 240px"
-          width={800} height={800} alt="Oluwafemi Soaga, Product Engineer"
+          width={810} height={1080} alt="Oluwafemi Soaga, Product Engineer"
           loading="eager" fetchpriority="high" decoding="async" />
       </section>
       <div className="home-sections">
-        <FadeIn>
-          <section aria-labelledby="selected-work-title">
-            <div className="mb-8 max-w-2xl">
-              <p className="eyebrow mb-4">Selected work</p>
-              <h2 id="selected-work-title" className="section-title">Product thinking, put into practice.</h2>
-              <p className="mt-5">Banking operations, investment journeys, and research discovery. A closer look at the problems I help turn into working products.</p>
-            </div>
-            <div className="grid gap-5 md:grid-cols-3">
-              {projects.filter(project => ["business-central", "bucks-invest-partners", "sahara-centre"].includes(project.id)).map(project => <ProjectCard key={project.id} project={project} compact />)}
-            </div>
-          </section>
-        </FadeIn>
+        <section aria-labelledby="selected-work-title">
+          <div className="mb-8 max-w-2xl">
+            <p className="eyebrow mb-4">Selected work</p>
+            <h2 id="selected-work-title" className="section-title">Product thinking, put into practice.</h2>
+            <p className="mt-5">Banking operations, investment journeys, and research discovery. A closer look at the problems I help turn into working products.</p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {projects.filter(project => ["business-central", "bucks-invest-partners", "sahara-centre"].includes(project.id)).map(project => <ProjectCard key={project.id} project={project} compact />)}
+          </div>
+        </section>
         <FadeIn><ProductApproach /></FadeIn>
         <FadeIn><div id="services-section" className="scroll-mt-28"><Services /></div></FadeIn>
         <FadeIn><Experience /></FadeIn>
