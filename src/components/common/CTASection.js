@@ -36,7 +36,7 @@ export const CTASection = () => {
             Have a product problem worth solving?
           </h2>
           <p className="mx-auto max-w-2xl text-base text-white/65 md:text-lg dark:text-[#1e293b]">
-            I’m open to Product Engineer and frontend-focused opportunities, as well as selected product development collaborations. Let’s discuss what you’re building.
+            I’m open to product and frontend engineering roles, including teams building AI-enabled products, and selected development collaborations. Let’s discuss what you’re building.
           </p>
         </header>
 

@@ -1,4 +1,4 @@
-import { Cloud, Code2, Layers3, ServerCog, Smartphone } from "lucide-react";
+import { Cloud, Code2, Layers3, ServerCog, Smartphone, Workflow } from "lucide-react";
 
 const disciplines = [
   {
@@ -31,6 +31,12 @@ const disciplines = [
     title: "Production delivery",
     copy: "Cloud, hosting, DNS, SSL, SMTP and deployment troubleshooting that helps move products beyond localhost.",
   },
+  {
+    icon: Workflow,
+    number: "06",
+    title: "AI in products & workflows",
+    copy: "Help businesses put AI to practical use through product features and workflows that reduce repetitive work and make information more useful. Start with the user need, then build and validate the integration.",
+  },
 ];
 
 const AboutMe = () => (
@@ -43,6 +49,7 @@ const AboutMe = () => (
       <div className="space-y-5 text-base leading-8 text-[#475569] dark:text-[#94a3b8]">
         <p>I’m Oluwafemi, a Product Engineer. I start by understanding who will use a product, what they need to accomplish, and how the business works. My strongest tools are React, Next.js and TypeScript; my focus is making complex workflows feel clear.</p>
         <p>Beyond the interface, I work with REST APIs, authentication, databases and cloud services, build mobile applications with React Native, and take products through deployment and production troubleshooting.</p>
+        <p>I also help teams bring useful AI capabilities into their products and business workflows. I use AI in my own development process while keeping the engineering judgment to build, debug, and maintain systems independently.</p>
         <p>I care about usability, accessibility, performance and maintainability. I balance delivery speed with technical constraints, work through edge cases, and stay involved beyond the hand-off to help the product work reliably in practice.</p>
       </div>
     </div>

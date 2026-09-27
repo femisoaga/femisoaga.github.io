@@ -18,7 +18,7 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-copy">
           <h1 id="hero-title">Product Engineer building digital experiences <span>people care about.</span></h1>
-          <p className="hero-description">I’m Oluwafemi Soaga. I combine frontend engineering, product thinking, and end-to-end ownership to build useful, reliable web and mobile products.</p>
+          <p className="hero-description">I’m Oluwafemi Soaga. I build reliable web and mobile products, combining frontend depth, product thinking, and practical AI integration to help people and businesses work better.</p>
           <div className="hero-actions">
             <Link className="hero-link hero-link-primary" to="/portfolio">View selected work <ArrowRight aria-hidden="true" size={18} /></Link>
             <Link className="hero-link" to="/contact">Let’s talk</Link>

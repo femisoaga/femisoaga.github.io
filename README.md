@@ -1,6 +1,8 @@
 # Oluwafemi Soaga — Product Engineer
 
 Personal portfolio for product engineering, with frontend expertise at its core.
+Practical AI integration and AI-assisted development are supporting capabilities;
+engineering judgment, independent problem-solving, and code ownership remain central.
 Built with React 18, Create React App, React Router, and Tailwind CSS. Project and
 experience content live in `src/data`; reusable components live in `src/components`.
 

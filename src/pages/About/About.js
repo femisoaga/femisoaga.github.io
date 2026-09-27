@@ -17,7 +17,7 @@ const About = () => {
                 Product engineering with frontend depth.
               </h1>
               <p className={`${colors.text.secondary} max-w-2xl text-base leading-relaxed md:text-lg`}>
-                I turn user needs and business requirements into useful products, from the interface through integrations and production delivery.
+                I turn user needs and business requirements into reliable systems, combining frontend depth with ownership from architecture to production.
               </p>
             </div>
           </div>

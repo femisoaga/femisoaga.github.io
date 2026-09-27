@@ -17,8 +17,8 @@ const ContactMe = () => {
                 Have a product problem worth solving?
               </h1>
               <p className={`${colors.text.secondary} max-w-2xl text-base md:text-lg`}>
-                For product engineering, frontend architecture, client work or a role conversation,
-                use any of the direct channels below.
+                Building a product, strengthening your engineering team, or bringing AI into a
+                business workflow? Let’s discuss the problem and how I can help.
               </p>
             </div>
           </div>
