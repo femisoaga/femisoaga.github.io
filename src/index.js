@@ -4,18 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// Initialize theme before render to avoid FOUC
-try {
-  const stored = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const enableDark = stored ? stored === 'dark' : prefersDark;
-  const rootEl = document.documentElement;
-  if (enableDark) {
-    rootEl.classList.add('dark');
-  } else {
-    rootEl.classList.remove('dark');
-  }
-} catch (_) {}
+import { applyTheme, readThemePreference } from './theme';
+
+// Resolve the same preference as the picker before React renders.
+applyTheme(readThemePreference());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

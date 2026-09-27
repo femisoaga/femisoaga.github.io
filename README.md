@@ -37,3 +37,16 @@ Project briefs are grounded in the existing project descriptions and feature
 lists. Employer names, job titles, dates, delivery status, and confidentiality
 notes are preserved. No outcome metrics or additional responsibilities have been
 invented. Add quantified outcomes only when supporting evidence is available.
+
+## Appearance preference
+
+The header has a single button that switches between Light and Dark. It follows
+the device appearance, including live changes, until the visitor explicitly
+toggles it. That Light/Dark choice is saved across visits and synced between tabs.
+There is no third option in the interface. The control also works when browser
+storage is blocked (the choice then lasts only for the current page).
+
+Preferences use `theme-preference`. The previous `theme` value is intentionally
+ignored because it mixed manual choices with automatically saved system values.
+Existing visitors therefore start in System mode once after this update and can
+choose an explicit preference again.

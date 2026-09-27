@@ -92,6 +92,7 @@
   box-shadow: none;
 }
 .header-actions .header-theme:hover { background: var(--accent-soft); color: var(--foreground); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .header-menu-toggle { display: none; }
 .header-mobile-links { display: none; }
 .site-header :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
