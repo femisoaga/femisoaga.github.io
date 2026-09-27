@@ -40,7 +40,7 @@ export const ProjectCard = ({ project, compact = false }) => {
           <span className="text-xs font-semibold text-[#475569] dark:text-[#94a3b8]">{project.category}</span>
         </div>
         <h3 className="font-heading text-xl font-semibold leading-tight text-[#0f172a] dark:text-[#f8fafc]">{project.title}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-[#475569] dark:text-[#94a3b8]">{project.description}</p>
+        <p className="mt-3 text-sm leading-relaxed text-[#475569] dark:text-[#94a3b8]">{compact ? project.summary || project.description : project.description}</p>
 
         {project.role && <p className="mt-4 text-sm leading-relaxed"><strong className="text-slate-900 dark:text-slate-100">My role: </strong>{project.role}</p>}
 

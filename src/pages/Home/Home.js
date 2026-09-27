@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { FadeIn } from '../../components/common/FadeIn';
-import { TechStack } from '../../components/common/TechStack';
 import { colors } from '../../components/common/Colors';
 import { CTASection } from '../../components/common/CTASection';
-import { Services } from '../../components/common/Services';
-import { Experience } from '../../components/common/Experience';
-import { Certifications } from '../../components/common/Certifications';
 import { ProductApproach } from '../../components/common/ProductApproach';
 import { ProjectCard } from '../../components/portfolio/ProjectCard';
 import { projects } from '../../data/projects';
@@ -41,12 +37,15 @@ export default function Home() {
           <div className="grid gap-5 md:grid-cols-3">
             {projects.filter(project => ["business-central", "bucks-invest-partners", "sahara-centre"].includes(project.id)).map(project => <ProjectCard key={project.id} project={project} compact />)}
           </div>
+          <Link to="/portfolio" className="hero-link mt-8">Explore all work <ArrowRight aria-hidden="true" size={18} /></Link>
         </section>
-        <FadeIn><ProductApproach /></FadeIn>
-        <FadeIn><div id="services-section" className="scroll-mt-28"><Services /></div></FadeIn>
-        <FadeIn><Experience /></FadeIn>
-        <FadeIn><TechStack /></FadeIn>
-        <FadeIn><Certifications /></FadeIn>
+        <section aria-label="Engineering approach">
+          <ProductApproach />
+          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4">
+            <Link to="/about" className="hero-link">More about my capabilities <ArrowRight aria-hidden="true" size={18} /></Link>
+            <Link to="/resume" className="hero-link">Experience & CV <ArrowRight aria-hidden="true" size={18} /></Link>
+          </div>
+        </section>
         <FadeIn><CTASection /></FadeIn>
             <FadeIn delay={400}>
               <div className="mt-8 flex flex-col items-center gap-3">

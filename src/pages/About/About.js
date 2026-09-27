@@ -2,6 +2,8 @@ import React from "react";
 
 import { FadeIn } from "../../components/common/FadeIn";
 import { colors } from "../../components/common/Colors";
+import { TechStack } from "../../components/common/TechStack";
+import { Certifications } from "../../components/common/Certifications";
 import AboutMe from "../../components/profile/AboutMe";
 import FrostedPanel from "../../components/layout/FrostedPanel";
 
@@ -28,6 +30,10 @@ const About = () => {
             <AboutMe />
           </FrostedPanel>
         </FadeIn>
+        <div className="space-y-16 pt-6">
+          <TechStack />
+          <Certifications />
+        </div>
       </div>
     </main>
   );

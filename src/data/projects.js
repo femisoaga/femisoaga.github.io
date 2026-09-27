@@ -11,6 +11,12 @@ import estazImage from "../assets/estaz.png";
 export const projects = [
   {
     id: "business-central",
+    summary: "Role-aware banking operations, from approvals and credit facilities to administration.",
+    implementation: [
+      { title: "Operational workflows", copy: "Delivered frontend workflows across business banking, mobile banking, POS operations and credit facilities, including permission-gated actions and approval policies." },
+      { title: "Working with operational data", copy: "Built API-backed tables with filtering and pagination, alongside document uploads, exports and audit trails." },
+      { title: "Administration and UI states", copy: "Implemented provider, KYC and tenant configuration. Loading, validation, error and permission states were part of the interface design across these workflows." },
+    ],
     problem: "Bring banking operations, approvals, and administration into role-aware workflows, with clear permission and transaction states.",
     slug: "business-central",
     title: "Business Central",
@@ -27,6 +33,12 @@ export const projects = [
   },
   {
     id: "bucks-invest-partners",
+    summary: "Partner onboarding, verification and investment operations in one product journey.",
+    implementation: [
+      { title: "Onboarding and verification", copy: "Implemented registration, authentication and OTP verification, followed by multi-step KYB, document uploads, bank-account verification and authorised-signatory flows." },
+      { title: "Investment operations", copy: "Built frontend workflows for investment-product creation, approval and publishing, together with portfolio dashboards, analytics and CSV exports." },
+      { title: "Session and activity handling", copy: "Separated authentication, session expiry and token refresh from product workflows. The implementation also includes Server-Sent Events notifications and audit history." },
+    ],
     problem: "Support partners from organisational onboarding through investment operations, while keeping verification, session handling, and reporting understandable.",
     slug: "bucks-invest-partners",
     title: "Bucks Invest Partners",
@@ -59,6 +71,13 @@ export const projects = [
   },
   {
     id: "sahara-centre",
+    summary: "An institutional website and searchable platform for African indigenous-knowledge research.",
+    implementation: [
+      { title: "Institutional storytelling", copy: "Built the complete WordPress website and its information architecture, covering the mission, organisation history, initiatives, events, team, fellows and advisory board." },
+      { title: "Research discovery", copy: "Built the research database with multi-facet filtering and publication journeys that connect discovery to detail pages, previews and downloads." },
+      { title: "Paths to participation", copy: "Created pathways for partnerships, volunteering, careers and donations alongside the institution’s research and programme content." },
+    ],
+    decisions: ["Organised institutional content, research discovery and participation pathways within one WordPress website.", "Paired multi-facet research filtering with publication detail, preview and download journeys."],
     problem: "Help visitors explore the institution and find relevant indigenous-knowledge research through a searchable, filterable database.",
     slug: "sahara-centre",
     title: "The Sahara Centre",

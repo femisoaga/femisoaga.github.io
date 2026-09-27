@@ -38,9 +38,26 @@ const PortfolioDetails = () => {
 
         {project.confidentialityNote && <div className="my-8 flex gap-3 rounded-2xl border border-[#2563eb]/30 bg-[#93c5fd]/10 p-5 text-sm leading-relaxed text-[#1e40af] dark:text-[#93c5fd]"><LockKeyhole className="h-5 w-5 shrink-0" /><p>{project.confidentialityNote}</p></div>}
 
+        {project.problem && <section className="grid gap-5 py-10 md:grid-cols-[0.45fr_1fr] md:gap-12"><h2 className="font-heading text-2xl font-semibold">The product challenge</h2><p className="max-w-3xl text-lg leading-relaxed">{project.problem}</p></section>}
+
+        {project.implementation?.length > 0 && (
+          <section className="border-y border-black/10 py-10 dark:border-white/10" aria-labelledby="implementation-title">
+            <p className="eyebrow mb-4">My contribution</p>
+            <h2 id="implementation-title" className="section-title">From requirements to working journeys.</h2>
+            <div className="mt-8 grid gap-8 lg:grid-cols-3">
+              {project.implementation.map(({ title, copy }, index) => (
+                <div key={title}>
+                  <span aria-hidden="true" className="text-sm font-semibold text-[#1d4ed8] dark:text-blue-300">0{index + 1}</span>
+                  <h3 className="mt-3 font-heading text-xl font-semibold">{title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-[#475569] dark:text-[#94a3b8]">{copy}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         <div className="grid gap-5 py-10 lg:grid-cols-2">
-          {project.problem && <section className="rounded-[1.5rem] border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#101827] sm:p-8"><h2 className="text-2xl font-semibold">The product challenge</h2><p className="mt-5 leading-relaxed">{project.problem}</p></section>}
-          <DetailList title="What I built" items={project.features} />
+          {!project.implementation?.length && <DetailList title="What I built" items={project.features} />}
           <DetailList title="Engineering decisions" items={project.decisions} />
           <DetailList title="Improvements and next steps" items={project.improvements} icon={Wrench} />
           {project.tags?.length > 0 && <section className="rounded-[1.5rem] border border-black/10 bg-[#ffffff] p-6 dark:border-white/10 dark:bg-[#101827] sm:p-8"><h2 className="font-heading text-2xl font-semibold text-[#0f172a] dark:text-white">Technology stack</h2><ul className="mt-5 flex flex-wrap gap-2">{project.tags.map((tag) => <li key={tag} className="rounded-full border border-black/10 px-3 py-1.5 text-xs font-bold dark:border-white/10">{tag}</li>)}</ul></section>}
