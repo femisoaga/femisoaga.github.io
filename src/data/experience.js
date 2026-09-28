@@ -5,7 +5,7 @@ export const experienceEntries = [
     dates: "January 2026 – Present",
     summary: "Lead frontend implementation across enterprise banking, investment and employee-management products, coordinating delivery from requirements through production.",
     bullets: [
-      "Delivered AlertEvaluate, a role-based appraisal platform for employee, manager and HR workflows.",
+      "Designed and built the complete AlertEvaluate frontend from requirements through production delivery using Next.js, React, TypeScript and Tailwind CSS; integrated separately built backend APIs for employee, manager and HR workflows.",
       "Maintain and expand Business Central across banking, POS, credit, approvals, access control and operational administration.",
       "Build Bucks Invest partner workflows covering KYB onboarding, investment products, analytics, reporting and administration.",
       "Develop reusable frontend architecture, integrate REST APIs and mentor two junior frontend developers.",

@@ -1,3 +1,4 @@
+import { alertEvaluate } from "./alertEvaluate";
 import sarepayImage from "../assets/sarepay.png";
 import uniswitchImage from "../assets/uniswitch.png";
 import kekereImage from "../assets/kekere.png";
@@ -8,7 +9,9 @@ import solutionsArchitectBadge from "../assets/solutions architect badge.png";
 import alxLogo from "../assets/Alx-logo-black.svg";
 import estazImage from "../assets/estaz.png";
 
+/** @type {import("../types/project").Project[]} */
 export const projects = [
+  alertEvaluate,
   {
     id: "business-central",
     summary: "Role-aware banking operations, from approvals and credit facilities to administration.",
@@ -52,22 +55,6 @@ export const projects = [
     decisions: ["Separated authentication, session-expiry and token-refresh concerns from product workflows.", "Used server-state and client-state tools for distinct responsibilities."],
     confidentialityNote: "Legacy investor and settlement routes are not presented as completed. No private URLs or financial records are exposed.",
     accent: "#ff714b",
-  },
-  {
-    id: "alert-evaluate",
-    problem: "Connect employee self-assessment, manager review, and HR administration in one role-based appraisal journey.",
-    slug: "alert-evaluate",
-    title: "AlertEvaluate",
-    category: "Enterprise HR Platform",
-    categoryIds: ["featured"],
-    status: "Internal Product — Private Access",
-    description: "A role-based employee appraisal platform supporting enrolment, self-assessment, manager review, approval, return, acceptance and HR administration.",
-    role: "Owned the frontend implementation across employee, manager and HR workflows.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack Query", "Zustand"],
-    features: ["Zoho SSO and role-aware access", "Department and staff imports", "Supervisor relationships and enrolment", "Self-assessment and manager review", "Approval, return and acceptance workflows", "Reports, exports and prerequisite guidance"],
-    decisions: ["Built role-specific states around one shared appraisal domain.", "Created reusable loading, pagination, restricted-state and import components."],
-    confidentialityNote: "Employee information, internal URLs and proprietary screens are excluded.",
-    accent: "#93c5fd",
   },
   {
     id: "sahara-centre",

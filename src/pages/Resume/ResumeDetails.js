@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MdOutlineLinearScale } from "react-icons/md";
 
 import resumePdf from "../../assets/OluwafemiResume.pdf";
@@ -26,6 +27,7 @@ const ResumeDetails = () => {
 
         <a href={resumePdf} download="Oluwafemi_Soaga_Frontend_Engineer_CV.pdf" className="hero-link hero-link-primary">Download CV</a>
         <ExperienceTimeline />
+        <Link to="/portfolio/alert-evaluate" className="hero-link">Read the AlertEvaluate frontend ownership case study →</Link>
 
         <section className="grid gap-8 md:grid-cols-2">
           <div className="rounded-[1.5rem] border border-black/10 bg-[#f8fafc] p-6 dark:border-white/10 dark:bg-[#080d18]">

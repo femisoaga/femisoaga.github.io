@@ -340,3 +340,8 @@ body {
   .bg-app-light { @apply bg-slate-100; }
   .bg-app-dark { @apply bg-slate-950; }
 }
+
+/* Case-study figures and anchored sections. */
+.case-study-section { scroll-margin-top: 120px; }
+.case-study-title { overflow-wrap: anywhere; }
+.case-study-figure img { width: 100%; height: auto; }

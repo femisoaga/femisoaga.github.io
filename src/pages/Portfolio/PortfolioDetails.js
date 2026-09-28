@@ -1,6 +1,8 @@
 import { ArrowLeft, ArrowUpRight, CheckCircle2, LockKeyhole, Wrench } from "lucide-react";
 import { Link, Navigate, useParams } from "react-router-dom";
 
+import { ProjectCaseStudy } from "../../components/portfolio/ProjectCaseStudy";
+
 import { getProjectBySlug } from "../../data/projects";
 
 const DetailList = ({ title, items, icon: Icon = CheckCircle2 }) => {
@@ -27,7 +29,7 @@ const PortfolioDetails = () => {
         <header className="grid gap-8 border-b border-black/10 pb-14 dark:border-white/10 lg:grid-cols-[1fr_0.55fr] lg:items-end">
           <div>
             <div className="mb-5 flex flex-wrap gap-2"><span className="rounded-full bg-[#93c5fd] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#0f172a]">{project.status}</span><span className="rounded-full border border-black/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] dark:border-white/10">{project.category}</span></div>
-            <h1 className="font-heading text-5xl font-semibold leading-[0.95] tracking-[-0.06em] text-[#0f172a] sm:text-7xl dark:text-white">{project.title}</h1>
+            <h1 className="case-study-title font-heading text-5xl font-semibold leading-[0.95] tracking-[-0.06em] text-[#0f172a] sm:text-7xl dark:text-white">{project.title}</h1>
             <p className="mt-7 max-w-3xl text-lg leading-relaxed text-[#475569] dark:text-[#94a3b8]">{project.description}</p>
           </div>
           <div className="lg:text-right">
@@ -37,6 +39,8 @@ const PortfolioDetails = () => {
         </header>
 
         {project.confidentialityNote && <div className="my-8 flex gap-3 rounded-2xl border border-[#2563eb]/30 bg-[#93c5fd]/10 p-5 text-sm leading-relaxed text-[#1e40af] dark:text-[#93c5fd]"><LockKeyhole className="h-5 w-5 shrink-0" /><p>{project.confidentialityNote}</p></div>}
+
+        {project.caseStudy && <ProjectCaseStudy project={project} />}
 
         {project.problem && <section className="grid gap-5 py-10 md:grid-cols-[0.45fr_1fr] md:gap-12"><h2 className="font-heading text-2xl font-semibold">The product challenge</h2><p className="max-w-3xl text-lg leading-relaxed">{project.problem}</p></section>}
 

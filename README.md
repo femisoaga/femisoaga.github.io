@@ -50,3 +50,22 @@ Preferences use `theme-preference`. The previous `theme` value is intentionally
 ignored because it mixed manual choices with automatically saved system values.
 Existing visitors therefore start in System mode once after this update and can
 choose an explicit preference again.
+
+## AlertEvaluate case study
+
+AlertEvaluate leads the homepage and featured-work listing at
+`/portfolio/alert-evaluate`. Its structured content is in
+`src/data/alertEvaluate.js`; `src/types/project.d.ts` defines the project and
+case-study contracts. Run `npm run typecheck:content` for the scoped content
+check (the portfolio itself remains JavaScript).
+
+`npm run build` also emits a static HTML entry for the case-study route using
+`src/data/alertEvaluateSeo.json`, so title, description, canonical and social
+metadata are available without JavaScript. The existing GitHub Pages fallback
+continues to handle other routes. Structured data was not previously configured.
+
+The AlertEvaluate card and case-study opening use the supplied WebP sign-in
+screenshot. The cycle-builder SVG remains a labelled placeholder. See
+`docs/alert-evaluate-implementation.md` for replacement captures and verification.
+The internal `ALERT_EVALUATE_PORTFOLIO_CONTEXT.md` is ignored by Git and is not
+imported or copied into the site. No formatter is configured in this repository.

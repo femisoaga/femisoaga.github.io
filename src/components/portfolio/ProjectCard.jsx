@@ -23,10 +23,10 @@ export const ProjectCard = ({ project, compact = false }) => {
           <img
             src={project.image}
             alt={project.imageAlt || `${project.title} project preview`}
-            className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+            className={`h-full w-full transition duration-700 group-hover:scale-[1.03] ${project.caseStudy ? "object-contain bg-[#0f172a]" : "object-cover"}`}
             loading="lazy"
-            width="720"
-            height="420"
+            width={project.imageWidth || 720}
+            height={project.imageHeight || 420}
             onError={() => setImageFailed(true)}
           />
         ) : (
@@ -43,6 +43,8 @@ export const ProjectCard = ({ project, compact = false }) => {
         <p className="mt-3 text-sm leading-relaxed text-[#475569] dark:text-[#94a3b8]">{compact ? project.summary || project.description : project.description}</p>
 
         {project.role && <p className="mt-4 text-sm leading-relaxed"><strong className="text-slate-900 dark:text-slate-100">My role: </strong>{project.role}</p>}
+
+        {project.ownership && <p className="mt-3 text-sm leading-relaxed">{project.ownership}</p>}
 
         {project.tags?.length > 0 && (
           <ul className="mt-5 flex flex-wrap gap-2" aria-label={`${project.title} technologies`}>

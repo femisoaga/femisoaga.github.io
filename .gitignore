@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Internal project reference; never publish with the portfolio
+/ALERT_EVALUATE_PORTFOLIO_CONTEXT.md

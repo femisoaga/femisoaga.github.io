@@ -32,10 +32,10 @@ export default function Home() {
           <div className="mb-8 max-w-2xl">
             <p className="eyebrow mb-4">Selected work</p>
             <h2 id="selected-work-title" className="section-title">Product thinking, put into practice.</h2>
-            <p className="mt-5">Banking operations, investment journeys, and research discovery. A closer look at the problems I help turn into working products.</p>
+            <p className="mt-5">Enterprise appraisals, banking operations, and research discovery. A closer look at the problems I help turn into working products.</p>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
-            {projects.filter(project => ["business-central", "bucks-invest-partners", "sahara-centre"].includes(project.id)).map(project => <ProjectCard key={project.id} project={project} compact />)}
+            {projects.filter(project => ["alert-evaluate", "business-central", "sahara-centre"].includes(project.id)).map(project => <ProjectCard key={project.id} project={project} compact />)}
           </div>
           <Link to="/portfolio" className="hero-link mt-8">Explore all work <ArrowRight aria-hidden="true" size={18} /></Link>
         </section>
